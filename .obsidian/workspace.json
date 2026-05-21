@@ -196,6 +196,7 @@
   },
   "active": "3a0169c577a93720",
   "lastOpenFiles": [
+    "wiki/objectives/2.5.md",
     "wiki/quizzes/2.4-malicious-activity.md",
     "wiki/objectives/2.4.md",
     "wiki/quizzes/3.4-resilience.md",
@@ -222,7 +223,6 @@
     "SETUP.md",
     "wiki/quizzes/1.1-controls.md",
     "Untitled.base",
-    "wiki/quizzes/README.md",
     "Untitled.canvas",
     "wiki/transcripts/video_map.json",
     "wiki/transcripts/fetch_video_urls.py",
