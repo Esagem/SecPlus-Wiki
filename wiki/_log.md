@@ -40,3 +40,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] edit | _index.md | register synthesis/video-index in the index synthesis table
 ## [2026-05-21] write | quizzes/1.1-controls.md | first interactive quiz — 10 questions on 1.1 controls, dataviewjs UI
 ## [2026-05-21] edit | objectives/1.1.md | link new quiz from objective 1.1
+## [2026-05-21] edit | _index.md | register first quiz in the index
