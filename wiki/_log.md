@@ -59,3 +59,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | objectives/1.3.md | Add objective 1.3 — Change Management
 ## [2026-05-21] write | objectives/3.2.md | Write objective 3.2 (Secure Enterprise Infrastructure)
 ## [2026-05-21] write | quizzes/1.3-change-management.md | Add quiz 1.3-change-management
+## [2026-05-21] write | quizzes/2.2-vectors.md | Create quizzes/2.2-vectors.md
