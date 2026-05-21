@@ -96,3 +96,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | objectives/5.6.md | objectives/5.6.md — Security Awareness and Training written
 ## [2026-05-21] write | quizzes/4.5-enterprise-capabilities.md | Add quiz 4.5 — enterprise capabilities
 ## [2026-05-21] write | quizzes/5.6-awareness.md | quizzes/5.6-awareness.md — 10-question quiz
+## [2026-05-21] write | objectives/4.6.md | Domain 4.6 — Identity and Access Management objective page
