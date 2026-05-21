@@ -196,6 +196,9 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
+    "wiki/objectives/3.1.md",
+    "wiki/objectives/2.1.md",
+    "wiki/objectives/1.2.md",
     "SETUP.md",
     "wiki/quizzes/1.1-controls.md",
     "wiki/objectives/1.1.md",
@@ -230,9 +233,6 @@
     "server/node_modules/rollup-plugin-node-polyfills/readme.md",
     "server/node_modules/rollup-plugin-node-polyfills/LICENSE.md",
     "server/node_modules/rollup-plugin-inject/README.md",
-    "server/node_modules/rollup-plugin-inject/CHANGELOG.md",
-    "server/node_modules/mustache/README.md",
-    "server/node_modules/mustache/CHANGELOG.md",
-    "server/node_modules/is-arrayish/README.md"
+    "server/node_modules/rollup-plugin-inject/CHANGELOG.md"
   ]
 }
