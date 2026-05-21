@@ -70,3 +70,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/2.3-vulnerabilities.md | Create quizzes/2.3-vulnerabilities.md
 ## [2026-05-21] write | quizzes/3.4-resilience.md | Write quiz 3.4-resilience (5 videos, 14 questions)
 ## [2026-05-21] write | objectives/2.4.md | Create objectives/2.4.md — malicious activity
+## [2026-05-21] write | quizzes/2.4-malicious-activity.md | Create quizzes/2.4-malicious-activity.md
