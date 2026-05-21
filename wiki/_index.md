@@ -87,17 +87,17 @@ Raw Professor Messer auto-caption dumps. **Immutable.** Read these to build conc
 
 One page per exam objective (`objectives/N.N.md`). Each indexes the concept pages under it and links its transcript source.
 
-*Not yet populated. See [[STUDY|STUDY §5.1]] for the distillation workflow, or [[objectives/README|objectives/README.md]] for the full objective list.*
+| Objective | Title | Status | Concepts |
+|-----------|-------|--------|----------|
+| [[objectives/1.1\|1.1]] | Security Controls | active | 7 |
 
-`wiki_list(category="objectives")` to enumerate once they exist.
+Remaining 27 objectives not yet written. See [[STUDY|STUDY §5.1]] for the distillation workflow, or [[objectives/README|objectives/README.md]] for the full objective list. Use `wiki_list(category="objectives")` to enumerate.
 
 ## Concepts
 
 Atomic concept pages (`concepts/<kebab-case-name>.md`). Expected: 150–300 by exam time.
 
-*Not yet populated. See [[STUDY|STUDY §4]] for the concept page template and [[concepts/README|concepts/README.md]] for conventions.*
-
-`wiki_list(category="concepts")` to enumerate once they exist.
+**Current count: 7** (all under objective 1.1). Use `wiki_list(category="concepts")` to enumerate, or `wiki_search(query)` to find by content. See [[STUDY|STUDY §4]] for the page template and [[concepts/README|concepts/README.md]] for conventions.
 
 ## Quizzes
 
@@ -118,6 +118,7 @@ Cross-cutting views.
 | Page | Purpose |
 |------|---------|
 | [[synthesis/exam-blueprint\|Exam Blueprint]] | Official SY0-701 objectives + domain weighting |
+| [[synthesis/vocab\|Vocab]] | Master glossary, sortable by term / concept / objective |
 | [[synthesis/weak-areas\|Weak Areas]] | Accumulated misses across quizzes and sessions |
 | [[synthesis/open-questions\|Open Questions]] | Things you didn't fully understand; revisit list |
 | [[synthesis/lint-report\|Lint Report]] | Wiki health snapshots |
