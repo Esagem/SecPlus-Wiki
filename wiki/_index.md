@@ -85,19 +85,19 @@ Raw Professor Messer auto-caption dumps. **Immutable.** Read these to build conc
 
 ## Objectives
 
-One page per exam objective (`objectives/N.N.md`). Each indexes the concept pages under it and links its transcript source.
+One page per exam objective (`objectives/N.N.md`). Each contains the full distilled study material for that objective, organized into sections.
 
-| Objective | Title | Status | Concepts |
-|-----------|-------|--------|----------|
-| [[objectives/1.1\|1.1]] | Security Controls | active | 7 |
+| Objective | Title | Status |
+|-----------|-------|--------|
+| [[objectives/1.1\|1.1]] | Security Controls | active |
 
 Remaining 27 objectives not yet written. See [[STUDY|STUDY §5.1]] for the distillation workflow, or [[objectives/README|objectives/README.md]] for the full objective list. Use `wiki_list(category="objectives")` to enumerate.
 
 ## Concepts
 
-Atomic concept pages (`concepts/<kebab-case-name>.md`). Expected: 150–300 by exam time.
+Atomic concept pages for cross-cutting topics that span multiple objectives (`concepts/<kebab-case-name>.md`). Empty for now — most material lives on objective pages. Create a concept page only when a topic is referenced from 2+ objectives and deserves a canonical home.
 
-**Current count: 7** (all under objective 1.1). Use `wiki_list(category="concepts")` to enumerate, or `wiki_search(query)` to find by content. See [[STUDY|STUDY §4]] for the page template and [[concepts/README|concepts/README.md]] for conventions.
+Use `wiki_list(category="concepts")` to enumerate, or `wiki_search(query)` to find by content.
 
 ## Quizzes
 
