@@ -101,3 +101,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | objectives/4.7.md | Domain 4.7 — Automation and orchestration objective page
 ## [2026-05-21] write | quizzes/4.7-automation.md | Domain 4.7 — Automation quiz (10 questions)
 ## [2026-05-21] write | objectives/4.8.md | Domain 4.8 — Incident response objective page
+## [2026-05-21] write | quizzes/4.8-incident-response.md | Domain 4.8 — Incident response quiz (12 questions)
