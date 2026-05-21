@@ -67,3 +67,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/3.3-data-protection.md | Write quiz 3.3-data-protection (3 videos, 12 questions)
 ## [2026-05-21] write | quizzes/1.4-cryptography.md | Add quiz 1.4-cryptography
 ## [2026-05-21] write | objectives/3.4.md | Write objective 3.4 (Resilience and Recovery)
+## [2026-05-21] write | quizzes/2.3-vulnerabilities.md | Create quizzes/2.3-vulnerabilities.md
