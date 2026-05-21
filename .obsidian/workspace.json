@@ -196,6 +196,9 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
+    "wiki/objectives/3.3.md",
+    "wiki/objectives/2.3.md",
+    "wiki/objectives/1.4.md",
     "wiki/quizzes/3.2-infrastructure.md",
     "wiki/quizzes/2.2-vectors.md",
     "wiki/quizzes/1.3-change-management.md",
@@ -230,9 +233,6 @@
     "server/node_modules/undici/lib/handler/RedirectHandler.js",
     "server/node_modules/undici/docs/best-practices/writing-tests.md",
     "server/node_modules/undici/docs/best-practices/client-certificate.md",
-    "server/node_modules/undici/docs/best-practices/proxy.md",
-    "server/node_modules/undici/docs/best-practices/mocking-request.md",
-    "server/node_modules/undici/docs/assets/lifecycle-diagram.png",
-    "server/node_modules/stacktracey/README.md"
+    "server/node_modules/undici/docs/assets/lifecycle-diagram.png"
   ]
 }
