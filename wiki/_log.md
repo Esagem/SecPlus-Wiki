@@ -54,3 +54,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | objectives/3.1.md | Write objective 3.1 (Architecture and Infrastructure Models)
 ## [2026-05-21] write | quizzes/2.1-threat-actors.md | Create quizzes/2.1-threat-actors.md
 ## [2026-05-21] write | quizzes/1.2-concepts.md | Add quiz 1.2-concepts
+## [2026-05-21] write | quizzes/3.1-architecture.md | Write quiz 3.1-architecture (4 videos, 13 questions)
