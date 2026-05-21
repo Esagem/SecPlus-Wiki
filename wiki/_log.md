@@ -45,3 +45,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] edit | quizzes/1.1-controls.md | softer colors and more breathing room in the quiz UI
 ## [2026-05-21] edit | quizzes/1.1-controls.md | vertically center option text via flex
 ## [2026-05-21] edit | objectives/1.1.md | strip metadata cruft from quiz link
+## [2026-05-21] edit | quizzes/1.1-controls.md | strip how-to-use and install-instruction chrome from quiz page
