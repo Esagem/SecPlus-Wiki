@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/objectives/1.1.md",
+                "file": "wiki/objectives/1.4.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1"
+              "title": "1.4"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/objectives/1.1.md",
+                "file": "wiki/objectives/1.4.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 1.1"
+              "title": "Outline of 1.4"
             }
           },
           {
@@ -194,8 +194,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f517b844b8b55a46",
+  "active": "3a0169c577a93720",
   "lastOpenFiles": [
+    "wiki/quizzes/2.3-vulnerabilities.md",
+    "wiki/objectives/3.4.md",
+    "wiki/objectives/1.1.md",
     "wiki/quizzes/3.3-data-protection.md",
     "wiki/quizzes/1.4-cryptography.md",
     "wiki/objectives/3.3.md",
@@ -215,18 +218,15 @@
     "wiki/objectives/1.2.md",
     "SETUP.md",
     "wiki/quizzes/1.1-controls.md",
-    "wiki/objectives/1.1.md",
     "Untitled.base",
     "wiki/quizzes/README.md",
     "wiki/objectives/README.md",
     "Untitled.canvas",
     "wiki/transcripts/Section 1.1.md",
     "wiki/transcripts/video_index.md",
-    "wiki/synthesis/video-index.md",
     "wiki/transcripts/video_map.json",
     "wiki/transcripts/fetch_video_urls.py",
     "wiki/transcripts/fetch_video_urls.py.tmp.35756.ebd9e0d2a197",
-    "wiki/synthesis/vocab.md",
     "server/node_modules/unenv/lib/index.d.mts",
     "server/node_modules/undici/types/filereader.d.ts",
     "server/node_modules/undici/types/file.d.ts",
