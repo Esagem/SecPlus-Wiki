@@ -81,3 +81,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/4.2-asset-management.md | Add quiz 4.2 — asset management
 ## [2026-05-21] write | objectives/5.2.md | objectives/5.2.md — Risk Management written
 ## [2026-05-21] write | objectives/4.3.md | Add objective 4.3 — Vulnerability Management
+## [2026-05-21] write | quizzes/5.2-risk.md | quizzes/5.2-risk.md — 13-question quiz
