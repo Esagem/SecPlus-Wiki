@@ -23,3 +23,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | concepts/directive-controls.md | directive controls — instruct people toward safer behavior; relies on cooperation
 ## [2026-05-21] write | objectives/1.1.md | objective 1.1 index page — links all 7 control concept pages
 ## [2026-05-21] write | synthesis/vocab.md | seed vocab table with 13 terms from objective 1.1
+## [2026-05-21] edit | _index.md | register objective 1.1, 7 concepts, and synthesis/vocab.md
