@@ -196,6 +196,8 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
+    "wiki/quizzes/3.3-data-protection.md",
+    "wiki/quizzes/1.4-cryptography.md",
     "wiki/objectives/3.3.md",
     "wiki/objectives/2.3.md",
     "wiki/objectives/1.4.md",
@@ -231,8 +233,6 @@
     "server/node_modules/undici/lib/interceptor/redirectInterceptor.js",
     "server/node_modules/undici/lib/handler/RetryHandler.js",
     "server/node_modules/undici/lib/handler/RedirectHandler.js",
-    "server/node_modules/undici/docs/best-practices/writing-tests.md",
-    "server/node_modules/undici/docs/best-practices/client-certificate.md",
     "server/node_modules/undici/docs/assets/lifecycle-diagram.png"
   ]
 }
