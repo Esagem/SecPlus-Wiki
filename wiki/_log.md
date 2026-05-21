@@ -95,3 +95,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/practice-exam-a.md | test write to check size limit
 ## [2026-05-21] write | objectives/5.6.md | objectives/5.6.md — Security Awareness and Training written
 ## [2026-05-21] write | quizzes/4.5-enterprise-capabilities.md | Add quiz 4.5 — enterprise capabilities
+## [2026-05-21] write | quizzes/5.6-awareness.md | quizzes/5.6-awareness.md — 10-question quiz
