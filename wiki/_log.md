@@ -87,3 +87,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/5.3-third-party.md | quizzes/5.3-third-party.md — 10-question quiz
 ## [2026-05-21] write | objectives/4.4.md | Add objective 4.4 — Security Alerting and Monitoring
 ## [2026-05-21] write | objectives/5.4.md | objectives/5.4.md — Compliance and Privacy written
+## [2026-05-21] write | quizzes/4.4-monitoring.md | Add quiz 4.4 — security monitoring
