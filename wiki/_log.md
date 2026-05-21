@@ -91,3 +91,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/5.4-compliance-privacy.md | quizzes/5.4-compliance-privacy.md — 10-question quiz
 ## [2026-05-21] write | objectives/5.5.md | objectives/5.5.md — Audits and Penetration Tests written
 ## [2026-05-21] write | quizzes/5.5-audits-pentests.md | quizzes/5.5-audits-pentests.md — 10-question quiz
+## [2026-05-21] write | objectives/4.5.md | Add objective 4.5 — Enterprise Capabilities
