@@ -61,3 +61,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/1.3-change-management.md | Add quiz 1.3-change-management
 ## [2026-05-21] write | quizzes/2.2-vectors.md | Create quizzes/2.2-vectors.md
 ## [2026-05-21] write | quizzes/3.2-infrastructure.md | Write quiz 3.2-infrastructure (6 videos, 15 questions)
+## [2026-05-21] write | objectives/2.3.md | Create objectives/2.3.md — vulnerabilities
