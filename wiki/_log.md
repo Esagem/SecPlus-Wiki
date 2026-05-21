@@ -51,3 +51,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] edit | _index.md | strip operational chatter from quizzes section
 ## [2026-05-21] write | objectives/2.1.md | Create objectives/2.1.md — threat actors
 ## [2026-05-21] write | objectives/1.2.md | Add objective 1.2 — Fundamental Security Concepts
+## [2026-05-21] write | objectives/3.1.md | Write objective 3.1 (Architecture and Infrastructure Models)
