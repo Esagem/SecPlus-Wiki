@@ -101,9 +101,13 @@ Use `wiki_list(category="concepts")` to enumerate, or `wiki_search(query)` to fi
 
 ## Quizzes
 
-Question banks (`quizzes/<topic>.md`), one per topic.
+Interactive question banks (`quizzes/<topic>.md`), one per topic. Render in Obsidian with the Dataview plugin.
 
-*Not yet populated. See [[STUDY|STUDY §4]] for the quiz bank template and [[quizzes/README|quizzes/README.md]] for conventions.*
+| Quiz | Covers | Questions |
+|------|--------|-----------|
+| [[quizzes/1.1-controls\|1.1 — Security Controls]] | 1.1 | 10 |
+
+See [[STUDY|STUDY §4]] for the quiz template and [[quizzes/README|quizzes/README.md]] for conventions.
 
 ## Sessions
 
