@@ -38,3 +38,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] delete | transcripts/video_index.md | moved to synthesis/video-index.md with kebab-case naming
 ## [2026-05-21] edit | objectives/1.1.md | add YouTube link to source section
 ## [2026-05-21] edit | _index.md | register synthesis/video-index in the index synthesis table
+## [2026-05-21] write | quizzes/1.1-controls.md | first interactive quiz — 10 questions on 1.1 controls, dataviewjs UI
