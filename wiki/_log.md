@@ -93,3 +93,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/5.5-audits-pentests.md | quizzes/5.5-audits-pentests.md — 10-question quiz
 ## [2026-05-21] write | objectives/4.5.md | Add objective 4.5 — Enterprise Capabilities
 ## [2026-05-21] write | quizzes/practice-exam-a.md | test write to check size limit
+## [2026-05-21] write | objectives/5.6.md | objectives/5.6.md — Security Awareness and Training written
