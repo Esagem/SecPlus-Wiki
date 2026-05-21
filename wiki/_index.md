@@ -118,6 +118,7 @@ Cross-cutting views.
 | Page | Purpose |
 |------|---------|
 | [[synthesis/exam-blueprint\|Exam Blueprint]] | Official SY0-701 objectives + domain weighting |
+| [[synthesis/video-index\|Video Index]] | Master lookup of all 121 Professor Messer videos, grouped by objective |
 | [[synthesis/vocab\|Vocab]] | Master glossary, sortable by term / concept / objective |
 | [[synthesis/weak-areas\|Weak Areas]] | Accumulated misses across quizzes and sessions |
 | [[synthesis/open-questions\|Open Questions]] | Things you didn't fully understand; revisit list |
