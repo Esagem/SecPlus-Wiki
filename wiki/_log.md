@@ -64,3 +64,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | objectives/2.3.md | Create objectives/2.3.md — vulnerabilities
 ## [2026-05-21] write | objectives/1.4.md | Add objective 1.4 — Cryptographic Solutions
 ## [2026-05-21] write | objectives/3.3.md | Write objective 3.3 (Data Protection)
+## [2026-05-21] write | quizzes/3.3-data-protection.md | Write quiz 3.3-data-protection (3 videos, 12 questions)
