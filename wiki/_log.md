@@ -48,3 +48,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] edit | quizzes/1.1-controls.md | strip how-to-use and install-instruction chrome from quiz page
 ## [2026-05-21] edit | synthesis/video-index.md | strip the regenerate-script notes from video index
 ## [2026-05-21] write | synthesis/vocab.md | strip conventions, how-to-use, and growth pattern; lean glossary now
+## [2026-05-21] edit | _index.md | strip operational chatter from quizzes section
