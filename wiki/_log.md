@@ -15,3 +15,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] schema | initial seed | Wiki created from cyber-wiki template adapted for SY0-701 study.
 ## [2026-05-21] write | _index.md | replace stale _index.md with one matching the actual wiki structure
 ## [2026-05-21] write | concepts/security-controls.md | overview of the security controls framework (4×6 matrix)
+## [2026-05-21] write | concepts/preventive-controls.md | preventive controls — blocks events before they occur
