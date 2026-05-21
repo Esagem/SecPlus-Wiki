@@ -1,0 +1,19 @@
+{
+  "name": "secplus-wiki-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MCP server for the Security+ study wiki. GitHub-backed, deployed as a Cloudflare Worker.",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "secret:put:github": "wrangler secret put GITHUB_TOKEN",
+    "secret:put:auth": "wrangler secret put AUTH_TOKEN"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^3.60.0"
+  }
+}

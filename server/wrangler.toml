@@ -1,0 +1,17 @@
+# Cloudflare Worker config for the Security+ Wiki MCP server.
+
+name = "secplus-wiki-mcp"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Public-facing vars (non-secret).
+[vars]
+GITHUB_OWNER = "Esagem"
+GITHUB_REPO = "SecPlus-Wiki"
+GITHUB_BRANCH = "main"
+WIKI_PATH_PREFIX = "wiki"
+
+# Secrets (set via `wrangler secret put`):
+#   GITHUB_TOKEN — fine-grained PAT with Contents: read+write on Esagem/SecPlus-Wiki
+#   AUTH_TOKEN   — optional bearer token gating mutating tool calls. Leave unset for no auth.
