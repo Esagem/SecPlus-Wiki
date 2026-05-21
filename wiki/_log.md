@@ -20,3 +20,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | concepts/detective-controls.md | detective controls — identify events after they happen
 ## [2026-05-21] write | concepts/corrective-controls.md | corrective controls — act after the event to undo or limit damage
 ## [2026-05-21] write | concepts/compensating-controls.md | compensating controls — temporary substitutes for unavailable controls
+## [2026-05-21] write | concepts/directive-controls.md | directive controls — instruct people toward safer behavior; relies on cooperation
