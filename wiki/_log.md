@@ -77,3 +77,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | objectives/5.1.md | objectives/5.1.md — Security Governance written
 ## [2026-05-21] write | quizzes/4.1-securing-resources.md | Add quiz 4.1 — securing computing resources
 ## [2026-05-21] write | objectives/4.2.md | Add objective 4.2 — Asset Management
+## [2026-05-21] write | quizzes/5.1-governance.md | quizzes/5.1-governance.md — 15-question quiz
