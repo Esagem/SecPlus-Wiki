@@ -27,3 +27,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] delete | concepts/security-controls.md | consolidating 1.1 content onto the objective page per user preference
 ## [2026-05-21] delete | concepts/preventive-controls.md | consolidating 1.1 content onto the objective page
 ## [2026-05-21] delete | concepts/deterrent-controls.md | consolidating 1.1 content onto the objective page
+## [2026-05-21] delete | concepts/detective-controls.md | consolidating 1.1 content onto the objective page
