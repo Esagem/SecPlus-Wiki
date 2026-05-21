@@ -31,3 +31,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] delete | concepts/corrective-controls.md | consolidating 1.1 content onto the objective page
 ## [2026-05-21] delete | concepts/compensating-controls.md | consolidating 1.1 content onto the objective page
 ## [2026-05-21] delete | concepts/directive-controls.md | consolidating 1.1 content onto the objective page
+## [2026-05-21] write | objectives/1.1.md | full content for 1.1 consolidated onto the objective page
