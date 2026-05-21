@@ -72,3 +72,5 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | objectives/2.4.md | Create objectives/2.4.md — malicious activity
 ## [2026-05-21] write | quizzes/2.4-malicious-activity.md | Create quizzes/2.4-malicious-activity.md
 ## [2026-05-21] write | objectives/2.5.md | 2.5 objective — mitigation techniques (segmentation, ACLs, allow/deny lists, patching, encryption, EDR, hardening)
+## [2026-05-21] write | quizzes/2.5-mitigation.md | 2.5 quiz — mitigation techniques (10 Qs)
+## [2026-05-21] write | objectives/4.1.md | Add objective 4.1 — Securing Computing Resources
