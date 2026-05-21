@@ -12,105 +12,126 @@ updated: 2026-05-21
 
 ## What this is
 
-Eli's personal study workspace for the **CompTIA Security+ SY0-701** exam. Source material under `sources/`. Cleaned reference notes under `concepts/`. Exam-objective hubs under `objectives/`. Quizzes, sessions, and progress tracking elsewhere.
+The knowledge base and study surface for CompTIA Security+ (SY0-701). See [[STUDY|STUDY.md]] for the operating schema.
 
-See [[SECPLUS|SECPLUS.md]] for the operating schema and [[ONBOARDING|ONBOARDING.md]] for setup.
-
-**Current phase: bootstrap.** Initial transcript population in progress. Objective stubs exist; concept pages to be drafted from sources.
+**Current phase:** transcripts seeded (29 files, 121 videos). Objective and concept pages not yet written — those populate as you distill (see [[STUDY|STUDY §5.1]]).
 
 ---
 
-## Domain 1 — General Security Concepts
+## Transcripts
 
-| Objective | Status | Mastery | Tags |
-|-----------|--------|---------|------|
-| [[objectives/1.1-security-controls\|1.1 Security Controls]] | seed | low | controls, fundamentals |
-| [[objectives/1.2-fundamental-security-concepts\|1.2 Fundamental Security Concepts]] | seed | low | CIA, AAA, zero-trust, physical-security |
-| [[objectives/1.3-change-management\|1.3 Change Management]] | seed | low | governance, process |
-| [[objectives/1.4-cryptographic-solutions\|1.4 Cryptographic Solutions]] | seed | low | PKI, encryption, certificates, hashing |
+Raw Professor Messer auto-caption dumps. **Immutable.** Read these to build concept pages; never edit them.
 
-## Domain 2 — Threats, Vulnerabilities, and Mitigations
+### Overview
 
-| Objective | Status | Mastery | Tags |
-|-----------|--------|---------|------|
-| [[objectives/2.1-threat-actors\|2.1 Threat Actors]] | seed | low | actors, motivations |
-| [[objectives/2.2-threat-vectors-and-social-engineering\|2.2 Threat Vectors and Social Engineering]] | seed | low | phishing, social-engineering |
-| [[objectives/2.3-vulnerabilities\|2.3 Vulnerabilities]] | seed | low | OS, application, hardware, cloud |
-| [[objectives/2.4-malicious-activity\|2.4 Malicious Activity]] | seed | low | malware, attacks, IoCs |
-| [[objectives/2.5-mitigation-techniques\|2.5 Mitigation Techniques]] | seed | low | hardening, segmentation, mitigation |
+| Section | Title |
+|---------|-------|
+| [[transcripts/Section Overview\|Overview]] | How to Pass Your SY0-701 Security+ Exam in 2026 |
 
-## Domain 3 — Security Architecture
+### Domain 1 — General Security Concepts (12%)
 
-| Objective | Status | Mastery | Tags |
-|-----------|--------|---------|------|
-| [[objectives/3.1-architecture-models\|3.1 Architecture Models]] | seed | low | cloud, network, infra |
-| [[objectives/3.2-secure-architecture\|3.2 Secure Architecture]] | seed | low | firewalls, ports, secure-comm |
-| [[objectives/3.3-data-protection\|3.3 Data Protection]] | seed | low | classification, states, protection |
-| [[objectives/3.4-resilience-and-recovery\|3.4 Resilience and Recovery]] | seed | low | backups, capacity, power |
+| Section | Title |
+|---------|-------|
+| [[transcripts/Section 1.1\|1.1]] | Security Controls |
+| [[transcripts/Section 1.2\|1.2]] | Fundamental Security Concepts |
+| [[transcripts/Section 1.3\|1.3]] | Change Management |
+| [[transcripts/Section 1.4\|1.4]] | Cryptographic Solutions |
 
-## Domain 4 — Security Operations
+### Domain 2 — Threats, Vulnerabilities, and Mitigations (22%)
 
-| Objective | Status | Mastery | Tags |
-|-----------|--------|---------|------|
-| [[objectives/4.1-compute-security\|4.1 Compute Security]] | seed | low | baselines, hardening, wireless, app-sec |
-| [[objectives/4.2-asset-management\|4.2 Asset Management]] | seed | low | inventory, lifecycle |
-| [[objectives/4.3-vulnerability-management\|4.3 Vulnerability Management]] | seed | low | scanning, pentest, remediation |
-| [[objectives/4.4-security-monitoring\|4.4 Security Monitoring]] | seed | low | tools, SIEM, alerting |
-| [[objectives/4.5-enhanced-security\|4.5 Enhanced Security]] | seed | low | firewalls, web-filter, email, endpoint |
-| [[objectives/4.6-identity-and-access-management\|4.6 Identity and Access Management]] | seed | low | IAM, MFA, passwords |
-| [[objectives/4.7-automation-and-scripting\|4.7 Automation and Scripting]] | seed | low | automation, scripting |
-| [[objectives/4.8-incident-response\|4.8 Incident Response]] | seed | low | IR, forensics, planning |
-| [[objectives/4.9-log-analysis\|4.9 Log Analysis]] | seed | low | logs, sources |
+| Section | Title |
+|---------|-------|
+| [[transcripts/Section 2.1\|2.1]] | Threat Actors |
+| [[transcripts/Section 2.2\|2.2]] | Threat Vectors and Attack Surfaces |
+| [[transcripts/Section 2.3\|2.3]] | Vulnerabilities |
+| [[transcripts/Section 2.4\|2.4]] | Indicators of Malicious Activity |
+| [[transcripts/Section 2.5\|2.5]] | Mitigation Techniques |
 
-## Domain 5 — Security Program Management
+### Domain 3 — Security Architecture (18%)
 
-| Objective | Status | Mastery | Tags |
-|-----------|--------|---------|------|
-| [[objectives/5.1-security-governance\|5.1 Security Governance]] | seed | low | policies, standards, procedures |
-| [[objectives/5.2-risk-management\|5.2 Risk Management]] | seed | low | risk, BIA, strategies |
-| [[objectives/5.3-third-party-risk\|5.3 Third-Party Risk]] | seed | low | vendors, agreements |
-| [[objectives/5.4-compliance\|5.4 Compliance]] | seed | low | privacy, regulation |
-| [[objectives/5.5-audits-and-assessments\|5.5 Audits and Assessments]] | seed | low | audit, pentest |
-| [[objectives/5.6-security-awareness\|5.6 Security Awareness]] | seed | low | training, awareness |
+| Section | Title |
+|---------|-------|
+| [[transcripts/Section 3.1\|3.1]] | Security Architecture |
+| [[transcripts/Section 3.2\|3.2]] | Enterprise Infrastructure |
+| [[transcripts/Section 3.3\|3.3]] | Protecting Data |
+| [[transcripts/Section 3.4\|3.4]] | Resilience and Recovery |
+
+### Domain 4 — Security Operations (28%)
+
+| Section | Title |
+|---------|-------|
+| [[transcripts/Section 4.1\|4.1]] | Computing Resources |
+| [[transcripts/Section 4.2\|4.2]] | Asset Management |
+| [[transcripts/Section 4.3\|4.3]] | Vulnerability Management |
+| [[transcripts/Section 4.4\|4.4]] | Security Monitoring |
+| [[transcripts/Section 4.5\|4.5]] | Enhancing Enterprise Capabilities |
+| [[transcripts/Section 4.6\|4.6]] | Identity and Access Management |
+| [[transcripts/Section 4.7\|4.7]] | Automation and Orchestration |
+| [[transcripts/Section 4.8\|4.8]] | Incident Response |
+| [[transcripts/Section 4.9\|4.9]] | Investigation Data |
+
+### Domain 5 — Security Program Management (20%)
+
+| Section | Title |
+|---------|-------|
+| [[transcripts/Section 5.1\|5.1]] | Security Governance |
+| [[transcripts/Section 5.2\|5.2]] | Risk Management |
+| [[transcripts/Section 5.3\|5.3]] | Third-Party Risk |
+| [[transcripts/Section 5.4\|5.4]] | Compliance |
+| [[transcripts/Section 5.5\|5.5]] | Audits and Assessments |
+| [[transcripts/Section 5.6\|5.6]] | Security Awareness |
 
 ---
 
-## Synthesis
+## Objectives
 
-| Page | Status | Confidence | Tags |
-|------|--------|------------|------|
-| [[synthesis/mastery-tracker\|Mastery Tracker]] | seed | medium | tracking, progress |
-| [[synthesis/weak-areas\|Weak Areas]] | seed | medium | review, gaps |
-| [[synthesis/study-plan\|Study Plan]] | seed | medium | planning, pacing |
-| [[synthesis/cross-references\|Cross-References]] | planned | — | concept-relationships |
-| [[synthesis/lint-report\|Lint Report]] | planned | — | maintenance |
+One page per exam objective (`objectives/N.N.md`). Each indexes the concept pages under it and links its transcript source.
+
+*Not yet populated. See [[STUDY|STUDY §5.1]] for the distillation workflow, or [[objectives/README|objectives/README.md]] for the full objective list.*
+
+`wiki_list(category="objectives")` to enumerate once they exist.
+
+## Concepts
+
+Atomic concept pages (`concepts/<kebab-case-name>.md`). Expected: 150–300 by exam time.
+
+*Not yet populated. See [[STUDY|STUDY §4]] for the concept page template and [[concepts/README|concepts/README.md]] for conventions.*
+
+`wiki_list(category="concepts")` to enumerate once they exist.
 
 ## Quizzes
 
-_None yet. Populated during study loop._
+Question banks (`quizzes/<topic>.md`), one per topic.
+
+*Not yet populated. See [[STUDY|STUDY §4]] for the quiz bank template and [[quizzes/README|quizzes/README.md]] for conventions.*
 
 ## Sessions
 
-_None yet. First study session creates `sessions/YYYY-MM-DD-<slug>.md`._
+Dated study session notes (`sessions/YYYY-MM-DD-<slug>.md`).
+
+*Auto-grows; one per study session. See [[sessions/README|sessions/README.md]].*
+
+## Synthesis
+
+Cross-cutting views.
+
+| Page | Purpose |
+|------|---------|
+| [[synthesis/exam-blueprint\|Exam Blueprint]] | Official SY0-701 objectives + domain weighting |
+| [[synthesis/weak-areas\|Weak Areas]] | Accumulated misses across quizzes and sessions |
+| [[synthesis/open-questions\|Open Questions]] | Things you didn't fully understand; revisit list |
+| [[synthesis/lint-report\|Lint Report]] | Wiki health snapshots |
 
 ---
 
 ## Status legend
 
-- **seed** — page exists, no real content yet
-- **draft** — content in flight, not study-ready
-- **active** — content complete, study-ready
-- **needs-review** — flagged for re-study
-- **retired** — out of scope
-- **planned** — referenced but not yet written
-- **superseded** — replaced; `superseded_by` points to newer
-
-## Mastery legend (concepts and objectives only)
-
-- **low** — fuzzy, read once
-- **medium** — understood, can explain
-- **high** — quiz-confirmed, exam-ready
+- **seed** — stub, no real content yet
+- **draft** — partial content, in flight
+- **active** — useful and maintained
+- **mature** — comprehensive, stable, you nail it on quizzes
+- **retired** — abandoned; kept for history
 
 ## Link format
 
-Explicit-path pipe syntax everywhere: `[[path/to/file|Display Text]]`. See [[SECPLUS|SECPLUS.md §4]].
+Explicit-path pipe syntax everywhere: `[[path/to/file|Display Text]]`. See [[STUDY|STUDY §4]].
