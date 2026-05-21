@@ -34,3 +34,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | objectives/1.1.md | full content for 1.1 consolidated onto the objective page
 ## [2026-05-21] write | synthesis/vocab.md | repoint all 1.1 vocab entries to the consolidated objective page
 ## [2026-05-21] edit | _index.md | reflect consolidation: concepts/ now empty, 1.1 holds everything
+## [2026-05-21] write | synthesis/video-index.md | relocate video index to synthesis/ with kebab-case naming
