@@ -196,6 +196,9 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
+    "wiki/quizzes/3.1-architecture.md",
+    "wiki/quizzes/2.1-threat-actors.md",
+    "wiki/quizzes/1.2-concepts.md",
     "wiki/objectives/3.1.md",
     "wiki/objectives/2.1.md",
     "wiki/objectives/1.2.md",
@@ -230,9 +233,6 @@
     "server/node_modules/sourcemap-codec/CHANGELOG.md",
     "server/node_modules/rollup-pluginutils/README.md",
     "server/node_modules/rollup-pluginutils/CHANGELOG.md",
-    "server/node_modules/rollup-plugin-node-polyfills/readme.md",
-    "server/node_modules/rollup-plugin-node-polyfills/LICENSE.md",
-    "server/node_modules/rollup-plugin-inject/README.md",
-    "server/node_modules/rollup-plugin-inject/CHANGELOG.md"
+    "server/node_modules/rollup-plugin-node-polyfills/readme.md"
   ]
 }
