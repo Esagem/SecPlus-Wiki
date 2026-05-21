@@ -75,3 +75,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/2.5-mitigation.md | 2.5 quiz — mitigation techniques (10 Qs)
 ## [2026-05-21] write | objectives/4.1.md | Add objective 4.1 — Securing Computing Resources
 ## [2026-05-21] write | objectives/5.1.md | objectives/5.1.md — Security Governance written
+## [2026-05-21] write | quizzes/4.1-securing-resources.md | Add quiz 4.1 — securing computing resources
