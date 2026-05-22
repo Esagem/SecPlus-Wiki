@@ -134,3 +134,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-c.md | Practice Exam C — append questions 56–90
 ## [2026-05-22] edit | quizzes/practice-exam-c.md | Practice Exam C — add 5 PBQs
 ## [2026-05-22] edit | quizzes/practice-exam-c.md | Practice Exam C — install interactive grading widget (final piece)
+## [2026-05-22] edit | quizzes/practice-exam-a.md | Practice Exam A: persist results to Misses log on grade
