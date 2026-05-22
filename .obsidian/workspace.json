@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "b6df3eeef7b83096",
@@ -195,8 +194,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b875cc12d128e2a1",
+  "active": "f517b844b8b55a46",
   "lastOpenFiles": [
+    "wiki/quizzes/practice-exam-a.md",
     "wiki/quizzes/practice-exam-c.md",
     "wiki/objectives/1.1.md",
     "wiki/synthesis/vocab.md",
@@ -212,7 +212,6 @@
     "wiki/objectives/2.1.md",
     "wiki/quizzes/1.1-controls.md",
     "wiki/quizzes/practice-exam-e.md",
-    "wiki/quizzes/practice-exam-a.md",
     "wiki/quizzes/5.2-risk.md",
     "wiki/quizzes/practice-exam-d.md",
     "wiki/synthesis/video-index.md",
