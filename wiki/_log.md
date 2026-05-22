@@ -125,3 +125,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-c.md | Insert MCQs C74-C90 (chunk 3/3) — completes Practice Exam C
 ## [2026-05-22] write | quizzes/practice-exam-b.md | Add Practice Exam B (custom community version) — skeleton; chunks to follow
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Practice Exam B: insert MCQs B6-B35
+## [2026-05-22] edit | synthesis/vocab.md | Append Domain 5 vocab blocks (5.1-5.6)
