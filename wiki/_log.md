@@ -124,3 +124,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-c.md | Insert MCQs C39-C73 (chunk 2/3) into Practice Exam C
 ## [2026-05-22] edit | quizzes/practice-exam-c.md | Insert MCQs C74-C90 (chunk 3/3) — completes Practice Exam C
 ## [2026-05-22] write | quizzes/practice-exam-b.md | Add Practice Exam B (custom community version) — skeleton; chunks to follow
+## [2026-05-22] edit | quizzes/practice-exam-b.md | Practice Exam B: insert MCQs B6-B35
