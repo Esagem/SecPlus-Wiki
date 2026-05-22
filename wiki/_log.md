@@ -121,3 +121,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | synthesis/vocab.md | Domain 4 vocab — append 4.1 through 4.9 blocks (~180 terms)
 ## [2026-05-22] write | quizzes/practice-exam-c.md | Create Practice Exam C — 5 original PBQs (rotated topics: log triage, access-control models, cloud shared responsibility, password attack ID, 3-tier firewall) + 85 original MCQs, same widget harness as A and B. Skeleton with sentinel for chunked MCQ insertion.
 ## [2026-05-22] edit | quizzes/practice-exam-c.md | Insert MCQs C6-C38 (chunk 1/3) into Practice Exam C
+## [2026-05-22] edit | quizzes/practice-exam-c.md | Insert MCQs C39-C73 (chunk 2/3) into Practice Exam C
