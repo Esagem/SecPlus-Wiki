@@ -130,3 +130,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Practice Exam B: insert MCQs B66-B90
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Practice Exam B: insert PBQs B1-B5
 ## [2026-05-22] write | quizzes/practice-exam-c.md | Add Practice Exam C — initial write (questions 6–55, rest to follow)
+## [2026-05-22] edit | quizzes/practice-exam-c.md | Practice Exam C — append questions 26–60
