@@ -111,3 +111,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-a.md | insert questions chunk 4/4 (A73–A90) — completes Practice Exam A
 ## [2026-05-22] edit | quizzes/practice-exam-a.md | Center option button content vertically to match quiz styling
 ## [2026-05-22] write | synthesis/vocab.md | Expand vocab with 1.2/1.3/1.4 terms; convert to interactive search/filter/sort table
+## [2026-05-22] edit | quizzes/practice-exam-a.md | Add PBQs A1–A5 as interactive widgets at top of Practice Exam A; unified grading and report card
