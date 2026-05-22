@@ -1,16 +1,46 @@
 ---
-title: Practice Exam B — Original SY0-701 Drill
+title: Practice Exam D — Original SY0-701 Drill
 category: practice-exam
-tags: [practice-exam, exam-b]
+tags:
+  - practice-exam
+  - exam-d
 status: active
 confidence: high
 created: 2026-05-22
 updated: 2026-05-22
-covers: [1.1, 1.2, 1.3, 1.4, 2.1, 2.2, 2.3, 2.4, 2.5, 3.1, 3.2, 3.3, 3.4, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6]
+covers:
+  - 1.1
+  - 1.2
+  - 1.3
+  - 1.4
+  - 2.1
+  - 2.2
+  - 2.3
+  - 2.4
+  - 2.5
+  - 3.1
+  - 3.2
+  - 3.3
+  - 3.4
+  - 4.1
+  - 4.2
+  - 4.3
+  - 4.4
+  - 4.5
+  - 4.6
+  - 4.7
+  - 4.8
+  - 4.9
+  - 5.1
+  - 5.2
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
 source: Original content, written for SY0-701 objectives
 ---
 
-# Practice Exam B — Original SY0-701 Drill
+# Practice Exam D — Original SY0-701 Drill
 
 **Original** practice exam covering the same SY0-701 objectives and domain distribution as [[quizzes/practice-exam-a|Practice Exam A]]. **85 multiple-choice questions** (B6–B90) plus **5 performance-based questions** (B1–B5) — written from scratch, not drawn from any published exam.
 
