@@ -127,3 +127,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Practice Exam B: insert MCQs B6-B35
 ## [2026-05-22] edit | synthesis/vocab.md | Append Domain 5 vocab blocks (5.1-5.6)
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Practice Exam B: insert MCQs B36-B65
+## [2026-05-22] edit | quizzes/practice-exam-b.md | Practice Exam B: insert MCQs B66-B90
