@@ -106,3 +106,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-21] write | quizzes/4.9-log-data.md | Domain 4.9 — Log data quiz (10 questions)
 ## [2026-05-22] write | quizzes/practice-exam-a.md | Practice Exam A skeleton (questions injected next via wiki_edit chunks)
 ## [2026-05-22] edit | quizzes/practice-exam-a.md | insert questions chunk 1/4 (A6–A27)
+## [2026-05-22] edit | quizzes/practice-exam-a.md | insert questions chunk 2/4 (A28–A49)
