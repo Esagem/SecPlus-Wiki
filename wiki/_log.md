@@ -115,3 +115,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] write | synthesis/vocab.md | append Domain 2 vocab — 2.1–2.5 (~140 entries: threat actors, vectors, vulnerabilities, malicious activity, mitigation)
 ## [2026-05-22] edit | synthesis/vocab.md | append Domain 3 vocab — 3.1–3.4 (~128 entries: architecture, infrastructure, data protection, resilience)
 ## [2026-05-22] write | quizzes/practice-exam-b.md | Create Practice Exam B — 5 original PBQs + 85 original MCQs covering SY0-701 objectives, same widget harness as Exam A. Skeleton with sentinel for chunked MCQ insertion.
+## [2026-05-22] edit | quizzes/practice-exam-b.md | Insert MCQs B6-B37 (chunk 1/3) into Practice Exam B
