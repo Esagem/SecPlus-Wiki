@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/quizzes/practice-exam-a.md",
+                "file": "wiki/synthesis/vocab.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "practice-exam-a"
+              "title": "vocab"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/quizzes/practice-exam-a.md",
+                "file": "wiki/synthesis/vocab.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of practice-exam-a"
+              "title": "Outline of vocab"
             }
           },
           {
@@ -196,6 +196,7 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
+    "wiki/quizzes/practice-exam-a.md",
     "wiki/synthesis/vocab.md",
     "wiki/synthesis/video-index.md",
     "wiki/synthesis/README.md",
@@ -207,7 +208,6 @@
     "wiki/_log.md",
     "wiki/README.md",
     "wiki/STUDY.md",
-    "wiki/quizzes/practice-exam-a.md",
     "wiki/quizzes/1.2-concepts.md",
     "wiki/quizzes/1.3-change-management.md",
     "wiki/quizzes/2.1-threat-actors.md",
