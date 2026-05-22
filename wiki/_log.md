@@ -109,3 +109,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-a.md | insert questions chunk 2/4 (A28–A49)
 ## [2026-05-22] edit | quizzes/practice-exam-a.md | insert questions chunk 3/4 (A50–A72)
 ## [2026-05-22] edit | quizzes/practice-exam-a.md | insert questions chunk 4/4 (A73–A90) — completes Practice Exam A
+## [2026-05-22] edit | quizzes/practice-exam-a.md | Center option button content vertically to match quiz styling
