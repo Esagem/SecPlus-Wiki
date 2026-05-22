@@ -118,3 +118,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Insert MCQs B6-B37 (chunk 1/3) into Practice Exam B
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Insert MCQs B38-B72 (chunk 2/3) into Practice Exam B
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Insert MCQs B73-B90 (chunk 3/3) — completes Practice Exam B
+## [2026-05-22] edit | synthesis/vocab.md | Domain 4 vocab — append 4.1 through 4.9 blocks (~180 terms)
