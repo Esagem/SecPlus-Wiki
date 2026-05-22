@@ -117,3 +117,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] write | quizzes/practice-exam-b.md | Create Practice Exam B — 5 original PBQs + 85 original MCQs covering SY0-701 objectives, same widget harness as Exam A. Skeleton with sentinel for chunked MCQ insertion.
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Insert MCQs B6-B37 (chunk 1/3) into Practice Exam B
 ## [2026-05-22] edit | quizzes/practice-exam-b.md | Insert MCQs B38-B72 (chunk 2/3) into Practice Exam B
+## [2026-05-22] edit | quizzes/practice-exam-b.md | Insert MCQs B73-B90 (chunk 3/3) — completes Practice Exam B
