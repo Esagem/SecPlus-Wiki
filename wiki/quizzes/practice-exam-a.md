@@ -14,7 +14,7 @@ source: Professor Messer's CompTIA SY0-701 Security+ Practice Exams (v1.8, Nov 2
 
 Full multiple-choice section of Practice Exam A from Professor Messer's *CompTIA SY0-701 Security+ Practice Exams* (v1.8). **85 questions** total — 82 single-answer, 3 multi-answer (Select TWO / Select THREE).
 
-> **Performance-based questions A1–A5** from the printed exam aren't included here — they're drag-and-drop / matching exercises that don't fit the quiz format. The multiple-choice questions A6–A90 are reproduced in full below.
+> **Performance-based questions A1–A5** appear first as interactive widgets — matching, classification, and a firewall rule builder. The 85 multiple-choice questions A6–A90 follow below.
 
 **How this works:** answer every question by clicking option(s). For "Select TWO" or "Select THREE" questions, click each option you want to include — clicking again deselects. **No feedback appears as you go.** When you're done, hit **Grade my test** at the bottom and the full report card with per-question feedback drops in at the top.
 
@@ -109,11 +109,21 @@ const questions = [
 {"n":90,"q":"A company has just purchased a new application server, and the security\ndirector wants to determine if the system is secure. The system is currently\ninstalled in a test environment and will not be available to users until the\nroll out to production next week. Which of the following would be the\nBEST way to determine if any part of the system can be exploited?","opts":[{"l":"A","t":"Tabletop exercise","c":false,"w":"A tabletop exercise is used to talk through a security event with an incident response team around a conference room table. This is commonly performed as a training device instead of performing a full-scale disaster drill."},{"l":"B","t":"Vulnerability scanner","c":false,"w":"Vulnerability scanners may identify a vulnerability, but they do not actively attempt to exploit the vulnerability."},{"l":"C","t":"DDoS","c":false,"w":"A DDoS (Distributed Denial of Service) attack is often used to disable a service or application, but it doesn't provide any particular information regarding an application vulnerability."},{"l":"D","t":"Penetration test","c":true,"w":"A penetration test can be used to actively exploit potential vulnerabilities\nin a system or application. This could cause a denial of service or loss of\ndata, so the best practice is to perform the penetration test during nonproduction hours or in a test environment."}],"topic":"SY0-701, Objective 4.3 - Penetration Testing","url":"https://professormesser.link/701040303","objective":"4.3","domain":"4"}
 ];
 
+const pbqs = [
+  {n:1,title:"Attack type identification",type:"match",prompt:"Match each scenario with the most accurate attack type. Not all attack types will be used.",options:["On-path","RFID cloning","Keylogger","Vishing","Rootkit","DDoS","Injection","Supply chain"],items:[{id:"1a",desc:"Attacker obtains a victim's bank account number and birth date by calling them on the phone",answer:"Vishing",w:"Phishing over voice = vishing. The phone call asking for personal info is the giveaway."},{id:"1b",desc:"Attacker accesses a database directly through a web browser",answer:"Injection",w:"SQL injection sends database commands through a vulnerable web application."},{id:"1c",desc:"Attacker silently intercepts all communication between a client and a web server",answer:"On-path",w:"On-path attacks sit invisibly between two devices and can read or modify the data stream."},{id:"1d",desc:"Multiple attackers coordinate to overwhelm a web server",answer:"DDoS",w:"Distributed Denial of Service — multiple sources working together to exhaust a service's capacity."},{id:"1e",desc:"Attacker obtains a list of every credential typed on a machine over 24 hours",answer:"Keylogger",w:"Hardware or software keylogger captures keystrokes and ships them to the attacker."}],objective:"2.2/2.3/2.4",url:"https://professormesser.link/701020202"},
+  {n:2,title:"Physical security controls by location",type:"match",prompt:"Each control below belongs at exactly one location for this manufacturing site. Locations may apply to more than one control.",options:["Outside Building / Parking","Reception / Lobby","Data Center Door","Server Administration"],items:[{id:"2a",desc:"Fencing",answer:"Outside Building / Parking",w:"Fencing controls access to the perimeter and parking lot."},{id:"2b",desc:"Lighting",answer:"Outside Building / Parking",w:"A well-lit parking lot is part of exterior physical security."},{id:"2c",desc:"Security guard",answer:"Reception / Lobby",w:"Guards at reception check authorization for anyone entering the building."},{id:"2d",desc:"Access control vestibule",answer:"Reception / Lobby",w:"A mantrap-style vestibule controls the flow of people through the lobby checkpoint."},{id:"2e",desc:"Access badge",answer:"Data Center Door",w:"Badge readers enforce who can open the data center door from inside the building."},{id:"2f",desc:"Biometrics",answer:"Data Center Door",w:"Layered with the badge — fingerprint or hand geometry adds a second factor at the data center door."},{id:"2g",desc:"Authentication token",answer:"Server Administration",w:"A token is part of MFA for console login to servers, used past the physical door."}],objective:"1.2",url:"https://professormesser.link/701010206"},
+  {n:3,title:"Security control categories",type:"match",prompt:"Classify each scenario by the most appropriate control category. Categories can be reused.",options:["Technical","Managerial","Operational","Physical"],items:[{id:"3a",desc:"A guard checks the identification of all visitors",answer:"Operational",w:"A person performing security duties = operational."},{id:"3b",desc:"All returns must be approved by a Vice President",answer:"Managerial",w:"A policy/procedure requiring an authority signature = managerial (administrative)."},{id:"3c",desc:"A generator is used during a power outage",answer:"Physical",w:"Physical equipment providing resilience — generators, fences, locks all fall here."},{id:"3d",desc:"Building doors can be unlocked with an access card",answer:"Physical",w:"The lock + badge reader is a physical control on a physical door."},{id:"3e",desc:"System logs are transferred automatically to a SIEM",answer:"Technical",w:"Automated by systems with no human in the loop = technical."}],objective:"1.1",url:"https://professormesser.link/701010101"},
+  {n:4,title:"Authentication factors",type:"match",prompt:"Match each scenario with its authentication factor. Each factor is used exactly once.",options:["Something you know","Something you have","Something you are","Somewhere you are"],items:[{id:"4a",desc:"During login, your phone receives a text message with a one-time passcode",answer:"Something you have",w:"Possession of the phone receiving the SMS = something you have."},{id:"4b",desc:"You enter your PIN to deposit at an ATM",answer:"Something you know",w:"Knowledge factor — a PIN is information stored in your head."},{id:"4c",desc:"You use your fingerprint to unlock the door to the data center",answer:"Something you are",w:"Biometric = inherence factor."},{id:"4d",desc:"Login is blocked unless you are connected to the corporate VPN",answer:"Somewhere you are",w:"Location-based restriction — VPN, GPS, or IP-based geofencing are 'somewhere you are' factors."}],objective:"4.6",url:"https://professormesser.link/701040603"},
+  {n:5,title:"Stateful firewall rules",type:"firewall",prompt:"This firewall sits between a DMZ and an internal network. Complete each rule to meet the stated goal. Because the firewall is stateful, only the initiating direction needs a rule.",servers:[{name:"Web Server (DMZ)",ip:"10.1.1.2"},{name:"File Server (DMZ)",ip:"10.1.1.3"},{name:"Video Server (DMZ)",ip:"10.1.1.7"},{name:"Database Server (Internal)",ip:"10.2.1.20"},{name:"Storage Server (Internal)",ip:"10.2.1.33"},{name:"Management Server (Internal)",ip:"10.2.1.47"}],ports:["20","21","22","23","25","53","80","110","143","389","443","445","636","3389"],rules:[{id:"5a",goal:"Block HTTP sessions between the Web Server and the Database Server",answer:{srcIP:"10.1.1.2",dstIP:"10.2.1.20",proto:"TCP",port:"80",action:"Block"},w:"HTTP is TCP/80. Web Server initiates (10.1.1.2 source), Database Server is destination (10.2.1.20). Disposition: Block."},{id:"5b",goal:"Allow the Storage Server to transfer files to the Video Server over HTTPS",answer:{srcIP:"10.2.1.33",dstIP:"10.1.1.7",proto:"TCP",port:"443",action:"Allow"},w:"HTTPS = TCP/443. Storage (10.2.1.33) → Video (10.1.1.7). Allow."},{id:"5c",goal:"Allow the Management Server to use a secure terminal on the File Server",answer:{srcIP:"10.2.1.47",dstIP:"10.1.1.3",proto:"TCP",port:"22",action:"Allow"},w:"Secure terminal = SSH = TCP/22. Management (10.2.1.47) → File (10.1.1.3). Allow."}],objective:"4.5",url:"https://professormesser.link/701040501"}
+];
+
 const domainNames = {"1": "1.0 General Security Concepts", "2": "2.0 Threats, Vulnerabilities, and Mitigations", "3": "3.0 Security Architecture", "4": "4.0 Security Operations", "5": "5.0 Security Program Management & Oversight"};
 
 // ---- State ----
 const selections = {}; // qNum -> Set of letters
 questions.forEach(q => { selections[q.n] = new Set(); });
+const pbqSelections = {};
+pbqs.forEach(p => { pbqSelections[p.n] = {}; });
 let graded = false;
 
 // ---- Render setup ----
@@ -164,20 +174,163 @@ style.textContent = `
   .pe-miss-list li { margin: 6px 0; font-size: 0.9em; }
   .pe-miss-list a { color: var(--text-accent); text-decoration: none; }
   .pe-miss-list a:hover { text-decoration: underline; }
+  .pbq-section-header { margin-top: 8px; margin-bottom: 14px; font-size: 1.05em; color: var(--text-muted); font-weight: 600; letter-spacing: 0.02em; border-bottom: 1px solid var(--background-modifier-border); padding-bottom: 8px; }
+  .pbq-prompt { font-style: italic; color: var(--text-muted); margin: 8px 0 14px; font-size: 0.92em; line-height: 1.5; }
+  .pbq-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  .pbq-table td { padding: 9px 10px; vertical-align: middle; border-bottom: 1px solid var(--background-modifier-border); font-size: 0.95em; }
+  .pbq-table td.pbq-desc-cell { padding-right: 18px; line-height: 1.45; }
+  .pbq-table td.pbq-sel-cell { width: 230px; text-align: right; }
+  .pbq-select { padding: 6px 10px; border-radius: 4px; border: 1px solid var(--background-modifier-border); background: var(--background-secondary); color: var(--text-normal); font-size: 0.9em; min-width: 210px; font-family: inherit; }
+  .pbq-select:focus { outline: 2px solid var(--interactive-accent); outline-offset: 1px; }
+  .pbq-select:disabled { opacity: 0.85; cursor: default; }
+  .pbq-row-correct { background: rgba(63, 185, 80, 0.08); }
+  .pbq-row-wrong { background: rgba(248, 81, 73, 0.06); }
+  .pbq-srv-list { font-size: 0.85em; color: var(--text-muted); margin: 10px 0; padding: 9px 12px; background: var(--background-secondary); border-radius: 4px; line-height: 1.7; }
+  .pbq-rule { margin: 14px 0; padding: 12px 14px; background: var(--background-secondary); border-radius: 6px; border: 1px solid var(--background-modifier-border); }
+  .pbq-rule-goal { font-weight: 500; margin-bottom: 10px; font-size: 0.92em; line-height: 1.5; }
+  .pbq-fw-table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+  .pbq-fw-table th { text-align: left; padding: 4px 6px; color: var(--text-muted); font-weight: 600; font-size: 0.78em; text-transform: uppercase; letter-spacing: 0.03em; }
+  .pbq-fw-table td { padding: 4px 6px; }
+  .pbq-fw-select { min-width: 95px; font-size: 0.85em; padding: 4px 8px; }
+  .pbq-report-tbl { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: 0.9em; }
+  .pbq-report-tbl th, .pbq-report-tbl td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--background-modifier-border); }
+  .pbq-report-tbl th { font-weight: 600; color: var(--text-muted); }
+  .pbq-report-tbl .pbq-rt-score { text-align: right; font-variant-numeric: tabular-nums; }
+  .pbq-report-tbl a { color: var(--text-accent); text-decoration: none; }
+  .pbq-report-tbl a:hover { text-decoration: underline; }
 `;
 
 const intro = root.createDiv({ cls: "pe-intro" });
-intro.setText(`${questions.length} questions. Multi-select questions are flagged below. No feedback until you click Grade my test.`);
+intro.setText(`5 performance-based questions + ${questions.length} multiple-choice questions. Multi-select MCQs are flagged below. No feedback until you click Grade my test at the bottom.`);
 
 const progress = root.createDiv({ cls: "pe-progress" });
+const countPbqItems = (p) => {
+  if (p.type === "match") return p.items.length;
+  if (p.type === "firewall") return p.rules.reduce((s, r) => s + Object.keys(r.answer).length, 0);
+  return 0;
+};
+const countPbqAnswered = (p) => {
+  if (p.type === "match") return Object.values(pbqSelections[p.n]).filter(v => v).length;
+  if (p.type === "firewall") {
+    let n = 0;
+    p.rules.forEach(r => {
+      const sel = pbqSelections[p.n][r.id] || {};
+      Object.keys(r.answer).forEach(k => { if (sel[k]) n++; });
+    });
+    return n;
+  }
+  return 0;
+};
+const pbqItemsTotal = pbqs.reduce((s, p) => s + countPbqItems(p), 0);
 const updateProgress = () => {
   if (graded) return;
-  const answered = questions.filter(q => selections[q.n].size > 0).length;
-  progress.setText(`Answered: ${answered} / ${questions.length}`);
+  const mcqAnswered = questions.filter(q => selections[q.n].size > 0).length;
+  const pbqAnswered = pbqs.reduce((s, p) => s + countPbqAnswered(p), 0);
+  progress.setText(`PBQ ${pbqAnswered}/${pbqItemsTotal}  ·  MCQ ${mcqAnswered}/${questions.length}`);
 };
 updateProgress();
 
 const reportContainer = root.createDiv();
+
+const pbqHeader = root.createDiv({ cls: "pbq-section-header" });
+pbqHeader.setText("Performance-Based Questions · A1–A5");
+
+const pbqContainer = root.createDiv();
+
+pbqs.forEach(p => {
+  const card = pbqContainer.createDiv({ cls: "pe-card" });
+  card.id = `pe-pbq-${p.n}`;
+
+  const hdr = card.createDiv({ cls: "pe-q-header" });
+  hdr.createEl("span", { cls: "pe-q-num", text: `PBQ · A${p.n}` });
+  if (p.objective) {
+    const objTag = hdr.createEl("span", { cls: "pe-q-tag" });
+    objTag.setText(`Obj ${p.objective}`);
+  }
+
+  card.createEl("div", { cls: "pe-q-text", text: p.title });
+  const promptEl = card.createDiv({ cls: "pbq-prompt" });
+  promptEl.setText(p.prompt);
+
+  if (p.type === "match") {
+    const tbl = card.createEl("table", { cls: "pbq-table" });
+    p.items.forEach(item => {
+      const tr = tbl.createEl("tr");
+      tr.dataset.itemId = item.id;
+      tr.createEl("td", { cls: "pbq-desc-cell", text: item.desc });
+      const tdSel = tr.createEl("td", { cls: "pbq-sel-cell" });
+      const sel = tdSel.createEl("select", { cls: "pbq-select" });
+      const def = sel.createEl("option", { text: "— Select —" });
+      def.value = "";
+      p.options.forEach(opt => {
+        const o = sel.createEl("option", { text: opt });
+        o.value = opt;
+      });
+      sel.onchange = () => {
+        if (graded) return;
+        pbqSelections[p.n][item.id] = sel.value;
+        updateProgress();
+      };
+    });
+  } else if (p.type === "firewall") {
+    const srvList = card.createDiv({ cls: "pbq-srv-list" });
+    srvList.createEl("strong", { text: "Servers: " });
+    p.servers.forEach((s, i) => {
+      srvList.appendText(`${s.name} ${s.ip}`);
+      if (i < p.servers.length - 1) srvList.appendText("  ·  ");
+    });
+
+    p.rules.forEach((rule, idx) => {
+      const ruleBox = card.createDiv({ cls: "pbq-rule" });
+      ruleBox.dataset.ruleId = rule.id;
+      ruleBox.createEl("div", { cls: "pbq-rule-goal", text: `Rule ${idx + 1}: ${rule.goal}` });
+
+      const tbl = ruleBox.createEl("table", { cls: "pbq-fw-table" });
+      const thead = tbl.createEl("thead");
+      const trh = thead.createEl("tr");
+      ["Source IP", "Destination IP", "Protocol", "Port", "Action"].forEach(h => {
+        trh.createEl("th", { text: h });
+      });
+      const tbody = tbl.createEl("tbody");
+      const tr = tbody.createEl("tr");
+
+      const ipOptions = p.servers.map(s => s.ip);
+      const fields = [
+        { key: "srcIP", options: ipOptions },
+        { key: "dstIP", options: ipOptions },
+        { key: "proto", options: ["TCP", "UDP"] },
+        { key: "port", options: p.ports },
+        { key: "action", options: ["Allow", "Block"] }
+      ];
+
+      fields.forEach(f => {
+        const td = tr.createEl("td");
+        const sel = td.createEl("select", { cls: "pbq-select pbq-fw-select" });
+        const def = sel.createEl("option", { text: "—" });
+        def.value = "";
+        f.options.forEach(opt => {
+          const o = sel.createEl("option", { text: opt });
+          o.value = opt;
+        });
+        sel.dataset.field = f.key;
+        sel.onchange = () => {
+          if (graded) return;
+          if (!pbqSelections[p.n][rule.id]) pbqSelections[p.n][rule.id] = {};
+          pbqSelections[p.n][rule.id][f.key] = sel.value;
+          updateProgress();
+        };
+      });
+    });
+  }
+
+  const fb = card.createDiv({ cls: "pe-feedback" });
+  fb.dataset.pbqN = p.n;
+});
+
+const mcqHeader = root.createDiv({ cls: "pbq-section-header" });
+mcqHeader.setText("Multiple-Choice Questions · A6–A90");
+mcqHeader.style.marginTop = "30px";
+
 
 const cardsContainer = root.createDiv();
 
@@ -241,6 +394,97 @@ gradeBtn.onclick = () => {
   gradeBtn.disabled = true;
   gradeBtn.setText("Test graded — scroll up for your report card");
   progress.style.display = "none";
+
+  // ---- Grade PBQs ----
+  let pbqItemsCorrect = 0;
+  const pbqResults = {};
+
+  pbqs.forEach(p => {
+    pbqResults[p.n] = { correct: 0, total: 0, details: [] };
+    const card = document.getElementById(`pe-pbq-${p.n}`);
+    card.querySelectorAll("select.pbq-select").forEach(s => { s.disabled = true; });
+
+    if (p.type === "match") {
+      p.items.forEach(item => {
+        const got = pbqSelections[p.n][item.id] || "";
+        const right = (got === item.answer);
+        pbqResults[p.n].total += 1;
+        if (right) { pbqResults[p.n].correct += 1; pbqItemsCorrect += 1; }
+        pbqResults[p.n].details.push({ kind: "match", desc: item.desc, got, expected: item.answer, right, w: item.w });
+        const tr = card.querySelector(`tr[data-item-id="${item.id}"]`);
+        if (tr) tr.classList.add(right ? "pbq-row-correct" : "pbq-row-wrong");
+      });
+    } else if (p.type === "firewall") {
+      p.rules.forEach(rule => {
+        const sel = pbqSelections[p.n][rule.id] || {};
+        const fieldRights = {};
+        let ruleAllRight = true;
+        Object.keys(rule.answer).forEach(k => {
+          const got = sel[k] || "";
+          const right = (got === rule.answer[k]);
+          fieldRights[k] = { got, expected: rule.answer[k], right };
+          pbqResults[p.n].total += 1;
+          if (right) { pbqResults[p.n].correct += 1; pbqItemsCorrect += 1; }
+          else ruleAllRight = false;
+        });
+        pbqResults[p.n].details.push({ kind: "firewall", goal: rule.goal, fields: fieldRights, w: rule.w, allRight: ruleAllRight });
+        const rb = card.querySelector(`div[data-rule-id="${rule.id}"]`);
+        if (rb) rb.classList.add(ruleAllRight ? "pbq-row-correct" : "pbq-row-wrong");
+      });
+    }
+
+    const fb = card.querySelector(".pe-feedback");
+    const allRight = pbqResults[p.n].correct === pbqResults[p.n].total;
+    fb.classList.add(allRight ? "correct" : "incorrect");
+    fb.style.display = "";
+    const headerRow = fb.createDiv({ cls: "pe-fb-row" });
+    headerRow.innerHTML = `<strong>${allRight ? "✓" : "✗"} ${pbqResults[p.n].correct} / ${pbqResults[p.n].total} item${pbqResults[p.n].total === 1 ? "" : "s"} correct</strong>`;
+
+    pbqResults[p.n].details.forEach((d, idx) => {
+      if (d.kind === "match") {
+        const row = fb.createDiv({ cls: "pe-fb-row" });
+        const mark = d.right ? "✓" : "✗";
+        const yourPart = d.got ? `picked <em>${escapeHtml(d.got)}</em>` : `<em>no answer</em>`;
+        row.innerHTML = `<strong>${mark}</strong> ${escapeHtml(d.desc)} → <strong>${escapeHtml(d.expected)}</strong>${d.right ? "" : ` &nbsp;(${yourPart})`}`;
+        if (!d.right && d.w) {
+          const why = fb.createDiv();
+          why.style.marginLeft = "22px";
+          why.style.fontSize = "0.88em";
+          why.style.color = "var(--text-muted)";
+          why.style.marginTop = "2px";
+          why.setText(d.w);
+        }
+      } else if (d.kind === "firewall") {
+        const row = fb.createDiv({ cls: "pe-fb-row" });
+        row.style.marginTop = "10px";
+        const mark = d.allRight ? "✓" : "✗";
+        row.innerHTML = `<strong>${mark} Rule ${idx + 1}:</strong> ${escapeHtml(d.goal)}`;
+        Object.keys(d.fields).forEach(k => {
+          const f = d.fields[k];
+          if (!f.right) {
+            const sub = fb.createDiv();
+            sub.style.marginLeft = "22px";
+            sub.style.fontSize = "0.88em";
+            const labelMap = { srcIP: "Source IP", dstIP: "Destination IP", proto: "Protocol", port: "Port", action: "Action" };
+            sub.innerHTML = `<strong>${labelMap[k]}:</strong> ${escapeHtml(f.expected)} <span style="color:var(--text-muted)">(you picked ${escapeHtml(f.got || "—")})</span>`;
+          }
+        });
+        if (!d.allRight && d.w) {
+          const why = fb.createDiv();
+          why.style.marginLeft = "22px";
+          why.style.fontSize = "0.88em";
+          why.style.color = "var(--text-muted)";
+          why.style.marginTop = "4px";
+          why.setText(d.w);
+        }
+      }
+    });
+
+    if (p.url) {
+      const linkRow = fb.createDiv({ cls: "pe-fb-link" });
+      linkRow.innerHTML = `Reference: <a href="${p.url}" target="_blank" rel="noopener">Objective ${escapeHtml(p.objective)}</a>`;
+    }
+  });
 
   let totalCorrect = 0;
   const missed = [];
@@ -337,12 +581,43 @@ gradeBtn.onclick = () => {
   report.createEl("h2", { text: "Report Card" });
 
   const scoreLine = report.createDiv({ cls: "pe-score-line" });
-  scoreLine.innerHTML = `${totalCorrect} / ${total} correct&nbsp;&nbsp;<span class="pe-score-percent ${strictPass ? "pass" : "fail"}">${pct.toFixed(1)}%</span>`;
+  scoreLine.innerHTML = `MCQ: ${totalCorrect} / ${total} correct&nbsp;&nbsp;<span class="pe-score-percent ${strictPass ? "pass" : "fail"}">${pct.toFixed(1)}%</span>`;
 
   const passNote = report.createDiv({ cls: "pe-pass-note" });
   passNote.setText(strictPass
     ? `Above the ~83% CompTIA scaled-pass benchmark. Solid.`
     : `Below the ~83% CompTIA scaled-pass benchmark (≈ 750/900). Review the misses below.`);
+
+  // PBQ section in report
+  report.createEl("h3", { text: "Performance-Based (A1–A5)" });
+  const pbqRptTbl = report.createEl("table", { cls: "pbq-report-tbl" });
+  const pbqThead = pbqRptTbl.createEl("thead");
+  const pbqTrh = pbqThead.createEl("tr");
+  pbqTrh.createEl("th", { text: "PBQ" });
+  pbqTrh.createEl("th", { text: "Topic" });
+  pbqTrh.createEl("th", { text: "Score", cls: "pbq-rt-score" });
+  pbqTrh.createEl("th", { text: "%", cls: "pbq-rt-score" });
+  const pbqTbody = pbqRptTbl.createEl("tbody");
+  pbqs.forEach(p => {
+    const r = pbqResults[p.n];
+    const tr = pbqTbody.createEl("tr");
+    const tdN = tr.createEl("td");
+    const link = tdN.createEl("a", { href: `#pe-pbq-${p.n}`, text: `A${p.n}` });
+    link.onclick = (e) => {
+      e.preventDefault();
+      document.getElementById(`pe-pbq-${p.n}`).scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    tr.createEl("td", { text: p.title });
+    tr.createEl("td", { text: `${r.correct} / ${r.total}`, cls: "pbq-rt-score" });
+    const pct = r.total > 0 ? (r.correct / r.total * 100).toFixed(0) : "—";
+    tr.createEl("td", { text: `${pct}%`, cls: "pbq-rt-score" });
+  });
+  const pbqTotalItems = pbqs.reduce((s, p) => s + pbqResults[p.n].total, 0);
+  const pbqSummary = report.createDiv();
+  pbqSummary.style.fontSize = "0.9em";
+  pbqSummary.style.marginTop = "4px";
+  pbqSummary.style.marginBottom = "18px";
+  pbqSummary.innerHTML = `<strong>PBQ total:</strong> ${pbqItemsCorrect} / ${pbqTotalItems} items`;
 
   // Domain breakdown
   report.createEl("h3", { text: "By domain" });
