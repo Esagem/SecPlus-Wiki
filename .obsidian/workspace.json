@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/quizzes/practice-exam-e.md",
-                "mode": "source",
+                "file": "wiki/objectives/1.1.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "practice-exam-e"
+              "title": "1.1"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/quizzes/practice-exam-e.md",
+                "file": "wiki/objectives/1.1.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for practice-exam-e"
+              "title": "Backlinks for 1.1"
             }
           },
           {
@@ -196,10 +196,22 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
-    "wiki/quizzes/practice-exam-a.md",
-    "wiki/quizzes/practice-exam-e.md",
-    "wiki/quizzes/5.2-risk.md",
+    "wiki/quizzes/practice-exam-b.md",
+    "wiki/objectives/1.4.md",
+    "wiki/objectives/1.2.md",
+    "wiki/objectives/1.1.md",
+    "wiki/objectives/3.1.md",
+    "wiki/objectives/3.4.md",
+    "wiki/objectives/4.4.md",
+    "wiki/objectives/4.6.md",
+    "wiki/objectives/5.6.md",
+    "wiki/objectives/4.3.md",
+    "wiki/objectives/2.1.md",
+    "wiki/quizzes/1.1-controls.md",
     "wiki/synthesis/vocab.md",
+    "wiki/quizzes/practice-exam-e.md",
+    "wiki/quizzes/practice-exam-a.md",
+    "wiki/quizzes/5.2-risk.md",
     "wiki/quizzes/practice-exam-d.md",
     "wiki/synthesis/video-index.md",
     "wiki/synthesis/README.md",
@@ -210,18 +222,6 @@
     "wiki/transcripts/Section 5.6.md",
     "wiki/_log.md",
     "wiki/README.md",
-    "wiki/STUDY.md",
-    "wiki/quizzes/1.2-concepts.md",
-    "wiki/quizzes/1.3-change-management.md",
-    "wiki/quizzes/2.1-threat-actors.md",
-    "wiki/quizzes/2.3-vulnerabilities.md",
-    "wiki/quizzes/3.1-architecture.md",
-    "wiki/quizzes/3.3-data-protection.md",
-    "wiki/quizzes/4.2-asset-management.md",
-    "wiki/quizzes/4.5-enterprise-capabilities.md",
-    "wiki/quizzes/4.8-incident-response.md",
-    "wiki/quizzes/5.1-governance.md",
-    "wiki/quizzes/5.4-compliance-privacy.md",
     "Untitled.base",
     "Untitled.canvas",
     "wiki/transcripts/video_map.json",
