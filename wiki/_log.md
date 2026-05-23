@@ -196,3 +196,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/5.4-compliance-privacy.md | refactor to use shared _quiz-scaffold
 ## [2026-05-23] edit | quizzes/5.5-audits-pentests.md | refactor to use shared _quiz-scaffold
 ## [2026-05-23] edit | quizzes/5.6-awareness.md | refactor to use shared _quiz-scaffold
+## [2026-05-23] edit | quizzes/practice-exam-a.md | fix self-corrupting save block; write attempts to sidecar log
