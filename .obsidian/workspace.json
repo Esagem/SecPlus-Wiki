@@ -196,10 +196,13 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
-    "wiki/quizzes/vocab-match.md",
-    "wiki/sessions/quiz-logs/1.1-controls.log.md",
-    "wiki/_log.md",
     "wiki/quizzes/1.1-controls.md",
+    "wiki/sessions/quiz-logs/1.1-controls.log.md",
+    "sessions/quiz-logs/1.1-controls.log.md",
+    "sessions/quiz-logs",
+    "sessions",
+    "wiki/quizzes/vocab-match.md",
+    "wiki/_log.md",
     "wiki/objectives/1.3.md",
     "wiki/sessions/quiz-logs",
     "wiki/quizzes/1.3-change-management.md",
@@ -222,7 +225,6 @@
     "wiki/quizzes/practice-exam-e.md",
     "wiki/quizzes/5.2-risk.md",
     "wiki/quizzes/practice-exam-d.md",
-    "wiki/synthesis/video-index.md",
     "Untitled.base",
     "Untitled.canvas",
     "wiki/transcripts/video_map.json",
@@ -231,8 +233,6 @@
     "server/node_modules/unenv/lib/index.d.mts",
     "server/node_modules/undici/types/filereader.d.ts",
     "server/node_modules/undici/types/file.d.ts",
-    "server/node_modules/undici/lib/interceptor/redirectInterceptor.js",
-    "server/node_modules/undici/lib/handler/RetryHandler.js",
     "server/node_modules/undici/docs/assets/lifecycle-diagram.png"
   ]
 }
