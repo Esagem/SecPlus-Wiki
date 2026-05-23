@@ -147,3 +147,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] write | objectives/README.md | lint: drop concepts wording; reconcile title column with each objective page's actual title
 ## [2026-05-23] status | quizzes/practice-exam-d.md | lint: add tags to practice-exam-d
 ## [2026-05-23] status | quizzes/practice-exam-e.md | lint: add tags to practice-exam-e
+## [2026-05-23] write | synthesis/lint-report.md | lint: append 2026-05-23 dated pass — 28 objectives, 33 quizzes, fixes applied + remaining items
