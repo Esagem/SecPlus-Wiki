@@ -155,3 +155,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/1.1-controls.md | restore vertical centering and fix long-answer wrap: flex container + inner span with min-width:0
 ## [2026-05-23] edit | quizzes/1.1-controls.md | use div instead of button for answer options (Chromium button quirk blocked content-driven height growth); add box-sizing border-box
 ## [2026-05-23] write | quizzes/vocab-match.md | add interactive vocab matching trainer; loads vocab from synthesis/vocab.md at runtime, weighted spaced-repetition selection, localStorage progress
+## [2026-05-23] edit | _index.md | link new vocab match trainer from master index
