@@ -11,14 +11,14 @@
             "id": "f517b844b8b55a46",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "wiki/quizzes/1.1-controls.log.md",
-                "bFile": "wiki/quizzes/1.1-controls.log.md",
-                "aRef": ""
+                "file": "wiki/quizzes/1.1-controls.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 1.1-controls.log  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "1.1-controls"
             }
           }
         ]
