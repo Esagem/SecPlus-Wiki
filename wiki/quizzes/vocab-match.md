@@ -11,15 +11,9 @@ covers: [all]
 
 # Vocab Match — Interactive Trainer
 
-A Quizlet-style matching game across all 706 SY0-701 vocab terms from [[synthesis/vocab|the master glossary]]. Pick a scope, pair tiles two at a time, beat your time. Progress is saved per-vault in `localStorage` — terms you miss come back more often, terms you nail get sampled less often.
+A Quizlet-style matching game across all 706 SY0-701 vocab terms from [[synthesis/vocab|the master glossary]]. Pick a scope, pair tiles two at a time. Progress is saved per-vault in `localStorage` — terms you miss come back more often, terms you nail get sampled less often.
 
 ```dataviewjs
-// ============== CLEANUP from any prior render of this block ==============
-if (window.__vmTrainerTimer) {
-  clearInterval(window.__vmTrainerTimer);
-  window.__vmTrainerTimer = null;
-}
-
 // ============== DATA: pulled live from synthesis/vocab.md ==============
 async function loadVocab() {
   // Resolve via Obsidian's link cache, then read the file directly.
@@ -339,7 +333,6 @@ function renderSetup() {
 }
 
 let round = null;
-let timerInt = null;
 
 function startRound() {
   const pool = termsInScope(settings.scope);
@@ -368,7 +361,6 @@ function renderGame() {
   metaItem(meta, "Scope", scopeLabel(settings.scope), "", null);
   metaItem(meta, "Matched", round.matchedPairs.size + "/" + round.pairs.length, "ok", "matched-val");
   metaItem(meta, "Misses", "0", "bad", "misses-val");
-  metaItem(meta, "Time", "0:00", "", "time-val");
   const quit = meta.createEl("button", { cls: "vm-quit", text: "Quit round" });
   quit.onclick = quitRound;
 
@@ -378,7 +370,6 @@ function renderGame() {
     el.dataset.id = t.id;
     el.onclick = () => onTileClick(el, t);
   });
-  startTimer();
 }
 
 function metaItem(parent, lbl, val, cls, id) {
@@ -386,22 +377,6 @@ function metaItem(parent, lbl, val, cls, id) {
   wrap.createDiv({ cls: "meta-lbl", text: lbl });
   const v = wrap.createDiv({ cls: "meta-val" + (cls ? " " + cls : ""), text: val });
   if (id) v.id = "vm-" + id;
-}
-
-function startTimer() {
-  if (timerInt) clearInterval(timerInt);
-  if (window.__vmTrainerTimer) clearInterval(window.__vmTrainerTimer);
-  timerInt = setInterval(() => {
-    if (!round || round.endTime) return;
-    const el = document.getElementById("vm-time-val");
-    if (el) el.textContent = fmtTime(Date.now() - round.startTime);
-  }, 1000);
-  window.__vmTrainerTimer = timerInt;
-}
-
-function fmtTime(ms) {
-  const t = Math.floor(ms / 1000);
-  return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0");
 }
 
 function onTileClick(el, tile) {
@@ -458,7 +433,6 @@ function updateMeta() {
 }
 
 function endRound() {
-  if (timerInt) { clearInterval(timerInt); timerInt = null; }
   round.endTime = Date.now();
   round.pairs.forEach(p => {
     const misses = round.missCountByPair[p.id];
@@ -477,7 +451,6 @@ function endRound() {
 function quitRound() {
   if (!round) return;
   if (!confirm("Quit this round? Progress for this round will not be recorded.")) return;
-  if (timerInt) { clearInterval(timerInt); timerInt = null; }
   round = null;
   renderSetup();
 }
@@ -486,7 +459,6 @@ function renderSummaryScreen() {
   renderStats();
   mainEl.empty();
   const r = round;
-  const dur = r.endTime - r.startTime;
   const clean = r.pairs.filter(p => r.missCountByPair[p.id] === 0).length;
   const total = r.pairs.length;
   const stumbles = r.totalAttempts - r.totalCorrect;
@@ -506,7 +478,7 @@ function renderSummaryScreen() {
   titleDiv.createSpan({ text: titleText });
   const sub = header.createDiv();
   sub.style.cssText = "color:var(--text-muted);font-size:0.9em";
-  sub.setText("Finished in " + fmtTime(dur) + " · " + clean + "/" + total + " first-try · " +
+  sub.setText(clean + "/" + total + " first-try · " +
     stumbles + " miss" + (stumbles === 1 ? "" : "es") + " · " + acc + "% net accuracy");
 
   card.createDiv({ cls: "vm-label", text: "Review" });
