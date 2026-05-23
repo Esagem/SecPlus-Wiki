@@ -16,7 +16,18 @@ A Quizlet-style matching game across all 706 SY0-701 vocab terms from [[synthesi
 ```dataviewjs
 // ============== DATA: pulled live from synthesis/vocab.md ==============
 async function loadVocab() {
-  const raw = await dv.io.load("synthesis/vocab.md");
+  // Resolve via Obsidian's link cache, then read the file directly.
+  // dv.io.load returns undefined in some Dataview versions; this path is rock-solid.
+  let raw;
+  const file = app.metadataCache.getFirstLinkpathDest("synthesis/vocab", "");
+  if (file) {
+    raw = await app.vault.read(file);
+  } else {
+    try { raw = await app.vault.adapter.read("synthesis/vocab.md"); } catch (e) { /* fall through */ }
+  }
+  if (typeof raw !== "string") {
+    throw new Error("synthesis/vocab.md not found in vault");
+  }
   const block = raw.match(/const data = \[([\s\S]*?)\n\];/);
   if (!block) throw new Error("Could not find vocab data block in synthesis/vocab.md");
   const out = [];
