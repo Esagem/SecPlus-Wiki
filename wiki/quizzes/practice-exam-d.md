@@ -1,42 +1,12 @@
 ---
 title: Practice Exam D — Original SY0-701 Drill
 category: practice-exam
-tags:
-  - practice-exam
-  - exam-d
+tags: [practice-exam, full-exam, sy0-701]
 status: active
 confidence: high
 created: 2026-05-22
-updated: 2026-05-22
-covers:
-  - 1.1
-  - 1.2
-  - 1.3
-  - 1.4
-  - 2.1
-  - 2.2
-  - 2.3
-  - 2.4
-  - 2.5
-  - 3.1
-  - 3.2
-  - 3.3
-  - 3.4
-  - 4.1
-  - 4.2
-  - 4.3
-  - 4.4
-  - 4.5
-  - 4.6
-  - 4.7
-  - 4.8
-  - 4.9
-  - 5.1
-  - 5.2
-  - 5.3
-  - 5.4
-  - 5.5
-  - 5.6
+updated: 2026-05-23
+covers: 
 source: Original content, written for SY0-701 objectives
 ---
 
