@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/quizzes/1.4-cryptography.md",
+                "file": "wiki/quizzes/vocab-match.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "1.4-cryptography"
+              "title": "vocab-match"
             }
           }
         ]
@@ -196,14 +196,14 @@
   },
   "active": "edc627f7b98abb60",
   "lastOpenFiles": [
+    "wiki/quizzes/1.4-cryptography.md",
+    "wiki/quizzes/vocab-match.md",
     "wiki/quizzes/practice-exam-a.md",
     "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "wiki/quizzes/1.1-controls.md",
-    "wiki/quizzes/vocab-match.md",
     "wiki/objectives/1.4.md",
     "sessions/quiz-logs/1.1-controls.log.md",
     "wiki/quizzes/1.2-concepts.md",
-    "wiki/quizzes/1.4-cryptography.md",
     "wiki/quizzes/1.3-change-management.md",
     "sessions/quiz-logs",
     "sessions",
