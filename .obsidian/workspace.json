@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/quizzes/1.1-controls.md",
+                "file": "wiki/objectives/1.2.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1-controls"
+              "title": "1.2"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:exam-b",
+                "query": "tag:deception",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -194,11 +195,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f517b844b8b55a46",
+  "active": "8ea447457b871ebc",
   "lastOpenFiles": [
+    "wiki/quizzes/1.1-controls.md",
+    "wiki/quizzes/1.2-concepts.md",
     "wiki/objectives/1.1.md",
     "wiki/objectives/1.2.md",
-    "wiki/quizzes/1.1-controls.md",
     "wiki/quizzes/practice-exam-a.md",
     "wiki/quizzes/practice-exam-c.md",
     "wiki/synthesis/vocab.md",
@@ -221,7 +223,6 @@
     "wiki/synthesis/exam-blueprint.md",
     "wiki/_index.md",
     "wiki/transcripts/Section 5.6.md",
-    "wiki/_log.md",
     "Untitled.base",
     "Untitled.canvas",
     "wiki/transcripts/video_map.json",
