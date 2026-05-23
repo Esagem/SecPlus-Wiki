@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "eb6a18eb01ce8556",
+        "id": "1744b5355f903a78",
         "type": "tabs",
         "children": [
           {
-            "id": "edc627f7b98abb60",
+            "id": "11bdc9512b5d54b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "wiki/quizzes/vocab-match.md",
                 "mode": "preview",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "vocab-match"
@@ -194,10 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "edc627f7b98abb60",
+  "active": "11bdc9512b5d54b2",
   "lastOpenFiles": [
-    "wiki/quizzes/1.4-cryptography.md",
     "wiki/quizzes/vocab-match.md",
+    "wiki/quizzes/1.4-cryptography.md",
     "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "wiki/sessions/README.md",
     "wiki/synthesis/vocab.md",
