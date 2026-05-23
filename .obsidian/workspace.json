@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "d80bff34a5e56bf5",
+        "id": "eb6a18eb01ce8556",
         "type": "tabs",
         "children": [
           {
-            "id": "8d305aaf5fcd504d",
+            "id": "edc627f7b98abb60",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "wiki/quizzes/vocab-match.md",
-                "mode": "preview",
-                "source": false
+                "aFile": "sessions/quiz-logs/1.1-controls.log.md",
+                "bFile": "sessions/quiz-logs/1.1-controls.log.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "vocab-match"
+              "icon": "diff",
+              "title": "Diff: 1.1-controls.log  (Working Tree)"
             }
           }
         ]
@@ -194,10 +194,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8d305aaf5fcd504d",
+  "active": "edc627f7b98abb60",
   "lastOpenFiles": [
-    "wiki/quizzes/1.1-controls.md",
     "wiki/sessions/quiz-logs/1.1-controls.log.md",
+    "wiki/quizzes/1.1-controls.md",
     "wiki/quizzes/vocab-match.md",
     "wiki/objectives/1.4.md",
     "wiki/quizzes/1.2-concepts.md",
