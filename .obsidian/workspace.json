@@ -11,14 +11,14 @@
             "id": "11bdc9512b5d54b2",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "wiki/sessions/vocab-match-state.json",
-                "bFile": "wiki/sessions/vocab-match-state.json",
-                "aRef": ""
+                "file": "wiki/quizzes/1.4-cryptography.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: vocab-match-state.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "1.4-cryptography"
             }
           }
         ]
