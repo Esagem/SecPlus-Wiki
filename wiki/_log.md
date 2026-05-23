@@ -182,3 +182,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/3.3-data-protection.md | refactor to use shared _quiz-scaffold
 ## [2026-05-23] edit | quizzes/3.4-resilience.md | refactor to use shared _quiz-scaffold
 ## [2026-05-23] edit | quizzes/4.1-securing-resources.md | refactor to use shared _quiz-scaffold
+## [2026-05-23] edit | quizzes/4.2-asset-management.md | refactor to use shared _quiz-scaffold
