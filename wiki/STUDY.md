@@ -1,12 +1,12 @@
 ---
-title: "STUDY.md — Wiki Schema & Operating Guide"
+title: STUDY.md — Wiki Schema & Operating Guide
 category: synthesis
 tags: [schema, operating-guide, meta]
 status: active
 confidence: high
 owner: shared
 created: 2026-05-21
-updated: 2026-05-21
+updated: 2026-05-23
 ---
 
 # STUDY.md — Wiki Schema & Operating Guide
@@ -19,8 +19,7 @@ updated: 2026-05-21
 
 This wiki is the **knowledge base and study surface** for the CompTIA Security+ (SY0-701) exam. It exists so that:
 
-- Raw lecture transcripts get distilled into clean, cross-referenced concept pages.
-- Every exam objective has a page that indexes the concepts under it.
+- Raw lecture transcripts get distilled into clean, cross-referenced **objective pages**.
 - Quiz banks live alongside the material they cover, so study sessions can pull the right questions at the right time.
 - Each study session leaves a trace — what was covered, what was weak, what to revisit.
 
@@ -30,7 +29,7 @@ The wiki is the durable study artifact. Chat sessions come and go; what lands he
 
 ## 1. What this wiki is *not*
 
-- **Not a transcript archive.** Raw transcripts live under `transcripts/` and are treated as immutable source material. The LLM reads them and writes *about* them in `concepts/` and `objectives/`, never edits them.
+- **Not a transcript archive.** Raw transcripts live under `transcripts/` and are treated as immutable source material. The LLM reads them and writes *about* them in `objectives/`, never edits them.
 - **Not Anki.** Quiz pages capture question banks for AI-generated quizzing sessions, not spaced-repetition cards. (Export to Anki is a downstream concern.)
 - **Not a general cybersecurity reference.** Scope is the SY0-701 exam objectives. Tangents that don't map to an objective stay in `synthesis/` or get cut.
 
@@ -39,7 +38,7 @@ The wiki is the durable study artifact. Chat sessions come and go; what lands he
 ## 2. The two layers
 
 - **Raw transcripts** (`transcripts/`) — auto-caption dumps from the Professor Messer SY0-701 playlist, one .md per objective, all `## ` headers per video. Immutable. The LLM reads these to build distilled pages elsewhere.
-- **The wiki** — everything else. LLM-authored markdown: concept pages, objective pages, quiz banks, session notes, synthesis. The LLM owns this layer.
+- **The wiki** — everything else. LLM-authored markdown: objective pages, quiz banks, session notes, synthesis. The LLM owns this layer.
 
 ---
 
@@ -56,17 +55,14 @@ wiki/
 │   ├── README.md
 │   └── Section 1.1.md … Section 5.6.md
 │
-├── concepts/              # Atomic concept pages, one per concept (~150-300 expected)
+├── objectives/            # One page per exam objective (1.1, 1.2, …, 5.6) — the distilled study material
 │   ├── README.md
-│   └── <concept-name>.md  # e.g. sql-injection.md, cia-triad.md, zero-trust.md
-│
-├── objectives/            # One page per exam objective (1.1, 1.2, …, 5.6)
-│   ├── README.md
-│   └── <N.N>.md           # indexes the concepts under that objective
+│   └── <N.N>.md
 │
 ├── quizzes/               # Question banks
 │   ├── README.md
-│   └── <topic>.md         # e.g. 1.4-cryptography.md, malware-types.md
+│   ├── <N.N>-<topic>.md       # per-objective banks
+│   └── practice-exam-<x>.md   # full-exam practice banks
 │
 ├── sessions/              # Study session notes
 │   ├── README.md
@@ -77,32 +73,50 @@ wiki/
     ├── open-questions.md  # things you didn't fully understand; revisit list
     ├── weak-areas.md      # accumulated misses across quizzes/sessions
     ├── exam-blueprint.md  # the official objective breakdown + weighting
+    ├── video-index.md     # master video lookup
+    ├── vocab.md           # master glossary
     └── lint-report.md     # wiki health snapshots
 ```
 
-Folders = categories. Filenames use `kebab-case.md` for concepts/quizzes, `N.N.md` for objectives, `YYYY-MM-DD-slug.md` for sessions.
+Folders = categories (with one exception, see §4). Filenames use `N.N.md` for objectives, `<N.N>-<kebab-case>.md` or `practice-exam-<x>.md` for quizzes, `YYYY-MM-DD-slug.md` for sessions.
+
+> **Note on the `concepts/` folder.** Earlier drafts of this schema had a separate `concepts/` directory for atomic concept pages. That was retired on 2026-05-23 — distilled content lives directly on each objective page. There is no concepts directory anymore.
 
 ---
 
 ## 4. Page conventions
 
-### YAML front matter (required on every page)
+### YAML front matter (required on every authored page)
 
 ```yaml
 ---
-title: "Human-readable title"
-category: <transcript|concept|objective|quiz|session|synthesis>
+title: Human-readable title
+category: <objective|quiz|practice-exam|session|synthesis>
 tags: [tag1, tag2]
 status: <seed|draft|active|mature|retired>
 confidence: <low|medium|high>
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 # Optional, type-specific
-objective: "1.4"            # for concept pages — which objective(s) this concept maps to
-covers: ["1.4", "2.3"]      # for quiz pages — which objectives the bank covers
-mastery: <weak|building|strong>  # for concepts — your self-assessment, updated by sessions
+covers: [1.4, 2.3]              # for quiz / practice-exam — which objectives the bank covers
+mastery: <weak|building|strong> # for objective pages — self-assessment, updated by sessions
 ---
 ```
+
+Titles are unquoted by default. Wrap in quotes only if the title contains a literal colon.
+
+**Transcripts are exempt** from front matter. Files under `transcripts/` are auto-generated dumps and ship with empty `---\n---` blocks. Don't edit them, don't lint them, don't add fields to them.
+
+### Categories
+
+Six categories in use:
+
+- **transcript** — files under `transcripts/`. Auto-generated, immutable. Front matter exempt.
+- **objective** — one page per exam objective (`objectives/N.N.md`). The distilled study material.
+- **quiz** — per-objective question banks (`quizzes/N.N-<topic>.md`).
+- **practice-exam** — full-exam practice banks (`quizzes/practice-exam-<x>.md`). Lives in `quizzes/` but is its own category because the scope and shape are different.
+- **session** — dated study session notes (`sessions/YYYY-MM-DD-<slug>.md`).
+- **synthesis** — cross-cutting views (`synthesis/*.md`, plus `_index.md`, `STUDY.md`).
 
 ### Status lifecycle
 
@@ -110,139 +124,114 @@ mastery: <weak|building|strong>  # for concepts — your self-assessment, update
 - **draft** — partial content, in flight.
 - **active** — useful and maintained. The expected state for most pages.
 - **mature** — comprehensive, stable, you've quizzed yourself on it and consistently nail it.
-- **retired** — abandoned, kept for history (e.g. a concept reframing that turned out wrong).
+- **retired** — abandoned, kept for history.
+
+(The MCP tool also accepts `planned` and `superseded` for compatibility with the `cyber-wiki` schema; neither is in active use here.)
 
 ### Confidence
 
 How confident the page's content is **factually correct**, not how well you know it. Use `mastery` for self-knowledge.
 
 - **low** — rough, possibly wrong, needs verification.
-- **medium** — checked against one source.
+- **medium** — checked against one source (e.g. the transcript).
 - **high** — checked against transcript + another reference.
 
+### Mastery
+
+Your self-assessment of how well you know the material on a page. Lives on **objective pages**. Sessions flip it.
+
+- **weak** — you miss questions on this routinely.
+- **building** — sometimes you get it, sometimes you don't.
+- **strong** — you nail it.
+
 ### Page-type templates
-
-#### Concept page (`concepts/sql-injection.md`)
-
-```markdown
----
-title: "SQL Injection"
-category: concept
-tags: [injection, web, owasp-top-10]
-status: active
-confidence: high
-objective: "2.3"
-mastery: building
-created: 2026-05-21
-updated: 2026-05-21
----
-
-# SQL Injection
-
-**One-line:** Inserting attacker-controlled SQL into a query string that an application later sends to the database, causing unintended database operations.
-
-## How it works
-…
-
-## Common variants
-- Inline / classic
-- Blind (boolean-based, time-based)
-- Out-of-band
-
-## Defenses
-- Parameterized queries / prepared statements (primary)
-- Input validation (secondary)
-- Least-privilege DB accounts
-
-## Exam traps
-- Don't confuse with command injection (different target, similar mechanic).
-- "Stored procedures" only help if they themselves use parameterized inputs internally.
-
-## Related
-- [[concepts/cross-site-scripting|XSS]]
-- [[concepts/input-validation|Input validation]]
-- [[objectives/2.3|Objective 2.3 — Vulnerabilities]]
-
-## Source
-- [[transcripts/Section 2.3|Transcript §2.3 — SQL Injection]]
-```
 
 #### Objective page (`objectives/1.4.md`)
 
 ```markdown
 ---
-title: "Objective 1.4 — Cryptographic Solutions"
+title: Objective 1.4 — Cryptographic Solutions
 category: objective
-tags: [cryptography]
+tags: [cryptography, 1.4]
 status: active
-confidence: high
+confidence: medium
+mastery: weak
 created: 2026-05-21
 updated: 2026-05-21
 ---
 
 # 1.4 — Cryptographic Solutions
 
-CompTIA description: "Explain the importance of using appropriate cryptographic solutions."
+CompTIA description: *"Explain the importance of using appropriate cryptographic solutions."*
 
-## Concepts
-- [[concepts/public-key-infrastructure|PKI]]
-- [[concepts/encryption-symmetric|Symmetric encryption]]
-- [[concepts/encryption-asymmetric|Asymmetric encryption]]
-- [[concepts/key-exchange|Key exchange]]
-- [[concepts/hashing-and-digital-signatures|Hashing & digital signatures]]
-- …
+A short framing paragraph: what this objective is really testing, and how to think about it on the exam.
+
+---
+
+## <Major topic 1>
+…distilled study material, tables, traps…
+
+## <Major topic 2>
+…
+
+---
+
+## How to read scenario questions
+1. …
+2. …
+
+---
+
+## Vocab
+See [[synthesis/vocab|vocab]] filtered to objective `1.4`.
 
 ## Quizzes
-- [[quizzes/1.4-cryptography|1.4 — Cryptography quiz bank]]
+- [[quizzes/1.4-cryptography|1.4 — Cryptography Quiz]]
 
 ## Source
-- [[transcripts/Section 1.4|Transcript §1.4]]
+- **<Video title>** — [▶ YouTube](URL) · [[transcripts/Section 1.4|transcript]] · Professor Messer · ~N min
+- …
+
+See [[synthesis/video-index|video-index]] for the master lookup.
 ```
 
 #### Quiz page (`quizzes/1.4-cryptography.md`)
 
 ```markdown
 ---
-title: "1.4 — Cryptography quiz bank"
+title: 1.4 — Cryptography Quiz
 category: quiz
-tags: [cryptography, quiz]
+tags: [quiz, cryptography, 1.4]
 status: active
 confidence: high
-covers: ["1.4"]
+covers: [1.4]
 created: 2026-05-21
 updated: 2026-05-21
 ---
 
-# 1.4 — Cryptography quiz bank
+# 1.4 — Cryptography Quiz
 
-A bank of question shapes for AI-generated quizzes. The LLM uses these as templates plus the concept pages to generate session-specific quiz questions. Track misses in [[synthesis/weak-areas|weak-areas]].
+Ten questions on the material from [[objectives/1.4|Objective 1.4]].
 
-## Question shapes
+```dataviewjs
+// question bank rendered as interactive quiz
+```
 
-### Conceptual
-- What problem does <X> solve, and what does it cost?
-- Where would you use <X> vs <Y>?
-- What's the difference between <X> and <Y>?
-
-### Scenario
-- A user receives a signed email. Which key was used and at which step?
-- An admin needs to encrypt data at rest on a SQL DB. Which approach?
-- A cert is suddenly distrusted. What's the recovery procedure?
-
-### Common exam traps
-- TLS handshake step ordering (asymmetric for key exchange, symmetric for data).
-- Hashing vs encryption vs encoding — what reverses, what doesn't.
-- Cert vs key — what's public, what's secret, who signs what.
+---
 
 ## Misses log
-*(LLM appends each session's missed questions here with date.)*
+- *(none yet)*
 ```
+
+#### Practice-exam page (`quizzes/practice-exam-a.md`)
+
+Same shape as a quiz page, with `category: practice-exam` and a `covers` list spanning many or all objectives.
 
 #### Session note (`sessions/2026-05-21-cryptography-deep-dive.md`)
 
 ```markdown
 ---
-title: "2026-05-21 — Cryptography deep dive"
+title: 2026-05-21 — Cryptography deep dive
 category: session
 tags: [session, cryptography, 1.4]
 status: active
@@ -259,22 +248,18 @@ updated: 2026-05-21
 
 **Missed:**
 - Diffie-Hellman vs ECDH — confused which provides forward secrecy by default.
-- ECC key-size equivalence to RSA (mismemorized 256-bit ECC ≈ 3072-bit RSA, not 2048).
+- ECC key-size equivalence to RSA.
 
 **Updated:**
-- [[concepts/key-exchange]] mastery `building` → `weak`.
+- [[objectives/1.4]] mastery `building` → `weak`.
 - [[synthesis/weak-areas]] appended both misses.
 
-**Next:** Re-quiz 1.4 in 3 days. Skim [[concepts/perfect-forward-secrecy]] before then.
+**Next:** Re-quiz 1.4 in 3 days.
 ```
-
-### Rationale stays inline
-
-When a concept page makes a claim that might mislead ("the *primary* defense for SQLi is parameterized queries"), say why in one line. The point of the wiki is durable understanding, not just notes.
 
 ### Link format
 
-Always use explicit-path pipe-syntax wikilinks: `[[concepts/sql-injection|SQL Injection]]`. Prevents Obsidian phantom pages and keeps references unambiguous.
+Always use explicit-path pipe-syntax wikilinks: `[[objectives/1.4|Objective 1.4]]`. Prevents Obsidian phantom pages and keeps references unambiguous.
 
 ---
 
@@ -282,65 +267,54 @@ Always use explicit-path pipe-syntax wikilinks: `[[concepts/sql-injection|SQL In
 
 ### 5.1 Distill a transcript
 
-When you (or the LLM) decide to work a transcript section:
+When working a transcript section:
 
-1. Read the relevant transcript page via `wiki_read("transcripts/Section X.Y.md")`.
-2. Identify the atomic concepts covered. Each `## ` heading in the transcript usually maps to one concept.
-3. For each concept:
-   - If a concept page exists, `wiki_edit` to add/refine.
-   - Otherwise `wiki_write` a new concept page using the template above.
-4. Update or create the objective page (`objectives/X.Y.md`) to list the concept.
-5. Update `_index.md` if a new concept folder or category appears.
-6. Append to `_log.md` is automatic on every mutating call.
-
-A single section distillation may touch 10–20 pages. That's expected.
+1. Read the transcript via `wiki_read("transcripts/Section X.Y.md")`.
+2. Either create `objectives/X.Y.md` or refine it. The objective page is where distilled study material lives.
+3. Update `_index.md` if anything new shows up at the category level.
+4. `_log.md` auto-appends on every mutating call.
 
 ### 5.2 Run a study session
 
-Working a topic in chat:
-
-1. LLM reads the objective page + 5–15 concept pages (`wiki_read_many`).
+1. LLM reads the objective page (and any related ones via `wiki_read_many`).
 2. LLM teaches / quizzes from the relevant `quizzes/<topic>.md` bank.
-3. At session end, the LLM writes `sessions/YYYY-MM-DD-<slug>.md` capturing what was covered, score, misses.
-4. LLM `wiki_status_set`s mastery on the concept pages that came up.
+3. At session end, LLM writes `sessions/YYYY-MM-DD-<slug>.md` capturing covered, score, misses.
+4. LLM `wiki_status_set`s mastery on the objective page(s).
 5. LLM appends misses to `synthesis/weak-areas.md`.
 
 ### 5.3 Generate a quiz
 
-Either ad-hoc in a session, or scheduled spaced-repetition style:
-
-1. LLM reads the relevant quiz bank + concept pages.
-2. Generates N questions in chat — uses the bank's question shapes plus concept content.
-3. After the user answers, scores them.
+1. LLM reads the relevant quiz bank + objective page.
+2. Generates N questions in chat from the bank's shapes + objective content.
+3. After answers, scores them.
 4. Logs misses (see 5.2).
 
 ### 5.4 Pre-exam review
 
-A week or two out:
-
-1. `wiki_search` or `wiki_list` for concept pages with `mastery: weak`.
-2. Read those + their objective pages.
+1. `wiki_search` or `wiki_list` for objective pages with `mastery: weak`.
+2. Read those.
 3. Run targeted quizzes on weak areas.
-4. Update mastery as it shifts.
+4. Run full practice exams (`quizzes/practice-exam-*.md`) to surface unknown-unknowns.
 
 ### 5.5 Lint
 
 On demand, scan the wiki for health issues:
 
-- Concept pages referenced from objective pages but unwritten (`status: planned` and empty).
-- `seed` pages with no activity for 14+ days.
-- Concept pages with no inbound links — orphans you can probably retire or fold in.
-- Objective pages missing any of the transcript's atomic concepts.
-- Quiz banks with no `covers` field.
-- Contradictions between concept pages and the transcripts they cite.
+- Schema drift: front-matter fields/values that don't match this file.
+- Broken wikilinks (target not on disk).
+- Orphan pages (no inbound links from other pages — excluding READMEs and `_index.md`).
+- Stale index (`_index.md` tables out of sync with the file tree).
+- Quiz banks without `covers`, or with empty `covers`.
+- Title mismatches between `objectives/README.md` and the actual objective pages.
+- Uniform-value tells: every objective at the same `confidence` or `mastery` usually means the data is template-default, not real signal.
 
-Output to `wiki/synthesis/lint-report.md` with a dated section. Canonical use case for `wiki_read_many` + `wiki_edit`.
+Output to `synthesis/lint-report.md` with a dated section.
 
 ---
 
 ## 6. Indexing and logging
 
-- **`_index.md`** — master index. Tables grouped by category. The first thing the LLM reads for any non-trivial query.
+- **`_index.md`** — master index. Tables grouped by category, every page on disk listed. Rebuild whenever a category gains or loses a page.
 - **`_log.md`** — chronological, append-only. Every mutating MCP call auto-appends: `## [YYYY-MM-DD] <op> | <context> | <short>`. Ops: `write | edit | status | delete | session | quiz | lint | schema`. Use `wiki_log_tail` instead of reading the whole log.
 
 ---
@@ -348,20 +322,20 @@ Output to `wiki/synthesis/lint-report.md` with a dated section. Canonical use ca
 ## 7. Voice
 
 - Precise and compact. Active voice. No hedging beyond what `confidence` already says.
-- Every claim worth verifying gets a one-line source pointer to a transcript or other concept page.
+- Every claim worth verifying gets a one-line source pointer to a transcript or other page.
 - Tone: study notes for a sharp future-you, not a textbook for a beginner.
-- No filler. A half-page concept that nails the mechanism beats three pages of vamping.
+- No filler. A half-page topic that nails the mechanism beats three pages of vamping.
 
 ---
 
 ## 8. Working with the MCP tools
 
-The server exposes ten tools. Same surface as `cyber-wiki`; same decision rules.
+The server exposes these tools.
 
 | Tool | When to use |
 |------|-------------|
 | `wiki_index` | First call for any non-trivial query. |
-| `wiki_list` | Enumerate pages in a folder (e.g. `category="concepts"`). |
+| `wiki_list` | Enumerate pages in a folder. |
 | `wiki_read` | One page; pass `section="…"` for partial reads. |
 | `wiki_read_many` | **Two or more pages.** Never sequence multiple `wiki_read` calls when this works. |
 | `wiki_search` | BM25 search across all pages. Content terms, not meta words. |
@@ -385,7 +359,7 @@ The server exposes ten tools. Same surface as `cyber-wiki`; same decision rules.
 - Smaller change → `wiki_edit` (multiple edits per call when applicable).
 - Front matter only → `wiki_status_set` (never `wiki_edit` for this — it refuses).
 
-**Concurrent-write detection:** All mutating tools include the file SHA from your last read in their write. If the page was modified between read and write, GitHub returns 409 and the tool surfaces a clear error. The right response is **always**: re-read, integrate, retry. Never assume your edit is safe to retry blindly.
+**Concurrent-write detection:** All mutating tools include the file SHA from your last read. If the page was modified between read and write, GitHub returns 409 and the tool surfaces a clear error. The right response is **always**: re-read, integrate, retry. Never assume your edit is safe to retry blindly.
 
 ---
 
