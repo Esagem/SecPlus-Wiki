@@ -660,6 +660,36 @@ gradeBtn.onclick = () => {
 
   // Scroll to top of report
   report.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  // Persist results to the Misses log so they survive a reload
+  try {
+    const file = app.workspace.getActiveFile();
+    if (file) {
+      const date = new Date().toISOString().slice(0, 10);
+      const missLines = missed.length === 0
+        ? "  - _Clean sweep — no MCQ misses_"
+        : missed.map(q => `  - A${q.n} (Obj ${q.objective || "?"}) — ${q.topic}`).join("\n");
+      const pbqLines = pbqs.map(p => {
+        const r = pbqResults[p.n];
+        return `  - A${p.n} ${p.title}: ${r.correct}/${r.total}`;
+      }).join("\n");
+      const domainLines = Object.keys(domainNames).sort().map(d => {
+        const s = domainStats[d] || { right: 0, total: 0 };
+        if (s.total === 0) return null;
+        return `  - ${domainNames[d]}: ${s.right}/${s.total} (${((s.right / s.total) * 100).toFixed(0)}%)`;
+      }).filter(Boolean).join("\n");
+      const entry = `### [${date}] Attempt\n- **MCQ:** ${totalCorrect} / ${total} (${pct.toFixed(1)}%)\n- **PBQ items:** ${pbqItemsCorrect} / ${pbqTotalItems}\n- **By domain:**\n${domainLines}\n- **PBQs:**\n${pbqLines}\n- **Missed MCQs:**\n${missLines}\n`;
+      const placeholder = "*(none yet — fill in after the first session: date, score, themes from missed Qs)*";
+      app.vault.read(file).then(current => {
+        const updated = current.includes(placeholder)
+          ? current.replace(placeholder, entry.trimEnd())
+          : current.trimEnd() + "\n\n" + entry;
+        return app.vault.modify(file, updated);
+      }).catch(e => console.error("Persist failed:", e));
+    }
+  } catch (e) {
+    console.error("Persist failed:", e);
+  }
 };
 
 function escapeHtml(s) {
