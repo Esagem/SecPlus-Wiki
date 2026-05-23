@@ -227,7 +227,7 @@ function initUI() {
     .vm-quit { margin-left: auto; padding: 6px 12px; background: transparent; border: 1px solid var(--background-modifier-border); border-radius: 6px; cursor: pointer; color: var(--text-muted); font-size: 0.85em; font-family: inherit; }
     .vm-quit:hover { color: rgb(248, 81, 73); }
     .vm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; }
-    .vm-tile { padding: 13px 15px; border: 1px solid var(--background-modifier-border); background: var(--background-secondary); border-radius: 6px; cursor: pointer; font-family: inherit; color: var(--text-normal); text-align: left; line-height: 1.4; transition: all 120ms; min-height: 80px; display: flex; flex-direction: column; justify-content: center; }
+    .vm-tile { padding: 13px 15px; border: 1px solid var(--background-modifier-border); background: var(--background-secondary); border-radius: 6px; cursor: pointer; font-family: inherit; color: var(--text-normal); text-align: left; line-height: 1.4; transition: all 120ms; min-height: 80px; display: flex; flex-direction: column; justify-content: center; white-space: normal; word-wrap: break-word; overflow-wrap: break-word; height: auto; }
     .vm-tile:hover:not(:disabled) { background: var(--background-modifier-hover); }
     .vm-tile.term { font-weight: 600; font-size: 0.97em; }
     .vm-tile.def { font-size: 0.87em; color: var(--text-normal); }
@@ -240,7 +240,7 @@ function initUI() {
     .vm-review-item.miss { border-left: 3px solid rgba(248, 81, 73, 0.55); }
     .vm-review-item.hit  { border-left: 3px solid rgba(63, 185, 80, 0.55); }
     .vm-review-term { font-weight: 600; }
-    .vm-review-def { color: var(--text-normal); }
+    .vm-review-def { color: var(--text-normal); white-space: normal; word-wrap: break-word; overflow-wrap: break-word; }
     .vm-review-obj { font-size: 0.82em; color: var(--text-muted); font-family: var(--font-monospace); text-align: right; }
     .vm-sym { display: inline-block; width: 1em; text-align: center; font-weight: 600; margin-right: 4px; }
     .vm-sym.ok { color: rgb(63, 185, 80); }
