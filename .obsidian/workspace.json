@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/sessions/quiz-logs/1.1-controls.log.md",
+                "file": "sessions/quiz-logs/1.1-controls.log.md",
                 "mode": "source",
                 "source": false
               },
@@ -196,9 +196,9 @@
   },
   "active": "edc627f7b98abb60",
   "lastOpenFiles": [
+    "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "sessions/quiz-logs/1.1-controls.log.md",
     "wiki/quizzes/1.1-controls.md",
-    "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "wiki/quizzes/vocab-match.md",
     "wiki/objectives/1.4.md",
     "wiki/quizzes/1.2-concepts.md",
