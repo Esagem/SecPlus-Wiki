@@ -11,14 +11,14 @@
             "id": "edc627f7b98abb60",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "sessions/quiz-logs/1.1-controls.log.md",
-                "bFile": "sessions/quiz-logs/1.1-controls.log.md",
-                "aRef": ""
+                "file": "wiki/sessions/quiz-logs/1.1-controls.log.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: 1.1-controls.log  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "1.1-controls.log"
             }
           }
         ]
@@ -196,12 +196,12 @@
   },
   "active": "edc627f7b98abb60",
   "lastOpenFiles": [
-    "wiki/sessions/quiz-logs/1.1-controls.log.md",
+    "sessions/quiz-logs/1.1-controls.log.md",
     "wiki/quizzes/1.1-controls.md",
+    "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "wiki/quizzes/vocab-match.md",
     "wiki/objectives/1.4.md",
     "wiki/quizzes/1.2-concepts.md",
-    "sessions/quiz-logs/1.1-controls.log.md",
     "wiki/quizzes/1.4-cryptography.md",
     "wiki/quizzes/1.3-change-management.md",
     "sessions/quiz-logs",
