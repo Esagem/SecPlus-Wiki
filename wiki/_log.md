@@ -137,3 +137,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-22] edit | quizzes/practice-exam-a.md | Practice Exam A: persist results to Misses log on grade
 ## [2026-05-23] edit | quizzes/practice-exam-b.md | Practice Exam B: persist results to Misses log on grade
 ## [2026-05-23] edit | quizzes/practice-exam-c.md | Practice Exam C: persist results to Misses log on grade
+## [2026-05-23] edit | quizzes/practice-exam-d.md | Practice Exam D: persist results to Misses log on grade
