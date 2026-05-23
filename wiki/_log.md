@@ -159,3 +159,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/1.1-controls.md | remove state.persisted gate so auto-fire works on every completion; add Submit button as explicit backup; add console.log diagnostics
 ## [2026-05-23] edit | quizzes/vocab-match.md | fix vocab loader to use Obsidian vault API instead of unreliable dv.io.load
 ## [2026-05-23] edit | quizzes/1.1-controls.md | make submit button always visible; add visible save status indicator
+## [2026-05-23] edit | quizzes/vocab-match.md | fix text wrapping on tiles and review rows
