@@ -139,3 +139,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/practice-exam-c.md | Practice Exam C: persist results to Misses log on grade
 ## [2026-05-23] edit | quizzes/practice-exam-d.md | Practice Exam D: persist results to Misses log on grade
 ## [2026-05-23] edit | quizzes/practice-exam-e.md | Practice Exam E: persist results to Misses log on grade
+## [2026-05-23] delete | concepts/README.md | lint: drop concepts/ — distillation will live on objective pages instead
