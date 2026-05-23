@@ -152,3 +152,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] write | sessions/quiz-logs/1.1-controls.log.md | move quiz log to sessions/quiz-logs/
 ## [2026-05-23] delete | quizzes/1.1-controls.log.md | remove old log location; moved to sessions/quiz-logs/
 ## [2026-05-23] write | quizzes/1.1-controls.md | rewrite 1.1 quiz: localStorage state, reset button, text wrap, log moved to sessions/quiz-logs/
+## [2026-05-23] edit | quizzes/1.1-controls.md | restore vertical centering and fix long-answer wrap: flex container + inner span with min-width:0
