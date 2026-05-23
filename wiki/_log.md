@@ -144,3 +144,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] write | STUDY.md | lint: schema rewrite — drop concepts; allow mastery on objectives; add practice-exam category; exempt transcripts from FM
 ## [2026-05-23] write | _index.md | lint: rebuild _index.md — full objective + quiz tables, drop concepts section, refresh phase copy
 ## [2026-05-23] write | README.md | lint: add proper front matter to README.md; drop concepts reference
+## [2026-05-23] write | objectives/README.md | lint: drop concepts wording; reconcile title column with each objective page's actual title
