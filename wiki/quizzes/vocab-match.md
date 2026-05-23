@@ -11,7 +11,7 @@ covers: [all]
 
 # Vocab Match — Interactive Trainer
 
-A Quizlet-style matching game across all 706 SY0-701 vocab terms from [[synthesis/vocab|the master glossary]]. Pick a scope, pair tiles two at a time. Progress is saved to `sessions/vocab-match-state.json` in your vault — terms you miss come back more often, terms you nail get sampled less often.
+A Quizlet-style matching game across all 706 SY0-701 vocab terms from [[synthesis/vocab|the master glossary]]. Pick a scope, pair tiles two at a time. Progress is saved to `wiki/sessions/vocab-match-state.json` in your vault — terms you miss come back more often, terms you nail get sampled less often.
 
 ```dataviewjs
 // ============== DATA: pulled live from synthesis/vocab.md ==============
@@ -74,7 +74,8 @@ loading.style.cssText = "padding: 14px 18px; color: var(--text-muted); font-styl
 
 let VOCAB, BY_OBJ, BY_DOMAIN;
 const STORAGE_KEY = "secplus-match-v1";  // legacy localStorage key, kept only for one-time migration
-const STATE_PATH = "sessions/vocab-match-state.json";
+const STATE_PATH = "wiki/sessions/vocab-match-state.json";
+const STATE_DIR = "wiki/sessions";
 let progress = {};
 let settings = { scope: { type: "all", value: null }, roundSize: 8 };
 
@@ -102,17 +103,15 @@ let settings = { scope: { type: "all", value: null }, roundSize: 8 };
 })();
 
 async function loadStateFn() {
-  // Primary: read from vault (adapter API bypasses metadata cache timing issues)
-  try {
-    if (await app.vault.adapter.exists(STATE_PATH)) {
-      const raw = await app.vault.adapter.read(STATE_PATH);
-      const parsed = JSON.parse(raw);
+  // Primary: read from vault
+  const existing = app.vault.getAbstractFileByPath(STATE_PATH);
+  if (existing) {
+    try {
+      const parsed = JSON.parse(await app.vault.read(existing));
       progress = parsed.progress || {};
       if (parsed.settings) settings = Object.assign(settings, parsed.settings);
       return;
-    }
-  } catch (e) {
-    console.warn("vocab-match: could not load vault state", e);
+    } catch (e) { console.warn("vocab-match: could not parse vault state", e); }
   }
   // One-time migration: pull any existing localStorage data into the vault
   try {
@@ -130,7 +129,14 @@ async function loadStateFn() {
 async function saveState() {
   const data = JSON.stringify({ progress, settings }, null, 2);
   try {
-    await app.vault.adapter.write(STATE_PATH, data);
+    const existing = app.vault.getAbstractFileByPath(STATE_PATH);
+    if (existing) {
+      await app.vault.modify(existing, data);
+    } else {
+      const folder = app.vault.getAbstractFileByPath(STATE_DIR);
+      if (!folder) await app.vault.createFolder(STATE_DIR);
+      await app.vault.create(STATE_PATH, data);
+    }
     if (statsEl) {
       const prev = statsEl.querySelector(".vm-save-err");
       if (prev) prev.remove();
@@ -543,7 +549,7 @@ function renderSummaryScreen() {
 
 **Scope.** Pick *All*, a domain (1–5), or a specific objective (1.1–5.6). The trainer pulls pairs from whatever you chose.
 
-**Selection is weighted, not random.** Each term carries a per-vault mastery state stored in `sessions/vocab-match-state.json`:
+**Selection is weighted, not random.** Each term carries a per-vault mastery state stored in `wiki/sessions/vocab-match-state.json`:
 
 | Mastery   | Trigger                                  | Sampling weight |
 |-----------|------------------------------------------|----------------|
@@ -558,7 +564,7 @@ On top of base weight: terms with higher error rates get up to a 3× boost, and 
 
 **Vocab source.** The trainer loads from [[synthesis/vocab|synthesis/vocab.md]] at runtime — no duplicated data, no separate sync to maintain.
 
-**Reset progress** — delete `sessions/vocab-match-state.json` from your vault and reload the page.
+**Reset progress** — delete `wiki/sessions/vocab-match-state.json` from your vault and reload the page.
 
 ## Misses log
 
