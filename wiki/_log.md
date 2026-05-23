@@ -170,3 +170,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/vocab-match.md | use adapter.write for reliable saves; surface save errors visibly instead of swallowing them
 ## [2026-05-23] edit | quizzes/vocab-match.md | fix path prefix: vault root contains wiki/ folder; align save logic with 1.1-controls quiz pattern
 ## [2026-05-23] write | quizzes/1.4-cryptography.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log
+## [2026-05-23] write | quizzes/2.2-vectors.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log
