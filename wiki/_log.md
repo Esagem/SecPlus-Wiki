@@ -175,3 +175,5 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] write | quizzes/2.3-vulnerabilities.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log
 ## [2026-05-23] write | quizzes/2.5-mitigation.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log
 ## [2026-05-23] write | quizzes/_quiz-scaffold.md | add shared scaffold so individual quizzes can stay tiny stubs
+## [2026-05-23] edit | quizzes/1.2-concepts.md | refactor to use shared _quiz-scaffold
+## [2026-05-23] edit | quizzes/2.1-threat-actors.md | refactor to use shared _quiz-scaffold
