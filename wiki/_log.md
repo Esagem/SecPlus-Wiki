@@ -149,3 +149,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] status | quizzes/practice-exam-e.md | lint: add tags to practice-exam-e
 ## [2026-05-23] write | synthesis/lint-report.md | lint: append 2026-05-23 dated pass — 28 objectives, 33 quizzes, fixes applied + remaining items
 ## [2026-05-23] edit | quizzes/1.1-controls.md | fix persistResults SyntaxError; switch to sidecar log file to preserve quiz state on submit
+## [2026-05-23] write | sessions/quiz-logs/1.1-controls.log.md | move quiz log to sessions/quiz-logs/
