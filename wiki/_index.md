@@ -155,6 +155,12 @@ See [[objectives/README|objectives/README.md]] for the full objective list with 
 | [[quizzes/5.5-audits-pentests\|5.5 — Audits and Penetration Tests]] | 5.5 |
 | [[quizzes/5.6-awareness\|5.6 — Security Awareness]] | 5.6 |
 
+### Interactive trainers
+
+| Trainer | Scope |
+|---------|-------|
+| [[quizzes/vocab-match\|Vocab Match]] | All 706 SY0-701 terms — Quizlet-style matching with mastery tracking |
+
 ### Practice exams
 
 | Practice exam | Scope |
