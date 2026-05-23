@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sessions/quiz-logs/1.1-controls.log.md",
-                "mode": "source",
+                "file": "wiki/objectives/1.4.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1-controls.log"
+              "title": "1.4"
             }
           }
         ]
@@ -196,8 +196,8 @@
   },
   "active": "edc627f7b98abb60",
   "lastOpenFiles": [
-    "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "sessions/quiz-logs/1.1-controls.log.md",
+    "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "wiki/quizzes/1.1-controls.md",
     "wiki/quizzes/vocab-match.md",
     "wiki/objectives/1.4.md",
