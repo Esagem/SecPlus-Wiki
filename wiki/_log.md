@@ -192,3 +192,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/4.9-log-data.md | refactor to use shared _quiz-scaffold
 ## [2026-05-23] edit | quizzes/5.1-governance.md | refactor to use shared _quiz-scaffold
 ## [2026-05-23] edit | quizzes/5.2-risk.md | refactor to use shared _quiz-scaffold
+## [2026-05-23] edit | quizzes/5.3-third-party.md | refactor to use shared _quiz-scaffold
