@@ -199,3 +199,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/practice-exam-a.md | fix self-corrupting save block; write attempts to sidecar log
 ## [2026-05-23] edit | quizzes/practice-exam-b.md | fix self-corrupting save block; write attempts to sidecar log
 ## [2026-05-23] edit | quizzes/practice-exam-c.md | fix self-corrupting save block; write attempts to sidecar log
+## [2026-05-23] edit | quizzes/practice-exam-d.md | fix self-corrupting save block; write attempts to sidecar log
