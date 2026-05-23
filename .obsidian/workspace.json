@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sessions/quiz-logs/1.1-controls.log.md",
+                "file": "wiki/objectives/1.4.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1-controls.log"
+              "title": "1.4"
             }
           }
         ]
@@ -196,16 +196,16 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
-    "wiki/quizzes/1.1-controls.md",
-    "wiki/sessions/quiz-logs/1.1-controls.log.md",
+    "wiki/quizzes/vocab-match.md",
     "wiki/objectives/1.4.md",
-    "wiki/quizzes/1.4-cryptography.md",
-    "wiki/quizzes/1.3-change-management.md",
+    "wiki/quizzes/1.1-controls.md",
     "wiki/quizzes/1.2-concepts.md",
     "sessions/quiz-logs/1.1-controls.log.md",
+    "wiki/sessions/quiz-logs/1.1-controls.log.md",
+    "wiki/quizzes/1.4-cryptography.md",
+    "wiki/quizzes/1.3-change-management.md",
     "sessions/quiz-logs",
     "sessions",
-    "wiki/quizzes/vocab-match.md",
     "wiki/_log.md",
     "wiki/objectives/1.3.md",
     "wiki/sessions/quiz-logs",
