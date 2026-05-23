@@ -11,7 +11,7 @@ covers: [all]
 
 # Vocab Match — Interactive Trainer
 
-A Quizlet-style matching game across all 706 SY0-701 vocab terms from [[synthesis/vocab|the master glossary]]. Pick a scope, pair tiles two at a time. Progress is saved per-vault in `localStorage` — terms you miss come back more often, terms you nail get sampled less often.
+A Quizlet-style matching game across all 706 SY0-701 vocab terms from [[synthesis/vocab|the master glossary]]. Pick a scope, pair tiles two at a time. Progress is saved to `sessions/vocab-match-state.json` in your vault — terms you miss come back more often, terms you nail get sampled less often.
 
 ```dataviewjs
 // ============== DATA: pulled live from synthesis/vocab.md ==============
@@ -73,7 +73,8 @@ const loading = root.createDiv({ text: "Loading vocab…" });
 loading.style.cssText = "padding: 14px 18px; color: var(--text-muted); font-style: italic;";
 
 let VOCAB, BY_OBJ, BY_DOMAIN;
-const STORAGE_KEY = "secplus-match-v1";
+const STORAGE_KEY = "secplus-match-v1";  // legacy localStorage key, kept only for one-time migration
+const STATE_PATH = "sessions/vocab-match-state.json";
 let progress = {};
 let settings = { scope: { type: "all", value: null }, roundSize: 8 };
 
@@ -95,24 +96,45 @@ let settings = { scope: { type: "all", value: null }, roundSize: 8 };
     (BY_OBJ[v.obj] = BY_OBJ[v.obj] || []).push(v);
     (BY_DOMAIN[v.domain] = BY_DOMAIN[v.domain] || []).push(v);
   });
-  loadStateFn();
+  await loadStateFn();
   loading.remove();
   initUI();
 })();
 
-function loadStateFn() {
+async function loadStateFn() {
+  // Primary: read from vault
+  const file = app.vault.getAbstractFileByPath(STATE_PATH);
+  if (file) {
+    try {
+      const parsed = JSON.parse(await app.vault.read(file));
+      progress = parsed.progress || {};
+      if (parsed.settings) settings = Object.assign(settings, parsed.settings);
+      return;
+    } catch (e) { console.warn("vocab-match: could not parse vault state", e); }
+  }
+  // One-time migration: pull any existing localStorage data into the vault
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
       progress = parsed.progress || {};
       if (parsed.settings) settings = Object.assign(settings, parsed.settings);
+      await saveState();
+      console.log("vocab-match: migrated progress from localStorage to", STATE_PATH);
     }
-  } catch (e) { /* first run */ }
+  } catch (e) { /* no migration data */ }
 }
-function saveState() {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ progress, settings })); }
-  catch (e) { console.warn("Save failed", e); }
+
+async function saveState() {
+  const data = JSON.stringify({ progress, settings }, null, 2);
+  try {
+    const file = app.vault.getAbstractFileByPath(STATE_PATH);
+    if (file) {
+      await app.vault.modify(file, data);
+    } else {
+      await app.vault.create(STATE_PATH, data);
+    }
+  } catch (e) { console.warn("vocab-match: save failed", e); }
 }
 
 // ============== MASTERY ==============
@@ -512,7 +534,7 @@ function renderSummaryScreen() {
 
 **Scope.** Pick *All*, a domain (1–5), or a specific objective (1.1–5.6). The trainer pulls pairs from whatever you chose.
 
-**Selection is weighted, not random.** Each term carries a per-vault mastery state stored in `localStorage`:
+**Selection is weighted, not random.** Each term carries a per-vault mastery state stored in `sessions/vocab-match-state.json`:
 
 | Mastery   | Trigger                                  | Sampling weight |
 |-----------|------------------------------------------|----------------|
@@ -527,7 +549,7 @@ On top of base weight: terms with higher error rates get up to a 3× boost, and 
 
 **Vocab source.** The trainer loads from [[synthesis/vocab|synthesis/vocab.md]] at runtime — no duplicated data, no separate sync to maintain.
 
-**Reset progress** — open the browser devtools console in Obsidian (Ctrl+Shift+I) and run `localStorage.removeItem("secplus-match-v1")` then reload the page.
+**Reset progress** — delete `sessions/vocab-match-state.json` from your vault and reload the page.
 
 ## Misses log
 
