@@ -173,3 +173,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] write | quizzes/2.2-vectors.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log
 ## [2026-05-23] write | quizzes/2.4-malicious-activity.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log
 ## [2026-05-23] write | quizzes/2.3-vulnerabilities.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log
+## [2026-05-23] write | quizzes/2.5-mitigation.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log
