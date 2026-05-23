@@ -102,15 +102,17 @@ let settings = { scope: { type: "all", value: null }, roundSize: 8 };
 })();
 
 async function loadStateFn() {
-  // Primary: read from vault
-  const file = app.vault.getAbstractFileByPath(STATE_PATH);
-  if (file) {
-    try {
-      const parsed = JSON.parse(await app.vault.read(file));
+  // Primary: read from vault (adapter API bypasses metadata cache timing issues)
+  try {
+    if (await app.vault.adapter.exists(STATE_PATH)) {
+      const raw = await app.vault.adapter.read(STATE_PATH);
+      const parsed = JSON.parse(raw);
       progress = parsed.progress || {};
       if (parsed.settings) settings = Object.assign(settings, parsed.settings);
       return;
-    } catch (e) { console.warn("vocab-match: could not parse vault state", e); }
+    }
+  } catch (e) {
+    console.warn("vocab-match: could not load vault state", e);
   }
   // One-time migration: pull any existing localStorage data into the vault
   try {
@@ -128,13 +130,20 @@ async function loadStateFn() {
 async function saveState() {
   const data = JSON.stringify({ progress, settings }, null, 2);
   try {
-    const file = app.vault.getAbstractFileByPath(STATE_PATH);
-    if (file) {
-      await app.vault.modify(file, data);
-    } else {
-      await app.vault.create(STATE_PATH, data);
+    await app.vault.adapter.write(STATE_PATH, data);
+    if (statsEl) {
+      const prev = statsEl.querySelector(".vm-save-err");
+      if (prev) prev.remove();
     }
-  } catch (e) { console.warn("vocab-match: save failed", e); }
+  } catch (e) {
+    console.error("vocab-match: save failed", e);
+    if (statsEl) {
+      const prev = statsEl.querySelector(".vm-save-err");
+      if (prev) prev.remove();
+      const errEl = statsEl.createDiv({ cls: "vm-save-err", text: "⚠ Save failed (" + STATE_PATH + "): " + e.message });
+      errEl.style.cssText = "color: rgb(248, 81, 73); font-size: 0.85em; flex-basis: 100%; margin-top: 4px;";
+    }
+  }
 }
 
 // ============== MASTERY ==============
