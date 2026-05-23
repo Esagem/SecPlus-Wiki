@@ -163,3 +163,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/1.1-controls.md | switch persistResults from adapter.* (raw disk) to vault.* (TFile-based, properly notifies Obsidian index)
 ## [2026-05-23] edit | quizzes/vocab-match.md | fix stats wrap and timer flicker (clean up leaked intervals across dataviewjs reruns)
 ## [2026-05-23] edit | quizzes/1.1-controls.md | hardcode log path; use explicit wiki link path; remove getActiveFile dependency
+## [2026-05-23] edit | quizzes/1.1-controls.md | prepend wiki/ to LOG_DIR and LOG_PATH so dataviewjs writes land in the same file my wiki tools manage
