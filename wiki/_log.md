@@ -168,3 +168,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/vocab-match.md | move progress storage from localStorage to sessions/vocab-match-state.json (syncs with vault, survives reinstalls)
 ## [2026-05-23] write | quizzes/1.3-change-management.md | apply v6 quiz template: localStorage state, reset, submit button, sidecar log at wiki/sessions/quiz-logs/
 ## [2026-05-23] edit | quizzes/vocab-match.md | use adapter.write for reliable saves; surface save errors visibly instead of swallowing them
+## [2026-05-23] edit | quizzes/vocab-match.md | fix path prefix: vault root contains wiki/ folder; align save logic with 1.1-controls quiz pattern
