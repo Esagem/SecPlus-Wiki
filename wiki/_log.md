@@ -142,3 +142,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] delete | concepts/README.md | lint: drop concepts/ — distillation will live on objective pages instead
 ## [2026-05-23] edit | quizzes/1.1-controls.md | Quiz 1.1: persist misses to log on completion
 ## [2026-05-23] write | STUDY.md | lint: schema rewrite — drop concepts; allow mastery on objectives; add practice-exam category; exempt transcripts from FM
+## [2026-05-23] write | _index.md | lint: rebuild _index.md — full objective + quiz tables, drop concepts section, refresh phase copy
