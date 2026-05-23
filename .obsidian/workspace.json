@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/quizzes/1.1-controls.md",
+                "file": "wiki/objectives/1.3.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1-controls"
+              "title": "1.3"
             }
           }
         ]
@@ -196,10 +196,13 @@
   },
   "active": "f517b844b8b55a46",
   "lastOpenFiles": [
-    "wiki/_log.md",
-    "wiki/quizzes/1.1-controls.md",
-    "wiki/quizzes/1.1-controls.log.md",
+    "wiki/sessions/quiz-logs/1.1-controls.log.md",
+    "wiki/sessions/quiz-logs",
+    "wiki/quizzes/1.3-change-management.md",
     "wiki/quizzes/1.2-concepts.md",
+    "wiki/quizzes/1.1-controls.md",
+    "wiki/_log.md",
+    "wiki/quizzes/1.1-controls.log.md",
     "wiki/objectives/1.2.md",
     "wiki/objectives/1.1.md",
     "wiki/quizzes/practice-exam-a.md",
@@ -220,8 +223,6 @@
     "wiki/synthesis/video-index.md",
     "wiki/synthesis/README.md",
     "wiki/synthesis/open-questions.md",
-    "wiki/synthesis/lint-report.md",
-    "wiki/synthesis/exam-blueprint.md",
     "Untitled.base",
     "Untitled.canvas",
     "wiki/transcripts/video_map.json",
@@ -232,7 +233,6 @@
     "server/node_modules/undici/types/file.d.ts",
     "server/node_modules/undici/lib/interceptor/redirectInterceptor.js",
     "server/node_modules/undici/lib/handler/RetryHandler.js",
-    "server/node_modules/undici/lib/handler/RedirectHandler.js",
     "server/node_modules/undici/docs/assets/lifecycle-diagram.png"
   ]
 }
