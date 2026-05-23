@@ -14,6 +14,12 @@ covers: [all]
 A Quizlet-style matching game across all 706 SY0-701 vocab terms from [[synthesis/vocab|the master glossary]]. Pick a scope, pair tiles two at a time, beat your time. Progress is saved per-vault in `localStorage` — terms you miss come back more often, terms you nail get sampled less often.
 
 ```dataviewjs
+// ============== CLEANUP from any prior render of this block ==============
+if (window.__vmTrainerTimer) {
+  clearInterval(window.__vmTrainerTimer);
+  window.__vmTrainerTimer = null;
+}
+
 // ============== DATA: pulled live from synthesis/vocab.md ==============
 async function loadVocab() {
   // Resolve via Obsidian's link cache, then read the file directly.
@@ -189,8 +195,9 @@ function initUI() {
   const style = root.createEl("style");
   style.textContent = `
     .vm-card { border: 1px solid var(--background-modifier-border); padding: 18px 22px; margin-bottom: 18px; border-radius: 8px; background: var(--background-primary-alt); }
-    .vm-stats { display: flex; gap: 22px; flex-wrap: wrap; padding: 12px 16px; background: var(--background-secondary); border-radius: 6px; margin-bottom: 18px; font-size: 0.9em; color: var(--text-muted); }
-    .vm-stats b { color: var(--text-normal); font-weight: 600; }
+    .vm-stats { display: flex; gap: 6px 18px; flex-wrap: wrap; padding: 12px 16px; background: var(--background-secondary); border-radius: 6px; margin-bottom: 18px; font-size: 0.9em; color: var(--text-muted); align-items: baseline; }
+    .vm-stat { display: inline-flex; gap: 5px; white-space: nowrap; align-items: baseline; }
+    .vm-stat b { color: var(--text-normal); font-weight: 600; }
     .vm-label { font-weight: 600; margin: 14px 0 8px; font-size: 0.95em; color: var(--text-normal); }
     .vm-label:first-child { margin-top: 0; }
     .vm-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
@@ -263,13 +270,17 @@ function renderStats() {
   const seen = m[1] + m[2] + m[3];
   const acc = (c + w) > 0 ? Math.round(100 * c / (c + w)) + "%" : "—";
   statsEl.empty();
-  statsEl.createSpan({ text: "Mastery: " });
-  statsEl.createEl("b", { text: m[3] + " mastered" });
-  statsEl.createSpan({ text: " · " + m[2] + " review · " + m[1] + " learning · " + m[0] + " new · " });
-  statsEl.createEl("b", { text: seen + "/" + VOCAB.length });
-  statsEl.createSpan({ text: " encountered · " });
-  statsEl.createEl("b", { text: acc });
-  statsEl.createSpan({ text: " lifetime accuracy" });
+  function stat(num, label) {
+    const item = statsEl.createDiv({ cls: "vm-stat" });
+    item.createEl("b", { text: String(num) });
+    item.createSpan({ text: label });
+  }
+  stat(m[3], "mastered");
+  stat(m[2], "review");
+  stat(m[1], "learning");
+  stat(m[0], "new");
+  stat(seen + "/" + VOCAB.length, "encountered");
+  stat(acc, "lifetime accuracy");
 }
 
 function renderSetup() {
@@ -379,11 +390,13 @@ function metaItem(parent, lbl, val, cls, id) {
 
 function startTimer() {
   if (timerInt) clearInterval(timerInt);
+  if (window.__vmTrainerTimer) clearInterval(window.__vmTrainerTimer);
   timerInt = setInterval(() => {
     if (!round || round.endTime) return;
     const el = document.getElementById("vm-time-val");
     if (el) el.textContent = fmtTime(Date.now() - round.startTime);
   }, 1000);
+  window.__vmTrainerTimer = timerInt;
 }
 
 function fmtTime(ms) {
