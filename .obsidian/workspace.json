@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/objectives/3.3.md",
+                "file": "wiki/objectives/3.4.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "3.3"
+              "title": "3.4"
             }
           },
           {
@@ -225,8 +225,10 @@
   },
   "active": "11bdc9512b5d54b2",
   "lastOpenFiles": [
-    "wiki/objectives/3.4.md",
+    "wiki/quizzes/3.3-data-protection.md",
+    "wiki/sessions/quiz-logs/3.3-data-protection.log.md",
     "wiki/objectives/3.3.md",
+    "wiki/objectives/3.4.md",
     "wiki/quizzes/3.2-infrastructure.md",
     "wiki/sessions/quiz-logs/3.2-infrastructure.log.md",
     "wiki/objectives/3.2.md",
@@ -249,8 +251,6 @@
     "wiki/sessions/quiz-logs/2.4-malicious-activity.log.md",
     "wiki/quizzes/2.3-vulnerabilities.md",
     "wiki/sessions/quiz-logs/2.3-vulnerabilities.log.md",
-    "wiki/synthesis/vocab.md",
-    "wiki/objectives/2.3.md",
     "wiki/sessions/vocab-match-state.json",
     "sessions/quiz-logs",
     "sessions",
