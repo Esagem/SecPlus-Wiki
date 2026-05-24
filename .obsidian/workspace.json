@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/objectives/2.1.md",
+                "file": "wiki/objectives/2.2.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2.1"
+              "title": "2.2"
             }
           },
           {
@@ -211,9 +211,10 @@
   },
   "active": "11bdc9512b5d54b2",
   "lastOpenFiles": [
-    "wiki/synthesis/video-index.md",
-    "wiki/objectives/2.1.md",
     "wiki/quizzes/2.1-threat-actors.md",
+    "wiki/sessions/quiz-logs/2.1-threat-actors.log.md",
+    "wiki/objectives/2.1.md",
+    "wiki/synthesis/video-index.md",
     "wiki/quizzes/2.2-vectors.md",
     "wiki/quizzes/1.4-cryptography.md",
     "wiki/quizzes/1.1-controls.md",
@@ -236,7 +237,6 @@
     "wiki/quizzes/5.4-compliance-privacy.md",
     "wiki/quizzes/5.2-risk.md",
     "wiki/quizzes/5.1-governance.md",
-    "wiki/quizzes/4.6-iam.md",
     "wiki/sessions/vocab-match-state.json",
     "sessions/quiz-logs",
     "sessions",
