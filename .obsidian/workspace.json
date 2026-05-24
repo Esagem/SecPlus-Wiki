@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/objectives/2.4.md",
+                "file": "wiki/objectives/2.5.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "2.4"
+              "title": "2.5"
             }
           },
           {
@@ -49,7 +49,8 @@
               "title": "vocab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -223,8 +224,12 @@
       "iconic:Open rulebook": false
     }
   },
-  "active": "11bdc9512b5d54b2",
+  "active": "6f3ffced7f7aff92",
   "lastOpenFiles": [
+    "wiki/objectives/2.5.md",
+    "wiki/objectives/2.4.md",
+    "wiki/quizzes/2.4-malicious-activity.md",
+    "wiki/sessions/quiz-logs/2.4-malicious-activity.log.md",
     "wiki/quizzes/2.3-vulnerabilities.md",
     "wiki/sessions/quiz-logs/2.3-vulnerabilities.log.md",
     "wiki/synthesis/vocab.md",
@@ -247,10 +252,6 @@
     "wiki/sessions/quiz-logs/1.2-concepts.log.md",
     "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "wiki/transcripts/Section 1.1.md",
-    "wiki/transcripts/README.md",
-    "wiki/_index.md",
-    "wiki/_log.md",
-    "wiki/quizzes/practice-exam-e.md",
     "wiki/sessions/vocab-match-state.json",
     "sessions/quiz-logs",
     "sessions",
