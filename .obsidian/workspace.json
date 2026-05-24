@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/objectives/2.1.md",
+                "file": "wiki/quizzes/3.1-architecture.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.1"
+              "title": "3.1-architecture"
             }
           }
         ]
@@ -196,21 +196,27 @@
   },
   "active": "11bdc9512b5d54b2",
   "lastOpenFiles": [
-    "wiki/quizzes/_quiz-scaffold.md",
+    "wiki/quizzes/2.5-mitigation.md",
+    "wiki/quizzes/2.4-malicious-activity.md",
+    "wiki/quizzes/2.3-vulnerabilities.md",
+    "wiki/quizzes/2.2-vectors.md",
     "wiki/quizzes/2.1-threat-actors.md",
-    "wiki/sessions/quiz-logs/1.4-cryptography.log.md",
     "wiki/quizzes/1.4-cryptography.md",
+    "wiki/quizzes/1.3-change-management.md",
+    "wiki/quizzes/1.1-controls.md",
+    "wiki/quizzes/1.2-concepts.md",
+    "wiki/quizzes/5.3-third-party.md",
+    "wiki/objectives/2.1.md",
+    "wiki/quizzes/_quiz-scaffold.md",
+    "wiki/sessions/quiz-logs/1.4-cryptography.log.md",
     "wiki/quizzes/vocab-match.md",
     "wiki/sessions/quiz-logs/1.1-controls.log.md",
     "wiki/sessions/vocab-match-state.json",
     "wiki/sessions/README.md",
     "wiki/synthesis/vocab.md",
     "wiki/quizzes/practice-exam-a.md",
-    "wiki/quizzes/1.1-controls.md",
     "wiki/objectives/1.4.md",
     "sessions/quiz-logs/1.1-controls.log.md",
-    "wiki/quizzes/1.2-concepts.md",
-    "wiki/quizzes/1.3-change-management.md",
     "sessions/quiz-logs",
     "sessions",
     "wiki/_log.md",
@@ -220,12 +226,6 @@
     "wiki/objectives/1.2.md",
     "wiki/objectives/1.1.md",
     "wiki/quizzes/practice-exam-c.md",
-    "wiki/quizzes/practice-exam-b.md",
-    "wiki/objectives/3.1.md",
-    "wiki/objectives/3.4.md",
-    "wiki/objectives/4.4.md",
-    "wiki/objectives/4.6.md",
-    "wiki/objectives/5.6.md",
     "Untitled.base",
     "Untitled.canvas",
     "wiki/transcripts/video_map.json",
