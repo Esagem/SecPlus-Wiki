@@ -201,3 +201,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-23] edit | quizzes/practice-exam-c.md | fix self-corrupting save block; write attempts to sidecar log
 ## [2026-05-23] edit | quizzes/practice-exam-d.md | fix self-corrupting save block; write attempts to sidecar log
 ## [2026-05-23] edit | quizzes/practice-exam-e.md | fix self-corrupting save block; write attempts to sidecar log
+## [2026-05-24] edit | quizzes/1.2-concepts.md | make scaffold regex tolerant of CRLF and trailing fence whitespace
