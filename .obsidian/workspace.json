@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/quizzes/1.1-controls.md",
+                "file": "wiki/quizzes/1.2-concepts.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.1-controls"
+              "title": "1.2-concepts"
             }
           }
         ]
@@ -196,9 +196,9 @@
   },
   "active": "11bdc9512b5d54b2",
   "lastOpenFiles": [
-    "wiki/quizzes/_quiz-scaffold.md",
     "wiki/quizzes/1.1-controls.md",
     "wiki/sessions/quiz-logs/1.1-controls.log.md",
+    "wiki/quizzes/_quiz-scaffold.md",
     "wiki/sessions/quiz-logs/1.4-cryptography.log.md",
     "wiki/transcripts/Section 1.1.md",
     "wiki/transcripts/README.md",
