@@ -160,12 +160,18 @@ function render() {
   async function persistResults() {
     try {
       if (!file) { console.warn("[quiz] no active file"); return; }
-      const date = new Date().toISOString().slice(0, 10);
+      const now = new Date();
+      const pad = n => String(n).padStart(2, "0");
+      const date = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+      const time = pad(now.getHours()) + ":" + pad(now.getMinutes());
+      const solved = solvedCount();
+      const total = questions.length;
       const missedNums = state.perQ
         .map((q, i) => (q.wrongIdxs.length > 0 ? i + 1 : null))
         .filter(n => n !== null);
-      const missedStr = missedNums.length === 0 ? "_Clean sweep_" : missedNums.map(n => "Q" + n).join(", ");
-      const entry = "### [" + date + "] Attempt\n- Solved: " + solvedCount() + "/" + questions.length + "\n- Wrong attempts: " + state.wrongCount + "\n- Missed (first try): " + missedStr + "\n";
+      const entry = missedNums.length === 0
+        ? "### " + date + " " + time + " — " + solved + "/" + total + " · clean sweep\n"
+        : "### " + date + " " + time + " — " + solved + "/" + total + " (" + state.wrongCount + " wrong)\nMissed: " + missedNums.map(n => "Q" + n).join(", ") + "\n";
 
       const existing = app.vault.getAbstractFileByPath(LOG_PATH);
       if (existing && existing.extension === "md") {
