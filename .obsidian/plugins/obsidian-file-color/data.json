@@ -1,0 +1,32 @@
+{
+  "cascadeColors": false,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "Zzijq0fLOdccOyzVQZnxx",
+      "name": "Red",
+      "value": "#6a0606"
+    },
+    {
+      "id": "qnfV7uIPI1IT6j-J9ARN0",
+      "name": "Burnt Orange",
+      "value": "#95290e"
+    },
+    {
+      "id": "oq3QL2pDR4HzcEme6YVQ-",
+      "name": "Bright Orange",
+      "value": "#e45011"
+    },
+    {
+      "id": "QlW5qFG5u4rsjdN4DoSk6",
+      "name": "Gold",
+      "value": "#92622a"
+    },
+    {
+      "id": "J850iZeolu08qTr2J5tpy",
+      "name": "Yello",
+      "value": "#db9214"
+    }
+  ],
+  "fileColors": []
+}
