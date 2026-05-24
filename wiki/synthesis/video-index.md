@@ -16,15 +16,15 @@ Source: [Professor Messer's SY0-701 course index](https://www.professormesser.co
 
 ## Runtime by domain
 
-| Domain | Title | Exam % | Videos | 1x | 1.5x | 2x |
-|--------|-------|-------:|-------:|----:|-----:|---:|
-| 1 | General Security Concepts | 12% | 18 | 2:30:48 | 1:40:32 | 1:15:24 |
-| 2 | Threats, Vulnerabilities, and Mitigations | 22% | 38 | 4:11:53 | 2:47:55 | 2:05:56 |
-| 3 | Security Architecture | 18% | 18 | 2:31:33 | 1:41:02 | 1:15:46 |
-| 4 | Security Operations | 28% | 29 | 4:06:56 | 2:44:37 | 2:03:28 |
-| 5 | Security Program Management and Oversight | 20% | 17 | 1:39:44 | 1:06:29 | 49:52 |
-| 0 | Overview | — | 1 | 10:06 | 6:44 | 5:03 |
-| **Total** | | | **121** | **15:11:00** | **10:07:20** | **7:35:30** |
+| Domain    | Title                                     | Exam % |  Videos |           1x |         1.5x |          2x |
+| --------- | ----------------------------------------- | -----: | ------: | -----------: | -----------: | ----------: |
+| 1         | General Security Concepts                 |    12% |      18 |      2:30:48 |      1:40:32 |     1:15:24 |
+| 2         | Threats, Vulnerabilities, and Mitigations |    22% |      38 |      4:11:53 |      2:47:55 |     2:05:56 |
+| 3         | Security Architecture                     |    18% |      18 |      2:31:33 |      1:41:02 |     1:15:46 |
+| 4         | Security Operations                       |    28% |      29 |      4:06:56 |      2:44:37 |     2:03:28 |
+| 5         | Security Program Management and Oversight |    20% |      17 |      1:39:44 |      1:06:29 |       49:52 |
+| 0         | Overview                                  |      — |       1 |        10:06 |         6:44 |        5:03 |
+| **Total** |                                           |        | **121** | **15:11:00** | **10:07:20** | **7:35:30** |
 
 ## Runtime by section
 
