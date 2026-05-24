@@ -213,3 +213,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-24] edit | quizzes/4.4-monitoring.md | make scaffold regex tolerant of CRLF and trailing fence whitespace
 ## [2026-05-24] edit | quizzes/4.5-enterprise-capabilities.md | make scaffold regex tolerant of CRLF and trailing fence whitespace
 ## [2026-05-24] edit | quizzes/4.6-iam.md | make scaffold regex tolerant of CRLF and trailing fence whitespace
+## [2026-05-24] edit | quizzes/4.7-automation.md | make scaffold regex tolerant of CRLF and trailing fence whitespace
