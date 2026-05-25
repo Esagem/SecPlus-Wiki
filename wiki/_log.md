@@ -232,3 +232,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-25] write | quizzes/2.3-vulnerabilities.md | refactor 2.3 to shared scaffold (picks up auto-✓ rename feature)
 ## [2026-05-25] write | quizzes/2.4-malicious-activity.md | refactor 2.4 to shared scaffold (picks up auto-✓ rename feature)
 ## [2026-05-25] write | quizzes/2.5-mitigation.md | refactor 2.5 to shared scaffold (picks up auto-✓ rename feature)
+## [2026-05-25] write | quizzes/_retroactive-mark.md | one-shot migration: retroactively rename quiz files with ✓ based on existing log scores
