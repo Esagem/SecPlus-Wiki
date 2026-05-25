@@ -105,7 +105,7 @@ One page per exam objective (`objectives/N.N.md`). Each contains the full distil
 | [[4.1 ✓\|4.1]] | Securing Computing Resources | active | medium | weak |
 | [[4.2 ✓\|4.2]] | Asset Management | active | medium | weak |
 | [[4.3 ✓\|4.3]] | Vulnerability Management | active | medium | weak |
-| [[objectives/4.4\|4.4]] | Security Alerting and Monitoring | active | medium | weak |
+| [[4.4 ✓\|4.4]] | Security Alerting and Monitoring | active | medium | weak |
 | [[objectives/4.5\|4.5]] | Enterprise Capabilities to Enhance Security | active | medium | weak |
 | [[objectives/4.6\|4.6]] | Identity and Access Management | active | medium | weak |
 | [[objectives/4.7\|4.7]] | Automation and Orchestration | active | medium | weak |
@@ -142,7 +142,7 @@ See [[objectives/README|objectives/README.md]] for the full objective list with 
 | [[4.1-securing-resources ✓\|4.1 — Securing Computing Resources]] | 4.1 |
 | [[4.2-asset-management ✓\|4.2 — Asset Management]] | 4.2 |
 | [[4.3-vulnerability-management ✓\|4.3 — Vulnerability Management]] | 4.3 |
-| [[quizzes/4.4-monitoring\|4.4 — Security Monitoring]] | 4.4 |
+| [[4.4-monitoring ✓\|4.4 — Security Monitoring]] | 4.4 |
 | [[quizzes/4.5-enterprise-capabilities\|4.5 — Enterprise Capabilities]] | 4.5 |
 | [[quizzes/4.6-iam\|4.6 — Identity and Access Management]] | 4.6 |
 | [[quizzes/4.7-automation\|4.7 — Automation and Orchestration]] | 4.7 |
