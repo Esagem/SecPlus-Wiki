@@ -1,0 +1,77 @@
+# Attempt log: practice-exam-b
+
+### [2026-05-25] Attempt
+- **MCQ:** 26 / 85 (30.6%)
+- **PBQ items:** 29 / 34
+- **By domain:**
+  - 1.0 General Security Concepts: 3/11 (27%)
+  - 2.0 Threats, Vulnerabilities, and Mitigations: 6/21 (29%)
+  - 3.0 Security Architecture: 3/14 (21%)
+  - 4.0 Security Operations: 8/26 (31%)
+  - 5.0 Security Program Management & Oversight: 6/13 (46%)
+- **PBQs:**
+  - B1 Certificate characteristics: 4/4
+  - B2 Mobile app security features by platform: 7/7
+  - B3 Incident response order: 3/7
+  - B4 Security technology to implementation: 6/6
+  - B5 States of data: 9/10
+- **Missed MCQs:**
+  - B12 (Obj 2.3) — SY0-701, Objective 2.3 - Virtualization Vulnerabilities
+  - B16 (Obj 2.2) — SY0-701, Objective 2.2 - Common Threat Vectors
+  - B29 (Obj 5.2) — SY0-701, Objective 5.2 - Risk Management Strategies
+  - B32 (Obj 4.9) — SY0-701, Objective 4.9 - Log Data
+  - B36 (Obj 1.2) — SY0-701, Objective 1.2 - Gap Analysis
+  - B37 (Obj 2.2) — SY0-701, Objective 2.2 - Common Threat Vectors
+  - B38 (Obj 2.2) — SY0-701, Objective 2.2 - Watering Hole Attacks
+  - B39 (Obj 3.4) — SY0-701, Objective 3.4 - Power Resiliency
+  - B40 (Obj 1.4) — SY0-701, Objective 1.4 - Certificates
+  - B41 (Obj 3.2) — SY0-701, Objective 3.2 - Secure Communication
+  - B42 (Obj 2.4) — SY0-701, Objective 2.4 - Indicators of Compromise
+  - B43 (Obj 3.3) — SY0-701, Objective 3.3 - Protecting Data
+  - B44 (Obj 4.4) — SY0-701, Objective 4.4 - Security Monitoring
+  - B45 (Obj 4.3) — SY0-701, Objective 4.3 - Analyzing Vulnerabilities
+  - B46 (Obj 5.4) — SY0-701, Objective 5.4 - Compliance
+  - B47 (Obj 5.3) — SY0-701, Objective 5.3 - Third-party Risk Assessment
+  - B48 (Obj 4.6) — SY0-701, Objective 4.6 - Multi-factor Authentication
+  - B49 (Obj 5.3) — SY0-701, Objective 5.3 - Agreement Types
+  - B50 (Obj 2.4) — SY0-701, Objective 2.4 - Other Social Engineering Attacks
+  - B51 (Obj 3.3) — SY0-701, Objective 3.3 - Protecting Data
+  - B52 (Obj 3.3) — SY0-701, Objective 3.3 - States of Data
+  - B53 (Obj 4.1) — SY0-701, Objective 4.1 - Wireless Security Settings
+  - B54 (Obj 2.4) — SY0-701, Objective 2.4 - Other Malware Types
+  - B55 (Obj 1.4) — SY0-701, Objective 1.4 - Certificates
+  - B56 (Obj 2.4) — SY0-701, Objective 2.4 - Cryptographic Attacks
+  - B57 (Obj 2.5) — SY0-701, Objective 2.5 - Hardening Techniques
+  - B58 (Obj 4.8) — SY0-701, Objective 4.8 - Digital Forensics
+  - B59 (Obj 3.1) — SY0-701, Objective 3.1 - Network Infrastructure Concepts
+  - B60 (Obj 3.2) — SY0-701, Objective 3.2 - Intrusion Prevention
+  - B61 (Obj 3.3) — SY0-701, Objective 3.3 - Protecting Data
+  - B62 (Obj 2.1) — SY0-701, Objective 2.1 - Threat Actors
+  - B63 (Obj 3.2) — SY0-701, Objective 3.2 - Firewall Types
+  - B64 (Obj 4.8) — SY0-701, Objective 4.8 - Digital Forensics
+  - B65 (Obj 4.6) — SY0-701, Objective 4.6 - Password Security
+  - B66 (Obj 1.3) — SY0-701, Objective 1.3 - Change Management Process
+  - B67 (Obj 2.4) — SY0-701, Objective 2.4 - Replay Attacks
+  - B68 (Obj 4.5) — SY0-701, Objective 4.5 - Monitoring Data
+  - B69 (Obj 4.6) — SY0-701, Objective 4.6 - Identity and Access Management
+  - B70 (Obj 3.1) — SY0-701, Objective 3.1 - Other Infrastructure Concepts
+  - B71 (Obj 4.2) — SY0-701, Objective 4.2 - Asset Management
+  - B72 (Obj 2.5) — SY0-701, Objective 2.5 - Hardening Techniques
+  - B73 (Obj 1.4) — SY0-701, Objective 1.4 - Encryption Technologies
+  - B74 (Obj 4.3) — SY0-701, Objective 4.3 - Vulnerability Scanning
+  - B75 (Obj 2.2) — SY0-701, Objective 2.2 - Common Threat Vectors
+  - B76 (Obj 4.4) — SY0-701, Objective 4.4 - Security Tools
+  - B77 (Obj 1.4) — SY0-701, Objective 1.4 - Public Key Infrastructure
+  - B78 (Obj 4.5) — SY0-701, Objective 4.5 - Monitoring Data
+  - B79 (Obj 4.8) — SY0-701, Objective 4.8 - Incident Response
+  - B80 (Obj 5.4) — SY0-701, Objective 5.4 - Privacy
+  - B81 (Obj 3.2) — SY0-701, Objective 3.2 - Encryption Technologies
+  - B82 (Obj 4.6) — SY0-701, Objective 4.6 - Access Controls
+  - B83 (Obj 2.5) — SY0-701, Objective 2.5 - Segmentation and Access Control
+  - B84 (Obj 4.2) — SY0-701, Objective 4.2 - Incident Response Planning
+  - B85 (Obj 2.4) — SY0-701, Objective 2.4 - Other Malware Types
+  - B86 (Obj 4.9) — SY0-701, Objective 4.9 - Log Data
+  - B87 (Obj 1.2) — SY0-701, Objective 1.2 - Physical Security
+  - B88 (Obj 1.4) — SY0-701, Objective 1.4 - Obfuscation
+  - B89 (Obj 5.5) — SY0-701, Objective 5.5 - Penetration Tests
+  - B90 (Obj 5.2) — SY0-701, Objective 5.2 - Risk Analysis
