@@ -226,3 +226,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-24] write | synthesis/video-index.md | add runtime tables (per-domain and per-section) at 1x/1.5x/2x, plus per-video durations
 ## [2026-05-25] edit | quizzes/_quiz-scaffold.md | auto-rename quiz + objective files with " ✓" suffix on first-try accuracy ≥ 90%
 ## [2026-05-25] write | quizzes/1.1-controls.md | refactor 1.1 to shared scaffold (picks up auto-✓ rename feature)
+## [2026-05-25] write | quizzes/1.3-change-management.md | refactor 1.3 to shared scaffold (picks up auto-✓ rename feature)
