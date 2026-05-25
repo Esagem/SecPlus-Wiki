@@ -228,3 +228,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-25] write | quizzes/1.1-controls.md | refactor 1.1 to shared scaffold (picks up auto-✓ rename feature)
 ## [2026-05-25] write | quizzes/1.3-change-management.md | refactor 1.3 to shared scaffold (picks up auto-✓ rename feature)
 ## [2026-05-25] write | quizzes/1.4-cryptography.md | refactor 1.4 to shared scaffold (picks up auto-✓ rename feature)
+## [2026-05-25] write | quizzes/2.2-vectors.md | refactor 2.2 to shared scaffold (picks up auto-✓ rename feature)
