@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/objectives/4.2.md",
+                "file": "wiki/objectives/4.3.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "4.2"
+              "title": "4.3"
             }
           },
           {
@@ -225,6 +225,9 @@
   },
   "active": "11bdc9512b5d54b2",
   "lastOpenFiles": [
+    "wiki/quizzes/4.2-asset-management.md",
+    "wiki/sessions/quiz-logs/4.2-asset-management.log.md",
+    "wiki/objectives/4.2.md",
     "wiki/quizzes/4.1-securing-resources.md",
     "wiki/sessions/quiz-logs/4.1-securing-resources.log.md",
     "wiki/objectives/4.1.md",
@@ -245,12 +248,9 @@
     "wiki/objectives/5.1.md",
     "wiki/objectives/4.9.md",
     "wiki/objectives/4.3.md",
-    "wiki/objectives/4.2.md",
     "wiki/objectives/2.5.md",
     "wiki/quizzes/2.5-mitigation.md",
     "wiki/sessions/quiz-logs/2.5-mitigation.log.md",
-    "wiki/synthesis/video-index.md",
-    "wiki/objectives/2.4.md",
     "wiki/sessions/vocab-match-state.json",
     "sessions/quiz-logs",
     "sessions",
