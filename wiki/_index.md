@@ -136,7 +136,7 @@ See [[objectives/README|objectives/README.md]] for the full objective list with 
 | [[2.4-malicious-activity ✓\|2.4 — Malicious Activity]] | 2.4 |
 | [[2.5-mitigation ✓\|2.5 — Mitigation Techniques]] | 2.5 |
 | [[3.1-architecture ✓\|3.1 — Architecture]] | 3.1 |
-| [[quizzes/3.2-infrastructure\|3.2 — Enterprise Infrastructure]] | 3.2 |
+| [[3.2-infrastructure ✓\|3.2 — Enterprise Infrastructure]] | 3.2 |
 | [[3.3-data-protection ✓\|3.3 — Data Protection]] | 3.3 |
 | [[3.4-resilience ✓\|3.4 — Resilience and Recovery]] | 3.4 |
 | [[4.1-securing-resources ✓\|4.1 — Securing Computing Resources]] | 4.1 |
