@@ -99,12 +99,12 @@ One page per exam objective (`objectives/N.N.md`). Each contains the full distil
 | [[2.4 ✓\|2.4]] | Malicious Activity | active | medium | weak |
 | [[2.5 ✓\|2.5]] | Mitigation Techniques for Security | active | medium | weak |
 | [[3.1 ✓\|3.1]] | Architecture and Infrastructure Models | active | medium | weak |
-| [[3.2 ✓\|3.2]] | Secure Enterprise Infrastructure | active | medium | weak |
+| [[3.2\|3.2]] | Secure Enterprise Infrastructure | active | medium | weak |
 | [[3.3 ✓\|3.3]] | Data Protection | active | medium | weak |
 | [[3.4 ✓\|3.4]] | Resilience and Recovery | active | medium | weak |
 | [[4.1 ✓\|4.1]] | Securing Computing Resources | active | medium | weak |
 | [[4.2 ✓\|4.2]] | Asset Management | active | medium | weak |
-| [[objectives/4.3\|4.3]] | Vulnerability Management | active | medium | weak |
+| [[4.3 ✓\|4.3]] | Vulnerability Management | active | medium | weak |
 | [[objectives/4.4\|4.4]] | Security Alerting and Monitoring | active | medium | weak |
 | [[objectives/4.5\|4.5]] | Enterprise Capabilities to Enhance Security | active | medium | weak |
 | [[objectives/4.6\|4.6]] | Identity and Access Management | active | medium | weak |
@@ -126,21 +126,21 @@ See [[objectives/README|objectives/README.md]] for the full objective list with 
 
 | Quiz | Covers |
 |------|--------|
-| [[quizzes/1.1-controls\|1.1 — Security Controls]] | 1.1 |
-| [[quizzes/1.2-concepts\|1.2 — Fundamental Concepts]] | 1.2 |
-| [[quizzes/1.3-change-management\|1.3 — Change Management]] | 1.3 |
-| [[quizzes/1.4-cryptography\|1.4 — Cryptography]] | 1.4 |
-| [[quizzes/2.1-threat-actors\|2.1 — Threat Actors]] | 2.1 |
-| [[quizzes/2.2-vectors\|2.2 — Threat Vectors]] | 2.2 |
-| [[quizzes/2.3-vulnerabilities\|2.3 — Vulnerabilities]] | 2.3 |
-| [[quizzes/2.4-malicious-activity\|2.4 — Malicious Activity]] | 2.4 |
-| [[quizzes/2.5-mitigation\|2.5 — Mitigation Techniques]] | 2.5 |
-| [[quizzes/3.1-architecture\|3.1 — Architecture]] | 3.1 |
+| [[1.1-controls ✓\|1.1 — Security Controls]] | 1.1 |
+| [[1.2-concepts ✓\|1.2 — Fundamental Concepts]] | 1.2 |
+| [[1.3-change-management ✓\|1.3 — Change Management]] | 1.3 |
+| [[1.4-cryptography ✓\|1.4 — Cryptography]] | 1.4 |
+| [[2.1-threat-actors ✓\|2.1 — Threat Actors]] | 2.1 |
+| [[2.2-vectors ✓\|2.2 — Threat Vectors]] | 2.2 |
+| [[2.3-vulnerabilities ✓\|2.3 — Vulnerabilities]] | 2.3 |
+| [[2.4-malicious-activity ✓\|2.4 — Malicious Activity]] | 2.4 |
+| [[2.5-mitigation ✓\|2.5 — Mitigation Techniques]] | 2.5 |
+| [[3.1-architecture ✓\|3.1 — Architecture]] | 3.1 |
 | [[quizzes/3.2-infrastructure\|3.2 — Enterprise Infrastructure]] | 3.2 |
-| [[quizzes/3.3-data-protection\|3.3 — Data Protection]] | 3.3 |
-| [[quizzes/3.4-resilience\|3.4 — Resilience and Recovery]] | 3.4 |
-| [[quizzes/4.1-securing-resources\|4.1 — Securing Computing Resources]] | 4.1 |
-| [[quizzes/4.2-asset-management\|4.2 — Asset Management]] | 4.2 |
+| [[3.3-data-protection ✓\|3.3 — Data Protection]] | 3.3 |
+| [[3.4-resilience ✓\|3.4 — Resilience and Recovery]] | 3.4 |
+| [[4.1-securing-resources ✓\|4.1 — Securing Computing Resources]] | 4.1 |
+| [[4.2-asset-management ✓\|4.2 — Asset Management]] | 4.2 |
 | [[4.3-vulnerability-management ✓\|4.3 — Vulnerability Management]] | 4.3 |
 | [[quizzes/4.4-monitoring\|4.4 — Security Monitoring]] | 4.4 |
 | [[quizzes/4.5-enterprise-capabilities\|4.5 — Enterprise Capabilities]] | 4.5 |
