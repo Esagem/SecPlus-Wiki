@@ -241,3 +241,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-25] edit | quizzes/4.9-log-data.md | balance answer-choice lengths in Q6, Q7, Q9 (remove length-as-tell)
 ## [2026-05-25] edit | quizzes/5.1-governance.md | balance answer-choice lengths in Q4, Q15 (remove length-as-tell)
 ## [2026-05-25] edit | quizzes/5.2-risk.md | balance answer-choice lengths in Q7 (remove length-as-tell)
+## [2026-05-25] edit | quizzes/5.4-compliance-privacy.md | balance answer-choice lengths in Q5 (remove length-as-tell)
