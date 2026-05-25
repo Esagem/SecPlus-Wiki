@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/quizzes/4.3-vulnerability-management.md",
+                "file": "wiki/quizzes/4.3-vulnerability-management ✓.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.3-vulnerability-management"
+              "title": "4.3-vulnerability-management ✓"
             }
           },
           {
@@ -226,6 +226,7 @@
   },
   "active": "6f3ffced7f7aff92",
   "lastOpenFiles": [
+    "wiki/sessions/quiz-logs/4.3-vulnerability-management.log.md",
     "wiki/quizzes/_retroactive-mark.md",
     "wiki/objectives/4.3.md",
     "wiki/objectives/1.1 ✓.md",
@@ -251,7 +252,6 @@
     "wiki/objectives/5.3.md",
     "wiki/objectives/5.2.md",
     "wiki/objectives/5.1.md",
-    "wiki/objectives/4.9.md",
     "wiki/sessions/vocab-match-state.json",
     "sessions/quiz-logs",
     "sessions",

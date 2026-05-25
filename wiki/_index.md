@@ -141,7 +141,7 @@ See [[objectives/README|objectives/README.md]] for the full objective list with 
 | [[quizzes/3.4-resilience\|3.4 — Resilience and Recovery]] | 3.4 |
 | [[quizzes/4.1-securing-resources\|4.1 — Securing Computing Resources]] | 4.1 |
 | [[quizzes/4.2-asset-management\|4.2 — Asset Management]] | 4.2 |
-| [[quizzes/4.3-vulnerability-management\|4.3 — Vulnerability Management]] | 4.3 |
+| [[4.3-vulnerability-management ✓\|4.3 — Vulnerability Management]] | 4.3 |
 | [[quizzes/4.4-monitoring\|4.4 — Security Monitoring]] | 4.4 |
 | [[quizzes/4.5-enterprise-capabilities\|4.5 — Enterprise Capabilities]] | 4.5 |
 | [[quizzes/4.6-iam\|4.6 — Identity and Access Management]] | 4.6 |
