@@ -116,7 +116,7 @@ One page per exam objective (`objectives/N.N.md`). Each contains the full distil
 | [[5.3 ✓\|5.3]] | Third-party Risk | active | medium | weak |
 | [[5.4 ✓\|5.4]] | Compliance and Privacy | active | medium | weak |
 | [[5.5 ✓\|5.5]] | Audits and Penetration Tests | active | medium | weak |
-| [[objectives/5.6\|5.6]] | Security Awareness and Training | active | medium | weak |
+| [[5.6 ✓\|5.6]] | Security Awareness and Training | active | medium | weak |
 
 See [[objectives/README|objectives/README.md]] for the full objective list with CompTIA descriptions. Use `wiki_list(category="objectives")` to enumerate.
 
@@ -153,7 +153,7 @@ See [[objectives/README|objectives/README.md]] for the full objective list with 
 | [[5.3-third-party ✓\|5.3 — Third-Party Risk]] | 5.3 |
 | [[5.4-compliance-privacy ✓\|5.4 — Compliance and Privacy]] | 5.4 |
 | [[5.5-audits-pentests ✓\|5.5 — Audits and Penetration Tests]] | 5.5 |
-| [[quizzes/5.6-awareness\|5.6 — Security Awareness]] | 5.6 |
+| [[5.6-awareness ✓\|5.6 — Security Awareness]] | 5.6 |
 
 ### Interactive trainers
 
