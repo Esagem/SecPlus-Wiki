@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/objectives/5.3.md",
+                "file": "wiki/objectives/5.4.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5.3"
+              "title": "5.4"
             }
           },
           {
@@ -211,6 +211,12 @@
   },
   "active": "6f3ffced7f7aff92",
   "lastOpenFiles": [
+    "wiki/objectives/5.6.md",
+    "wiki/objectives/5.5.md",
+    "wiki/objectives/5.4.md",
+    "wiki/quizzes/5.3-third-party ✓.md",
+    "wiki/sessions/quiz-logs/5.3-third-party.log.md",
+    "wiki/objectives/5.3 ✓.md",
     "wiki/quizzes/5.2-risk ✓.md",
     "wiki/sessions/quiz-logs/5.2-risk.log.md",
     "wiki/objectives/5.2 ✓.md",
@@ -223,10 +229,6 @@
     "wiki/quizzes/4.8-incident-response ✓.md",
     "wiki/sessions/quiz-logs/4.8-incident-response.log.md",
     "wiki/objectives/4.8 ✓.md",
-    "wiki/objectives/5.6.md",
-    "wiki/objectives/5.5.md",
-    "wiki/objectives/5.4.md",
-    "wiki/objectives/5.3.md",
     "wiki/quizzes/4.7-automation ✓.md",
     "wiki/sessions/quiz-logs/4.7-automation.log.md",
     "wiki/objectives/4.7 ✓.md",
@@ -235,8 +237,6 @@
     "wiki/objectives/3.2 ✓.md",
     "wiki/objectives/3.1 ✓.md",
     "wiki/objectives/4.6 ✓.md",
-    "wiki/quizzes/4.5-enterprise-capabilities ✓.md",
-    "wiki/sessions/quiz-logs/4.5-enterprise-capabilities.log.md",
     "wiki/sessions/vocab-match-state.json",
     "sessions/quiz-logs",
     "sessions",
