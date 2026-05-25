@@ -206,34 +206,62 @@ function render() {
 
   async function addCompletionMarker() {
     const renamed = [];
+    const errors = [];
 
     // 1. Rename the current quiz file: <name>.md → <name> ✓.md
     try {
-      if (file && !file.basename.endsWith(" ✓")) {
+      if (!file) {
+        errors.push("no active file");
+      } else if (file.basename.endsWith(" ✓")) {
+        // already marked — nothing to do
+      } else {
         const newQuizPath = file.path.replace(/\.md$/, " ✓.md");
-        if (!app.vault.getAbstractFileByPath(newQuizPath)) {
+        if (app.vault.getAbstractFileByPath(newQuizPath)) {
+          errors.push("quiz target exists: " + newQuizPath);
+        } else {
           await app.fileManager.renameFile(file, newQuizPath);
           renamed.push("quiz");
         }
       }
     } catch (e) {
       console.error("[quiz] rename quiz failed:", e);
+      errors.push("quiz: " + (e?.message || e));
     }
 
-    // 2. Rename the corresponding objective file: objectives/N.N.md → objectives/N.N ✓.md
+    // 2. Rename the corresponding objective file.
+    // Vault paths include the wiki/ prefix (see LOG_PATH above), so check both layouts.
     try {
       const objCode = baseName.split("-")[0]; // "1.4-cryptography" → "1.4"
-      const objPlain = "objectives/" + objCode + ".md";
-      const objMarked = "objectives/" + objCode + " ✓.md";
-      const objFile = app.vault.getAbstractFileByPath(objPlain);
-      if (objFile && !app.vault.getAbstractFileByPath(objMarked)) {
-        await app.fileManager.renameFile(objFile, objMarked);
-        renamed.push("objective");
+      const candidates = [
+        "wiki/objectives/" + objCode + ".md",
+        "objectives/" + objCode + ".md",
+      ];
+      let objFile = null;
+      let foundPath = null;
+      for (const p of candidates) {
+        const f = app.vault.getAbstractFileByPath(p);
+        if (f) { objFile = f; foundPath = p; break; }
       }
+      if (objFile) {
+        const newObjPath = foundPath.replace(/\.md$/, " ✓.md");
+        if (app.vault.getAbstractFileByPath(newObjPath)) {
+          // objective target already exists — silently skip (probably already marked elsewhere)
+        } else {
+          await app.fileManager.renameFile(objFile, newObjPath);
+          renamed.push("objective");
+        }
+      }
+      // If no plain objective file exists, it's already ✓-named — no error, no action.
     } catch (e) {
       console.error("[quiz] rename objective failed:", e);
+      errors.push("objective: " + (e?.message || e));
     }
 
+    if (errors.length > 0) {
+      const errMsg = errors.join("; ");
+      if (renamed.length > 0) return "partial ✓ (" + renamed.join(" + ") + "); errors: " + errMsg;
+      return "rename failed: " + errMsg;
+    }
     if (renamed.length === 0) return "already marked ✓";
     return "marked ✓ (" + renamed.join(" + ") + ")";
   }
