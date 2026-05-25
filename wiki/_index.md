@@ -99,7 +99,7 @@ One page per exam objective (`objectives/N.N.md`). Each contains the full distil
 | [[2.4 ✓\|2.4]] | Malicious Activity | active | medium | weak |
 | [[2.5 ✓\|2.5]] | Mitigation Techniques for Security | active | medium | weak |
 | [[3.1 ✓\|3.1]] | Architecture and Infrastructure Models | active | medium | weak |
-| [[3.2\|3.2]] | Secure Enterprise Infrastructure | active | medium | weak |
+| [[3.2 ✓\|3.2]] | Secure Enterprise Infrastructure | active | medium | weak |
 | [[3.3 ✓\|3.3]] | Data Protection | active | medium | weak |
 | [[3.4 ✓\|3.4]] | Resilience and Recovery | active | medium | weak |
 | [[4.1 ✓\|4.1]] | Securing Computing Resources | active | medium | weak |
