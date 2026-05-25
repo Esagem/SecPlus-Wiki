@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/objectives/4.5.md",
+                "file": "wiki/objectives/4.6.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.5"
+              "title": "4.6"
             }
           },
           {
@@ -226,6 +226,13 @@
   },
   "active": "6f3ffced7f7aff92",
   "lastOpenFiles": [
+    "wiki/objectives/4.9.md",
+    "wiki/objectives/4.6.md",
+    "wiki/objectives/4.8.md",
+    "wiki/objectives/4.7.md",
+    "wiki/quizzes/4.5-enterprise-capabilities ✓.md",
+    "wiki/sessions/quiz-logs/4.5-enterprise-capabilities.log.md",
+    "wiki/objectives/4.5 ✓.md",
     "wiki/quizzes/4.4-monitoring ✓.md",
     "wiki/sessions/quiz-logs/4.4-monitoring.log.md",
     "wiki/objectives/4.4 ✓.md",
@@ -245,13 +252,6 @@
     "wiki/objectives/2.4 ✓.md",
     "wiki/objectives/2.3 ✓.md",
     "wiki/objectives/2.2 ✓.md",
-    "wiki/objectives/2.1 ✓.md",
-    "wiki/objectives/1.4 ✓.md",
-    "wiki/objectives/1.3 ✓.md",
-    "wiki/objectives/1.2 ✓.md",
-    "wiki/synthesis/video-index.md",
-    "Untitled.md",
-    "wiki/objectives/5.6.md",
     "wiki/sessions/vocab-match-state.json",
     "sessions/quiz-logs",
     "sessions",
