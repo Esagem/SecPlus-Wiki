@@ -89,21 +89,21 @@ One page per exam objective (`objectives/N.N.md`). Each contains the full distil
 
 | Objective | Title | Status | Confidence | Mastery |
 |-----------|-------|--------|------------|---------|
-| [[objectives/1.1\|1.1]] | Security Controls | active | medium | weak |
-| [[objectives/1.2\|1.2]] | Fundamental Security Concepts | active | medium | weak |
-| [[objectives/1.3\|1.3]] | Change Management | active | medium | weak |
-| [[objectives/1.4\|1.4]] | Cryptographic Solutions | active | medium | weak |
-| [[objectives/2.1\|2.1]] | Threat Actors | active | medium | weak |
-| [[objectives/2.2\|2.2]] | Threat Vectors and Attack Surfaces | active | medium | weak |
-| [[objectives/2.3\|2.3]] | Vulnerabilities | active | medium | weak |
-| [[objectives/2.4\|2.4]] | Malicious Activity | active | medium | weak |
-| [[objectives/2.5\|2.5]] | Mitigation Techniques for Security | active | medium | weak |
-| [[objectives/3.1\|3.1]] | Architecture and Infrastructure Models | active | medium | weak |
-| [[objectives/3.2\|3.2]] | Secure Enterprise Infrastructure | active | medium | weak |
-| [[objectives/3.3\|3.3]] | Data Protection | active | medium | weak |
-| [[objectives/3.4\|3.4]] | Resilience and Recovery | active | medium | weak |
-| [[objectives/4.1\|4.1]] | Securing Computing Resources | active | medium | weak |
-| [[objectives/4.2\|4.2]] | Asset Management | active | medium | weak |
+| [[1.1 ✓\|1.1]] | Security Controls | active | medium | weak |
+| [[1.2 ✓\|1.2]] | Fundamental Security Concepts | active | medium | weak |
+| [[1.3 ✓\|1.3]] | Change Management | active | medium | weak |
+| [[1.4 ✓\|1.4]] | Cryptographic Solutions | active | medium | weak |
+| [[2.1 ✓\|2.1]] | Threat Actors | active | medium | weak |
+| [[2.2 ✓\|2.2]] | Threat Vectors and Attack Surfaces | active | medium | weak |
+| [[2.3 ✓\|2.3]] | Vulnerabilities | active | medium | weak |
+| [[2.4 ✓\|2.4]] | Malicious Activity | active | medium | weak |
+| [[2.5 ✓\|2.5]] | Mitigation Techniques for Security | active | medium | weak |
+| [[3.1 ✓\|3.1]] | Architecture and Infrastructure Models | active | medium | weak |
+| [[3.2 ✓\|3.2]] | Secure Enterprise Infrastructure | active | medium | weak |
+| [[3.3 ✓\|3.3]] | Data Protection | active | medium | weak |
+| [[3.4 ✓\|3.4]] | Resilience and Recovery | active | medium | weak |
+| [[4.1 ✓\|4.1]] | Securing Computing Resources | active | medium | weak |
+| [[4.2 ✓\|4.2]] | Asset Management | active | medium | weak |
 | [[objectives/4.3\|4.3]] | Vulnerability Management | active | medium | weak |
 | [[objectives/4.4\|4.4]] | Security Alerting and Monitoring | active | medium | weak |
 | [[objectives/4.5\|4.5]] | Enterprise Capabilities to Enhance Security | active | medium | weak |
