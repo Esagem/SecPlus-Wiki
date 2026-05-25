@@ -237,3 +237,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-25] edit | quizzes/4.5-enterprise-capabilities.md | balance answer-choice lengths in Q2, Q4, Q6, Q7, Q10, Q14 (remove length-as-tell)
 ## [2026-05-25] edit | quizzes/4.6-iam.md | balance answer-choice lengths in Q5, Q8, Q12 (remove length-as-tell)
 ## [2026-05-25] edit | quizzes/4.7-automation.md | balance answer-choice lengths in Q2, Q4, Q6, Q7, Q9, Q10 (remove length-as-tell)
+## [2026-05-25] edit | quizzes/4.8-incident-response.md | balance answer-choice lengths in Q2, Q3, Q6, Q7, Q8, Q10, Q11, Q12 (remove length-as-tell)
