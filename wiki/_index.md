@@ -109,7 +109,7 @@ One page per exam objective (`objectives/N.N.md`). Each contains the full distil
 | [[4.5 ✓\|4.5]] | Enterprise Capabilities to Enhance Security | active | medium | weak |
 | [[4.6 ✓\|4.6]] | Identity and Access Management | active | medium | weak |
 | [[4.7 ✓\|4.7]] | Automation and Orchestration | active | medium | weak |
-| [[objectives/4.8\|4.8]] | Incident Response | active | medium | weak |
+| [[4.8 ✓\|4.8]] | Incident Response | active | medium | weak |
 | [[objectives/4.9\|4.9]] | Data Sources for Investigation | active | medium | weak |
 | [[objectives/5.1\|5.1]] | Security Governance | active | medium | weak |
 | [[objectives/5.2\|5.2]] | Risk Management | active | medium | weak |
@@ -146,7 +146,7 @@ See [[objectives/README|objectives/README.md]] for the full objective list with 
 | [[4.5-enterprise-capabilities ✓\|4.5 — Enterprise Capabilities]] | 4.5 |
 | [[4.6-iam ✓\|4.6 — Identity and Access Management]] | 4.6 |
 | [[4.7-automation ✓\|4.7 — Automation and Orchestration]] | 4.7 |
-| [[quizzes/4.8-incident-response\|4.8 — Incident Response]] | 4.8 |
+| [[4.8-incident-response ✓\|4.8 — Incident Response]] | 4.8 |
 | [[quizzes/4.9-log-data\|4.9 — Log Data]] | 4.9 |
 | [[quizzes/5.1-governance\|5.1 — Security Governance]] | 5.1 |
 | [[quizzes/5.2-risk\|5.2 — Risk Management]] | 5.2 |
