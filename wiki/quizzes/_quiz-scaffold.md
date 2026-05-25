@@ -169,6 +169,7 @@ function render() {
       const missedNums = state.perQ
         .map((q, i) => (q.wrongIdxs.length > 0 ? i + 1 : null))
         .filter(n => n !== null);
+      const firstTryAccuracy = (total - missedNums.length) / total;
       const entry = missedNums.length === 0
         ? "### " + date + " " + time + " — " + solved + "/" + total + " · clean sweep\n"
         : "### " + date + " " + time + " — " + solved + "/" + total + " (" + state.wrongCount + " wrong)\nMissed: " + missedNums.map(n => "Q" + n).join(", ") + "\n";
@@ -185,8 +186,15 @@ function render() {
 
       lastLogPath = LOG_PATH;
       lastLogError = null;
+
+      // Auto-mark quiz + objective files with " ✓" on first-try accuracy ≥ 90%.
+      let markNote = "";
+      if (firstTryAccuracy >= 0.90) {
+        markNote = await addCompletionMarker();
+      }
+
       updateProgress();
-      showStatus("✓ Saved to " + LOG_PATH, true);
+      showStatus("✓ Saved to " + LOG_PATH + (markNote ? " · " + markNote : ""), true);
     } catch (e) {
       console.error("[quiz] log save failed:", e);
       lastLogError = e?.message || String(e);
@@ -194,6 +202,40 @@ function render() {
       updateProgress();
       showStatus("✗ Save failed: " + lastLogError, false);
     }
+  }
+
+  async function addCompletionMarker() {
+    const renamed = [];
+
+    // 1. Rename the current quiz file: <name>.md → <name> ✓.md
+    try {
+      if (file && !file.basename.endsWith(" ✓")) {
+        const newQuizPath = file.path.replace(/\.md$/, " ✓.md");
+        if (!app.vault.getAbstractFileByPath(newQuizPath)) {
+          await app.fileManager.renameFile(file, newQuizPath);
+          renamed.push("quiz");
+        }
+      }
+    } catch (e) {
+      console.error("[quiz] rename quiz failed:", e);
+    }
+
+    // 2. Rename the corresponding objective file: objectives/N.N.md → objectives/N.N ✓.md
+    try {
+      const objCode = baseName.split("-")[0]; // "1.4-cryptography" → "1.4"
+      const objPlain = "objectives/" + objCode + ".md";
+      const objMarked = "objectives/" + objCode + " ✓.md";
+      const objFile = app.vault.getAbstractFileByPath(objPlain);
+      if (objFile && !app.vault.getAbstractFileByPath(objMarked)) {
+        await app.fileManager.renameFile(objFile, objMarked);
+        renamed.push("objective");
+      }
+    } catch (e) {
+      console.error("[quiz] rename objective failed:", e);
+    }
+
+    if (renamed.length === 0) return "already marked ✓";
+    return "marked ✓ (" + renamed.join(" + ") + ")";
   }
 }
 
