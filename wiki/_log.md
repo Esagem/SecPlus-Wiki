@@ -265,3 +265,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | quizzes/2.3-vulnerabilities ✓.md | update AAR link to match created filename
 ## [2026-05-26] edit | quizzes/2.4-malicious-activity ✓.md | update AAR link to match created filename
 ## [2026-05-26] edit | quizzes/2.5-mitigation ✓.md | update AAR link to match created filename
+## [2026-05-26] write | _template/_LLM-OPERATING.md | add LLM operating guide — codifies wiki_edit-vs-wiki_write discipline and other lessons from the 2026-05-25 corruption AAR
