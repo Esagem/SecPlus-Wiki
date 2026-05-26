@@ -21,7 +21,7 @@ updated: 2026-05-26
 >   app.vault.getAbstractFileByPath("wiki/quizzes/_quiz-scaffold.md") ||
 >   app.vault.getAbstractFileByPath("quizzes/_quiz-scaffold.md")
 > );
-> const code = scaffold.match(/```javascript\n([\s\S]*?)\n```/)[1];
+> const code = scaffold.match(/```javascript[ \t]*\r?\n([\s\S]*?)\r?\n[ \t]*```/)[1];
 > eval(code);
 > ```
 >
