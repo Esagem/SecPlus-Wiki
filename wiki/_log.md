@@ -260,3 +260,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] write | synthesis/aar-2026-05-26.md | add after-action review covering wiki effectiveness, the 2026-05-25 wiki_write corruption incident, practice-exam state/log fixes, and forward rules
 ## [2026-05-26] edit | quizzes/1.1-controls ✓.md | update AAR link to match created filename
 ## [2026-05-26] edit | quizzes/1.3-change-management ✓.md | update AAR link to match created filename
+## [2026-05-26] edit | quizzes/1.4-cryptography ✓.md | update AAR link to match created filename
