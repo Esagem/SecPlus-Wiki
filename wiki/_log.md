@@ -297,3 +297,5 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] write | _template/starter/quizzes-README.md | add starter quizzes/README template
 ## [2026-05-26] write | _template/starter/sessions-README.md | add starter sessions/README template
 ## [2026-05-26] write | _template/starter/synthesis-README.md | add starter synthesis/README template with AAR convention
+## [2026-05-26] write | _template/starter/aar-template.md | add AAR template scaffolding the post-mortem structure used for the 2026-05-26 incident
+## [2026-05-26] write | _template/examples/example-quiz.md | add complete worked-example quiz file demonstrating scaffold-loader pattern, length parity, multi-select, and source attribution
