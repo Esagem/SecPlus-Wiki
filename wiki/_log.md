@@ -262,3 +262,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | quizzes/1.3-change-management ✓.md | update AAR link to match created filename
 ## [2026-05-26] edit | quizzes/1.4-cryptography ✓.md | update AAR link to match created filename
 ## [2026-05-26] edit | quizzes/2.2-vectors ✓.md | update AAR link to match created filename
+## [2026-05-26] edit | quizzes/2.3-vulnerabilities ✓.md | update AAR link to match created filename
