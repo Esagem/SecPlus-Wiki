@@ -306,3 +306,4 @@ render();
 - The auto-`✓` rename triggers at ≥ 90% first-try accuracy. Adjust the threshold by changing `0.90` in the scaffold source. The rename renames the quiz file *and* the corresponding objective file (`objectives/<topic-id>.md`) so both pick up the mastery mark.
 - The scaffold code uses plain string concatenation (not template literals) so the regex extraction in caller stubs is robust.
 - Edit per-quiz content (intro, questions array) in the individual quiz files. This file is the engine only.
+- **Before authoring questions**, read [[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]] — length parity, distractor design, multi-select handling, and the quality checklist. The first 28 quizzes on the SY0-701 wiki shipped with correct answers 2-4× longer than wrong ones; don't repeat that.
