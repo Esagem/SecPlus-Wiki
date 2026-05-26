@@ -17,8 +17,10 @@ These rules exist because they have already failed at least once. Each one is pa
 ## 0. Read these before doing anything
 
 1. The wiki's `STUDY.md` (schema, conventions, page templates).
-2. The wiki's `_index.md` (what exists today).
-3. `wiki_log_tail(n=20)` to see recent activity.
+2. **This file** — the tool-discipline rules.
+3. **`_QUESTION-AUTHORING.md`** — if you'll touch quizzes or practice exams.
+4. The wiki's `_index.md` (what exists today).
+5. `wiki_log_tail(n=20)` to see recent activity.
 
 Skipping any of these is how sessions step on each other.
 
@@ -111,8 +113,17 @@ If the wiki uses a shared scaffold pattern (e.g. `_quiz-scaffold.md` and `_pract
 - **Edit the scaffold, not the content files**, for engine changes. One edit propagates to all consumers.
 - **Edit the content file, not the scaffold**, for per-quiz content (questions, intro, references).
 - Content files should be small bootstraps that load the scaffold. If a content file grows past ~10 KB of code, something is wrong — the scaffold should be absorbing that.
+- **For authoring rules** (length parity, distractor design, multi-select, the chunked-build pattern for large practice exams), see [[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]]. Don't write questions without reading it first.
 
 The 5 monolithic practice-exam files in the secplus-wiki are the anti-example: each was authored standalone at ~150 KB, and bug fixes required editing all 5 separately. The scaffold pattern in `_template/_practice-exam-scaffold.md` is the correction.
+
+## 9a. Environment knowledge — things that have bitten us
+
+Two non-obvious things about working with this wiki + Obsidian:
+
+**Path prefix.** The wiki MCP tool surfaces paths *relative to the `wiki/` folder* — `wiki_read("sessions/foo.md")` reads `wiki/sessions/foo.md` on disk. But Obsidian's vault APIs (`app.vault.getAbstractFileByPath`, `app.vault.create`, `app.vault.modify`, `app.fileManager.renameFile`) see paths *from the vault root* — they want `"wiki/sessions/foo.md"`. For reads via Obsidian's wikilink resolution this difference doesn't matter, but for writes from inside `dataviewjs` code it absolutely does. The scaffolds in `_template/` handle this by trying both candidates (`wiki/quizzes/_scaffold.md` and `quizzes/_scaffold.md`). If you write new scripts that touch the vault, follow the same dual-path lookup pattern. The vocab-match save bug on 2026-05-23 was exactly this issue — saves were silently failing because the code used `sessions/...` (wiki tool style) instead of `wiki/sessions/...` (Obsidian vault style).
+
+**CRLF in regex extraction.** Bootstrap stubs extract the scaffold's JS code block via regex. The naive pattern `/```javascript\n([\s\S]*?)\n```/` fails on files written with CRLF line endings (some editors, some platforms, some round-trips through Git on Windows). Use `/```javascript[ \t]*\r?\n([\s\S]*?)\r?\n[ \t]*```/` instead — it tolerates both LF and CRLF, plus trailing whitespace on the fence lines. Every example stub in the template already uses this corrected pattern; copy it verbatim.
 
 ## 10. When you're not sure, ask
 
