@@ -24,20 +24,33 @@ These rules exist because they have already failed at least once. Each one is pa
 
 Skipping any of these is how sessions step on each other.
 
-## 1. Tool selection is the most important decision you make
+## 1. The tools
 
-The MCP server gives you a small set of tools. Choosing the wrong one is how data gets lost.
+The MCP server exposes ten tools. Six are read-side (cheap, idempotent, no state change), four are write-side (mutating; tool choice is the most important decision you make).
 
-### The hierarchy
+### Read-side
 
 | Tool | Use for |
 |------|---------|
-| `wiki_edit` | **Default mutation tool.** Any change smaller than a full rewrite. Multiple edits per call when applicable. Transactional. |
-| `wiki_write` | New pages, or genuine wholesale rewrites of an existing page (>~50% changed AND you're writing the full new content with full awareness of what you're replacing). |
-| `wiki_status_set` | Front matter only — status, confidence, mastery, tags, owner. `wiki_edit` refuses to touch YAML. |
-| `wiki_delete` | Genuine deletion. Defaults to refusing; prefer `wiki_status_set(status="retired")` for "keep but ignore". |
+| `wiki_index` | First call for any non-trivial query — returns the master `_index.md`. Cheaper than `wiki_list` for orientation since it surfaces structure plus status. |
+| `wiki_list` | Enumerate pages in a folder. Pass `category` to narrow. Use to confirm a page exists before reading or editing. |
+| `wiki_read` | One page. Pass `section=` for partial reads (one section or an array of sections). Pass `include_front_matter: false` to strip YAML. |
+| `wiki_read_many` | **Two or more pages** — always prefer this over multiple `wiki_read` calls. Provide either `page_paths` (explicit list) or `category` (folder). Optional `section=` applies to all pages. Default cap 10, hard cap 25. |
+| `wiki_search` | BM25 full-text search. Use content terms (entities, distinctive phrases), not meta words ("the", "about"). The index can be stale after out-of-band restores — if a search result feels wrong, verify with a direct read or probe-edit. |
+| `wiki_log_tail` | Recent `_log.md` entries as structured records. Filter by `op` (`edit`, `write`, `status`, `delete`) or `since` (ISO date). Use before any bulk operation to check what other sessions touched. |
 
-### The rule
+### Write-side
+
+Choosing the wrong write tool is how data gets lost. The hierarchy below is rank-ordered by how surgical the tool is — prefer the most surgical one that does the job.
+
+| Tool | Use for |
+|------|---------|
+| `wiki_edit` | **Default mutation tool.** Any change smaller than a full rewrite. Multiple edits per call when applicable. Transactional. Refuses any edit that overlaps YAML front matter. |
+| `wiki_status_set` | Front matter only — status, confidence, mastery, tags, owner. The only way to change YAML, since `wiki_edit` refuses it. |
+| `wiki_write` | New pages, or genuine wholesale rewrites of an existing page (>~50% changed AND you're writing the full new content with full awareness of what you're replacing). |
+| `wiki_delete` | Genuine deletion. Defaults to refusing non-test-looking pages; pass `force=true` only when you mean it. Prefer `wiki_status_set(status="retired")` for "keep but ignore." |
+
+### The rule that matters most
 
 **If you can describe the change as "replace X with Y" or "insert Z after W" or "modify the X part of this page," it is a `wiki_edit`. No exceptions.** Tasks phrased as "refactor," "migrate," "convert," "update" almost always belong in `wiki_edit` — these are partial changes by definition.
 
