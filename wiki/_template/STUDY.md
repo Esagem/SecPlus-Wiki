@@ -19,7 +19,7 @@ updated: 2026-05-26
 >
 > Once substituted, delete this header block.
 
-Operating manual for the **{{SUBJECT}} study wiki**. Any LLM connecting to this wiki's MCP server MUST read this file first, plus [[_LLM-OPERATING|_LLM-OPERATING.md]] (tool discipline) and [[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]] (content rules), and follow all three.
+Operating manual for the **{{SUBJECT}} study wiki**. Any LLM connecting to this wiki's MCP server MUST read this file first, plus [[_LLM-OPERATING|_LLM-OPERATING.md]] (tool discipline), [[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]] (content rules), and [[_INGESTION|_INGESTION.md]] (source-ingestion strategy), and follow all four.
 
 ---
 
@@ -53,10 +53,15 @@ wiki/
 ├── STUDY.md               # This file.
 ├── _LLM-OPERATING.md      # Tool-discipline rules.
 ├── _QUESTION-AUTHORING.md # Quiz/practice-exam content rules.
+├── _INGESTION.md          # Source-ingestion strategy.
 ├── README.md              # Top-of-repo orientation.
 │
-├── transcripts/           # Raw source material (immutable)
-│   └── ...
+├── ingestion/             # Raw source material (immutable)
+│   ├── README.md
+│   ├── transcripts/       # video captions, lecture transcripts
+│   ├── pdfs/              # study guide / practice test PDFs (extracted text)
+│   ├── web/               # scraped articles, forum threads, Reddit posts
+│   └── notes/             # study tips, hand-written notes, summaries
 │
 ├── objectives/            # One page per syllabus objective — the distilled study material
 │   ├── README.md
@@ -71,6 +76,8 @@ wiki/
 │
 ├── sessions/              # Study session notes
 │   ├── README.md
+│   ├── quiz-logs/         # Auto-generated per-quiz attempt logs (don't hand-edit)
+│   │   └── <baseName>.log.md
 │   └── YYYY-MM-DD-<slug>.md
 │
 └── synthesis/             # Cross-cutting views
@@ -78,7 +85,9 @@ wiki/
     ├── open-questions.md
     ├── weak-areas.md
     ├── exam-blueprint.md
-    └── vocab.md
+    ├── lint-report.md
+    ├── vocab.md
+    └── aar-YYYY-MM-DD.md  # when incidents warrant a post-mortem
 ```
 
 Folders are categories. Filenames use `<topic-id>.md` for objectives, `<topic-id>-<kebab-case>.md` or `practice-exam-<x>.md` for quizzes, `YYYY-MM-DD-slug.md` for sessions.
@@ -111,7 +120,7 @@ Titles are unquoted by default. Wrap in quotes only if the title contains a lite
 - **quiz** — per-objective question banks.
 - **practice-exam** — full-length practice banks. Same folder as `quiz`, different scope.
 - **session** — dated study-session notes.
-- **synthesis** — cross-cutting views (`synthesis/*.md`, plus `_index.md`, `STUDY.md`, `_LLM-OPERATING.md`, `_QUESTION-AUTHORING.md`).
+- **synthesis** — cross-cutting views (`synthesis/*.md`, plus `_index.md`, `STUDY.md`, `_LLM-OPERATING.md`, `_QUESTION-AUTHORING.md`, `_INGESTION.md`).
 
 ### Status lifecycle
 
@@ -261,9 +270,15 @@ Always use explicit-path pipe-syntax wikilinks: `[[objectives/1.4|Objective 1.4]
 
 ### 5.1 Distill source material
 
-1. Read the source via `wiki_read("transcripts/<file>.md")`.
-2. Create or refine `objectives/<topic-id>.md`. The objective page is where distilled study material lives.
-3. Update `_index.md` if anything new shows up at the category level.
+The core loop: raw sources in `ingestion/` get distilled into objective pages.
+
+1. **Source comes from `ingestion/`.** Read the relevant ingestion file(s) via `wiki_read` or `wiki_read_many`. Sources are immutable — you read, you don't edit them. See [[_INGESTION|_INGESTION.md]] for how sources get into `ingestion/` in the first place.
+2. **Create or refine `objectives/<topic-id>.md`.** The objective page is where the distilled study material lives. One page per syllabus objective.
+3. **Cite sources in the objective page's `## Source` section.** Wikilink back to the ingestion files that informed this objective — makes traceability obvious and lets the LLM cross-check claims against original material when authoring quizzes.
+4. **Update `_index.md`** if anything new shows up at the category level (new objective added, status change worth tracking, etc.).
+5. **Note any conflicts.** If two sources disagreed during distillation, mention it in the objective page and add a one-line entry to `synthesis/open-questions.md` if the conflict isn't yet resolved.
+
+A single objective's distillation may touch one objective page plus light edits to `_index.md` and `synthesis/vocab.md`. That's the expected scope.
 
 ### 5.2 Run a study session
 
