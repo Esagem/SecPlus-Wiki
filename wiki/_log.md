@@ -247,3 +247,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | quizzes/1.1-controls ✓.md | flag content-lost quiz; pointer to AAR for restore
 ## [2026-05-26] edit | quizzes/1.3-change-management ✓.md | flag content-lost quiz; pointer to AAR for restore
 ## [2026-05-26] edit | quizzes/1.4-cryptography ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/2.2-vectors ✓.md | flag content-lost quiz; pointer to AAR for restore
