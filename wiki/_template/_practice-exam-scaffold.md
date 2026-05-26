@@ -30,7 +30,7 @@ const scaffold = await app.vault.read(
   app.vault.getAbstractFileByPath("wiki/quizzes/_practice-exam-scaffold.md") ||
   app.vault.getAbstractFileByPath("quizzes/_practice-exam-scaffold.md")
 );
-eval(scaffold.match(/```javascript\n([\s\S]*?)\n```/)[1]);
+eval(scaffold.match(/```javascript[ \t]*\r?\n([\s\S]*?)\r?\n[ \t]*```/)[1]);
 ```
 
 ## Scaffold source
