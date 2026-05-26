@@ -281,3 +281,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | _template/_quiz-scaffold.md | point to _QUESTION-AUTHORING.md from the Notes section so question authors see the content rules
 ## [2026-05-26] edit | _template/_practice-exam-scaffold.md | point to _QUESTION-AUTHORING.md from the Notes section so practice-exam authors see content rules and chunked-build pattern
 ## [2026-05-26] edit | quizzes/practice-exam-a.md | integrity check probe — no-op edit to detect presence of 2026-05-26 STATE_KEY fix
+## [2026-05-26] edit | quizzes/practice-exam-b.md | integrity check probe
