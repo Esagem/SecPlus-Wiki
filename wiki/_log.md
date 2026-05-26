@@ -278,3 +278,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | _template/_quiz-scaffold.md | switch example bootstrap stub to CRLF-tolerant regex (avoids extraction failure on files with Windows line endings)
 ## [2026-05-26] edit | _template/_practice-exam-scaffold.md | switch example bootstrap stub to CRLF-tolerant regex (avoids extraction failure on files with Windows line endings)
 ## [2026-05-26] edit | _index.md | add _QUESTION-AUTHORING.md to template callout listing
+## [2026-05-26] edit | _template/_quiz-scaffold.md | point to _QUESTION-AUTHORING.md from the Notes section so question authors see the content rules
