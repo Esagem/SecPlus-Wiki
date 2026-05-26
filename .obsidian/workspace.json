@@ -4,26 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "726025220c09e4e9",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6f3ffced7f7aff92",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "wiki/sessions/quiz-logs/practice-exam-b.log.md",
-                "bFile": "wiki/sessions/quiz-logs/practice-exam-b.log.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: practice-exam-b.log  (Working Tree)"
-            }
-          }
-        ]
-      },
-      {
         "id": "1744b5355f903a78",
         "type": "tabs",
         "children": [
@@ -231,9 +211,9 @@
   },
   "active": "88277c2fc614fe12",
   "lastOpenFiles": [
+    "wiki/synthesis/vocab.md",
     "wiki/quizzes/practice-exam-b.md",
     "wiki/sessions/quiz-logs/practice-exam-b.log.md",
-    "wiki/synthesis/vocab.md",
     "wiki/quizzes/practice-exam-a.md",
     "wiki/quizzes/5.6-awareness ✓.md",
     "wiki/sessions/quiz-logs/5.6-awareness.log.md",
