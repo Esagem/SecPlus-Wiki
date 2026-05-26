@@ -273,3 +273,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | _index.md | add AAR link, _template/ callout, broken-quiz warning banner; flag 7 corrupted quizzes pending content restore
 ## [2026-05-26] write | _template/_QUESTION-AUTHORING.md | add question-authoring guide capturing the length-parity lesson and other quiz-quality rules learned during SY0-701 build
 ## [2026-05-26] edit | _template/README.md | add _QUESTION-AUTHORING reference; strengthen shared-scaffold-from-day-one guidance; add lessons absorbed list items for question authoring, wiki/-prefix gotcha, CRLF regex, chunked builds
+## [2026-05-26] edit | _template/_LLM-OPERATING.md | add _QUESTION-AUTHORING reference; document wiki/-prefix path gotcha and CRLF-tolerant regex pattern as environment knowledge
