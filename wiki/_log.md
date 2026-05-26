@@ -272,3 +272,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] write | _template/_practice-exam-scaffold.md | add template practice-exam scaffold with state persistence, Reset button, comprehensive logging, parameterized inputs (incorporates all fixes from 2026-05-26 AAR)
 ## [2026-05-26] edit | _index.md | add AAR link, _template/ callout, broken-quiz warning banner; flag 7 corrupted quizzes pending content restore
 ## [2026-05-26] write | _template/_QUESTION-AUTHORING.md | add question-authoring guide capturing the length-parity lesson and other quiz-quality rules learned during SY0-701 build
+## [2026-05-26] edit | _template/README.md | add _QUESTION-AUTHORING reference; strengthen shared-scaffold-from-day-one guidance; add lessons absorbed list items for question authoring, wiki/-prefix gotcha, CRLF regex, chunked builds
