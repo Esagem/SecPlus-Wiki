@@ -16,6 +16,10 @@ The knowledge base and study surface for CompTIA Security+ (SY0-701). See [[STUD
 
 **Current phase:** all 28 objective pages drafted (confidence `medium`, mastery `weak`); per-objective and full-exam quiz banks in place; sessions not yet started. Next move is to run sessions, raise mastery, and bump confidence on objective pages as they're verified.
 
+> ⚠️ **Seven per-objective quizzes were corrupted on 2026-05-25** and need content restored from git history or Obsidian local trash before they can be used: **1.1, 1.3, 1.4, 2.2, 2.3, 2.4, 2.5**. Each affected page carries a banner pointing to the postmortem. See [[synthesis/aar-2026-05-26|AAR — 2026-05-25 corruption incident]] for the full story.
+
+> 🛠 **Templates for future study wikis** live under `_template/` ([[_template/README|README]]). Includes the parameterized [[_template/STUDY|STUDY.md]] schema, the [[_template/_quiz-scaffold|quiz scaffold]], the new [[_template/_practice-exam-scaffold|practice-exam scaffold]] (with all 2026-05-26 fixes baked in), and the [[_template/_LLM-OPERATING|LLM operating rules]] codifying the wiki_edit-vs-wiki_write discipline.
+
 ---
 
 ## Transcripts
@@ -126,15 +130,15 @@ See [[objectives/README|objectives/README.md]] for the full objective list with 
 
 | Quiz | Covers |
 |------|--------|
-| [[1.1-controls ✓\|1.1 — Security Controls]] | 1.1 |
+| [[1.1-controls ✓\|1.1 — Security Controls]] ⚠️ | 1.1 — **content lost** |
 | [[1.2-concepts ✓\|1.2 — Fundamental Concepts]] | 1.2 |
-| [[1.3-change-management ✓\|1.3 — Change Management]] | 1.3 |
-| [[1.4-cryptography ✓\|1.4 — Cryptography]] | 1.4 |
+| [[1.3-change-management ✓\|1.3 — Change Management]] ⚠️ | 1.3 — **content lost** |
+| [[1.4-cryptography ✓\|1.4 — Cryptography]] ⚠️ | 1.4 — **content lost** |
 | [[2.1-threat-actors ✓\|2.1 — Threat Actors]] | 2.1 |
-| [[2.2-vectors ✓\|2.2 — Threat Vectors]] | 2.2 |
-| [[2.3-vulnerabilities ✓\|2.3 — Vulnerabilities]] | 2.3 |
-| [[2.4-malicious-activity ✓\|2.4 — Malicious Activity]] | 2.4 |
-| [[2.5-mitigation ✓\|2.5 — Mitigation Techniques]] | 2.5 |
+| [[2.2-vectors ✓\|2.2 — Threat Vectors]] ⚠️ | 2.2 — **content lost** |
+| [[2.3-vulnerabilities ✓\|2.3 — Vulnerabilities]] ⚠️ | 2.3 — **content lost** |
+| [[2.4-malicious-activity ✓\|2.4 — Malicious Activity]] ⚠️ | 2.4 — **content lost** |
+| [[2.5-mitigation ✓\|2.5 — Mitigation Techniques]] ⚠️ | 2.5 — **content lost** |
 | [[3.1-architecture ✓\|3.1 — Architecture]] | 3.1 |
 | [[3.2-infrastructure ✓\|3.2 — Enterprise Infrastructure]] | 3.2 |
 | [[3.3-data-protection ✓\|3.3 — Data Protection]] | 3.3 |
@@ -189,6 +193,7 @@ Cross-cutting views.
 | [[synthesis/weak-areas\|Weak Areas]] | Accumulated misses across quizzes and sessions |
 | [[synthesis/open-questions\|Open Questions]] | Things you didn't fully understand; revisit list |
 | [[synthesis/lint-report\|Lint Report]] | Wiki health snapshots |
+| [[synthesis/aar-2026-05-26\|AAR — 2026-05-25]] | After-action review: what worked, what failed (practice-exam state and 7 corrupted quizzes), forward rules |
 
 ---
 
