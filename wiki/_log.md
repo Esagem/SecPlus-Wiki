@@ -302,3 +302,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | _template/_LLM-OPERATING.md | add §9b: search-staleness gotcha and probe-edit verification pattern (discovered during 2026-05-26 integrity check after user's out-of-band revert)
 ## [2026-05-26] edit | _template/STUDY.md | add ingestion/ subfolders and sessions/quiz-logs/ to directory layout; update §5.1 to flow ingestion → objectives; reference _INGESTION.md
 ## [2026-05-26] edit | _template/README.md | add _INGESTION, starter/, and examples/ to inventory; tighten non-negotiables; update bootstrap sequence to reference starter files
+## [2026-05-26] edit | _index.md | expand template callout to mention _INGESTION, starter/, and examples/
