@@ -321,7 +321,7 @@ See **[[_LLM-OPERATING|_LLM-OPERATING.md]]** for operational rules (tool selecti
 | `wiki_write` | New page or genuine ≥50% rewrite. See _LLM-OPERATING §1 pre-flight checklist. |
 | `wiki_edit` | **Default mutation tool.** Smaller-than-rewrite changes. Refuses front-matter edits. |
 | `wiki_status_set` | Anything in the YAML block. |
-| `wiki_delete` | Genuine deletions. Prefer `status="retired"` for stale material. |
+| `wiki_delete` | Genuine deletions — force=true required for non-test pages. Prefer `wiki_status_set(status="retired")` for stale material. |
 | `wiki_log_tail` | Recent log entries as structured data. |
 
 ## 9. Evolution
