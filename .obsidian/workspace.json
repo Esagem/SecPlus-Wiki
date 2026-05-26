@@ -197,6 +197,8 @@
   },
   "active": "3a0169c577a93720",
   "lastOpenFiles": [
+    "wiki/_template/starter/wiki-README.md",
+    "wiki/_template/starter",
     "wiki/_template/_INGESTION.md",
     "SETUP.md",
     "wiki/transcripts/Section Overview.md",
@@ -222,7 +224,6 @@
     "wiki/sessions/quiz-logs/4.8-incident-response.log.md",
     "wiki/sessions/quiz-logs/4.7-automation.log.md",
     "wiki/sessions/quiz-logs/4.6-iam.log.md",
-    "wiki/sessions/quiz-logs/4.4-monitoring.log.md",
     "wiki/sessions/quiz-logs",
     "wiki/quizzes",
     "wiki/objectives",
@@ -233,7 +234,6 @@
     "server/node_modules/undici/docs",
     "wiki/_template",
     "wiki/sessions/vocab-match-state.json",
-    "sessions/quiz-logs",
     "Untitled.canvas"
   ]
 }
