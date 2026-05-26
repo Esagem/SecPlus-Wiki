@@ -268,3 +268,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] write | _template/_LLM-OPERATING.md | add LLM operating guide — codifies wiki_edit-vs-wiki_write discipline and other lessons from the 2026-05-25 corruption AAR
 ## [2026-05-26] write | _template/README.md | add template README — bootstrap guide for new study wikis derived from this one
 ## [2026-05-26] write | _template/STUDY.md | add parameterized STUDY.md template — schema and conventions for any subject study wiki
+## [2026-05-26] write | _template/_quiz-scaffold.md | add template quiz scaffold — verbatim copy of working engine, with header noting template provenance
