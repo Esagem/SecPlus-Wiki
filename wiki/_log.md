@@ -290,3 +290,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | _template/STUDY.md | add wiki_delete to §8 tool table for completeness (table previously had 9 of 10 server tools)
 ## [2026-05-26] write | _template/_INGESTION.md | add _INGESTION.md — source-ingestion strategy covering transcripts, PDFs, web scrapes, and aggregated notes
 ## [2026-05-26] write | _template/starter/wiki-README.md | add starter README template for new wiki root
+## [2026-05-26] write | _template/starter/index.md | add starter _index.md skeleton with all category tables
