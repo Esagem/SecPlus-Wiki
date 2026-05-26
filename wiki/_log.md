@@ -284,3 +284,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | quizzes/practice-exam-b.md | integrity check probe
 ## [2026-05-26] edit | quizzes/practice-exam-c.md | integrity check probe
 ## [2026-05-26] edit | quizzes/practice-exam-d.md | integrity check probe
+## [2026-05-26] edit | quizzes/practice-exam-e.md | integrity check probe
