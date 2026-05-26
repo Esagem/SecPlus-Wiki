@@ -295,3 +295,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] write | _template/starter/ingestion-README.md | add starter ingestion/README template
 ## [2026-05-26] write | _template/starter/objectives-README.md | add starter objectives/README template
 ## [2026-05-26] write | _template/starter/quizzes-README.md | add starter quizzes/README template
+## [2026-05-26] write | _template/starter/sessions-README.md | add starter sessions/README template
