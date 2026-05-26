@@ -586,3 +586,4 @@ function truncate(s, n) {
 - PBQ types supported out of the box: `match` and `firewall`. Other types require extending the render and grade branches.
 - The scaffold uses `eval()` on the JS code block extracted by regex. The standard bootstrap is shown in `## Caller bootstrap` above.
 - Edit per-exam content (questions, PBQs, intro text) in the individual practice-exam files. This file is the engine only.
+- **Before authoring questions or PBQs**, read [[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]] — length parity, distractor design, multi-select, PBQ rotation across exams, domain-weighting against the blueprint, and the chunked-build pattern for large exams (skeleton + sentinel + chunked `wiki_edit` replacements).
