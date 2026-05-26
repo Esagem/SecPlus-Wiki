@@ -664,10 +664,31 @@ gradeBtn.onclick = () => {
     const date = new Date().toISOString().slice(0, 10);
     const missLines = missed.length === 0
       ? "  - _Clean sweep — no MCQ misses_"
-      : missed.map(q => `  - A${q.n} (Obj ${q.objective || "?"}) — ${q.topic}`).join("\n");
+      : missed.map(q => {
+          const sel = selections[q.n];
+          const correctLetters = q.opts.filter(o => o.c).map(o => o.l).join(",");
+          const picked = sel.size === 0 ? "(no answer)" : [...sel].sort().join(",");
+          const snippet = truncate(q.q.split("\n")[0], 90);
+          return `  - **A${q.n}** (Obj ${q.objective || "?"}) — ${snippet}\n      picked: \`${picked}\`  ·  correct: \`${correctLetters}\`  ·  ${q.topic}`;
+        }).join("\n");
     const pbqLines = pbqs.map(p => {
       const r = pbqResults[p.n];
-      return `  - A${p.n} ${p.title}: ${r.correct}/${r.total}`;
+      const detailLines = r.details.map(d => {
+        if (d.kind === "match") {
+          const got = d.got || "(no answer)";
+          const mark = d.right ? "✓" : "✗";
+          return `      ${mark} ${d.desc}\n          picked: \`${got}\`  ·  correct: \`${d.expected}\``;
+        } else if (d.kind === "firewall") {
+          const mark = d.allRight ? "✓" : "✗";
+          const fieldDetails = Object.keys(d.fields).map(k => {
+            const f = d.fields[k];
+            return f.right ? `${k}=\`${f.got}\`` : `${k}=\`${f.got || "—"}\`→\`${f.expected}\``;
+          }).join(", ");
+          return `      ${mark} ${d.goal}\n          ${fieldDetails}`;
+        }
+        return "";
+      }).join("\n");
+      return `  - **A${p.n}** ${p.title}: ${r.correct}/${r.total}\n${detailLines}`;
     }).join("\n");
     const domainLines = Object.keys(domainNames).sort().map(d => {
       const s = domainStats[d] || { right: 0, total: 0 };
