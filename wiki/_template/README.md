@@ -14,13 +14,16 @@ updated: 2026-05-26
 
 ## What's in this folder
 
-| File | Purpose |
-|------|---------|
+| File / folder | Purpose |
+|--------------|---------|
 | [[_template/_LLM-OPERATING\|_LLM-OPERATING.md]] | Tool-discipline rules for any AI editing the wiki. Read first. |
 | [[_template/_QUESTION-AUTHORING\|_QUESTION-AUTHORING.md]] | Quiz/practice-exam content rules: length parity, distractor design, multi-select, chunked builds. Read before authoring any question. |
+| [[_template/_INGESTION\|_INGESTION.md]] | Source-ingestion strategy: transcripts, PDFs, web scrapes, notes. Read before pulling external material into the wiki. |
 | [[_template/STUDY\|STUDY.md]] | Parameterized schema. Copy to wiki root, substitute subject-specific bits. |
 | [[_template/_quiz-scaffold\|_quiz-scaffold.md]] | Shared engine for per-topic quiz banks. localStorage state, Reset button, auto-✓ mastery, log persistence. |
 | [[_template/_practice-exam-scaffold\|_practice-exam-scaffold.md]] | Shared engine for full-length practice exams. Same state-persistence story as the quiz scaffold, plus PBQ rendering, domain breakdown, comprehensive log entries. |
+| `starter/` | Copy-paste content for the new wiki's root and per-folder READMEs: `wiki-README.md`, `index.md`, `log.md`, `ingestion-README.md`, `objectives-README.md`, `quizzes-README.md`, `sessions-README.md`, `synthesis-README.md`, `aar-template.md`. |
+| `examples/` | Worked references. Currently: `example-quiz.md` (a complete 5-question quiz with the scaffold-loader bootstrap, demonstrating length parity, multi-select, and source attribution). |
 | (this file) | The bootstrap guide. |
 
 ## The non-negotiables
@@ -34,13 +37,22 @@ These aren't options — getting them wrong on the SY0-701 wiki cost real rework
 ## Bootstrap sequence
 
 1. **Create the new wiki repo / vault.** One folder, version-controlled if possible.
-2. **Copy the six files in this folder into the new wiki's root.** Keep `_LLM-OPERATING.md` and `_QUESTION-AUTHORING.md` named exactly that. Move the two scaffolds into `quizzes/`. The `STUDY.md` goes at root.
-3. **Substitute placeholders.** The template files have `{{SUBJECT}}`, `{{SUBJECT_SHORT}}`, `{{DOMAINS}}` and similar placeholders. Search and replace globally.
-4. **Create the empty category folders:** `transcripts/`, `objectives/`, `quizzes/`, `sessions/`, `synthesis/`. Each gets a one-paragraph `README.md` describing its purpose (the originals in the secplus-wiki are good models).
-5. **Create `_index.md`** at root with the master table-of-contents structure. The secplus-wiki [[../_index|_index.md]] is the working reference.
-6. **Set up `_log.md`** at root as an empty append-only log file. The MCP server populates it on every mutating call.
+2. **Copy the seven root-level template files into the new wiki's root:** `_LLM-OPERATING.md`, `_QUESTION-AUTHORING.md`, `_INGESTION.md`, `STUDY.md`, plus `starter/wiki-README.md` (renamed to `README.md`), `starter/index.md` (renamed to `_index.md`), and `starter/log.md` (renamed to `_log.md`). Keep `_LLM-OPERATING.md`, `_QUESTION-AUTHORING.md`, and `_INGESTION.md` named exactly that.
+3. **Move the two scaffolds into `quizzes/`:** `_quiz-scaffold.md` and `_practice-exam-scaffold.md`.
+4. **Substitute placeholders.** Search and replace globally: `{{SUBJECT}}` (long subject name), `{{SUBJECT_SHORT}}` (short name), `{{WIKI_NAME}}` (MCP server name), `{{DOMAINS}}` if present, plus the `YYYY-MM-DD` date placeholders in front matter.
+5. **Create the category folders and drop in per-folder READMEs** from `starter/`:
+   - `ingestion/README.md` from `starter/ingestion-README.md`
+   - `objectives/README.md` from `starter/objectives-README.md`
+   - `quizzes/README.md` from `starter/quizzes-README.md`
+   - `sessions/README.md` from `starter/sessions-README.md`
+   - `synthesis/README.md` from `starter/synthesis-README.md`
+   Create the empty subfolders too: `ingestion/{transcripts,pdfs,web,notes}/` and `sessions/quiz-logs/`.
+6. **Seed the synthesis pages** as `seed` status: `exam-blueprint.md`, `vocab.md`, `weak-areas.md`, `open-questions.md`, `lint-report.md`. Even empty, they exist from day one so future sessions know where to put cross-cutting content.
+7. **Keep `starter/aar-template.md` somewhere accessible.** It gets copied to `synthesis/aar-YYYY-MM-DD.md` when an incident warrants a post-mortem. Either leave it in `_template/starter/` or move it to `synthesis/_aar-template.md`.
 
-That's the scaffolding. From here, the content phase looks the same as the secplus-wiki: ingest source material into `transcripts/`, distill into `objectives/`, write quiz banks, run sessions, accumulate `synthesis/` views.
+That's the scaffolding. From here, the content phase begins: ingest source material per `_INGESTION.md`, distill into `objectives/`, write quiz banks per `_QUESTION-AUTHORING.md`, run study sessions, accumulate `synthesis/` views.
+
+**Smoke test the scaffold before authoring real content.** Copy `examples/example-quiz.md` into `quizzes/`, open it in Obsidian, and confirm the questions render. If they do, the scaffold-loader path is correct and you're clear to author real quizzes. If they don't, the failure is in scaffold placement or Obsidian Dataview setup, not in your content — fix that first.
 
 ## What's worth keeping vs. revising per-subject
 
