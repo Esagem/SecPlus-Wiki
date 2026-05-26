@@ -244,3 +244,39 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-25] edit | quizzes/5.4-compliance-privacy.md | balance answer-choice lengths in Q5 (remove length-as-tell)
 ## [2026-05-25] edit | quizzes/5.5-audits-pentests.md | balance answer-choice lengths in Q7, Q8 (remove length-as-tell)
 ## [2026-05-25] edit | quizzes/5.6-awareness.md | balance answer-choice lengths in Q10 (remove length-as-tell)
+## [2026-05-26] edit | quizzes/1.1-controls ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/1.3-change-management ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/1.4-cryptography ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/2.2-vectors ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/2.3-vulnerabilities ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/2.4-malicious-activity ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/2.5-mitigation ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/practice-exam-a.md | expand log entries to record user picks + correct answers per missed MCQ and per PBQ item (fixes #1 user complaint)
+## [2026-05-26] edit | quizzes/practice-exam-a.md | add localStorage state persistence + Reset button + visual restoration + already-graded banner (fixes #2 user complaint: practice exam no longer clears on submit/reload)
+## [2026-05-26] edit | quizzes/practice-exam-b.md | add localStorage state persistence, Reset button, MCQ/PBQ render restoration, already-graded banner, and expand log entries to record user picks + correct answers (mirrors fixes applied to practice-exam-a)
+## [2026-05-26] edit | quizzes/practice-exam-d.md | add localStorage state persistence, Reset button, MCQ/PBQ render restoration, already-graded banner, and expand log entries to record user picks + correct answers (mirrors fixes applied to practice-exam-a)
+## [2026-05-26] edit | quizzes/practice-exam-e.md | add localStorage state persistence, Reset button, MCQ/PBQ render restoration, already-graded banner, and expand log entries to record user picks + correct answers (mirrors fixes applied to practice-exam-a)
+## [2026-05-26] edit | quizzes/practice-exam-c.md | add localStorage state persistence, Reset button, MCQ/PBQ-match render restoration, already-graded banner, and expand log entries to record user picks + correct answers (mirrors fixes applied to practice-exam-a; c-specific edits due to absence of firewall PBQ and different code style)
+## [2026-05-26] write | synthesis/aar-2026-05-26.md | add after-action review covering wiki effectiveness, the 2026-05-25 wiki_write corruption incident, practice-exam state/log fixes, and forward rules
+## [2026-05-26] edit | quizzes/1.1-controls ✓.md | update AAR link to match created filename
+## [2026-05-26] edit | quizzes/1.3-change-management ✓.md | update AAR link to match created filename
+## [2026-05-26] edit | quizzes/1.4-cryptography ✓.md | update AAR link to match created filename
+## [2026-05-26] edit | quizzes/2.2-vectors ✓.md | update AAR link to match created filename
+## [2026-05-26] edit | quizzes/2.3-vulnerabilities ✓.md | update AAR link to match created filename
+## [2026-05-26] edit | quizzes/2.4-malicious-activity ✓.md | update AAR link to match created filename
+## [2026-05-26] edit | quizzes/2.5-mitigation ✓.md | update AAR link to match created filename
+## [2026-05-26] write | _template/_LLM-OPERATING.md | add LLM operating guide — codifies wiki_edit-vs-wiki_write discipline and other lessons from the 2026-05-25 corruption AAR
+## [2026-05-26] write | _template/README.md | add template README — bootstrap guide for new study wikis derived from this one
+## [2026-05-26] write | _template/STUDY.md | add parameterized STUDY.md template — schema and conventions for any subject study wiki
+## [2026-05-26] write | _template/_quiz-scaffold.md | add template quiz scaffold — verbatim copy of working engine, with header noting template provenance
+## [2026-05-26] write | _template/_practice-exam-scaffold.md | add template practice-exam scaffold with state persistence, Reset button, comprehensive logging, parameterized inputs (incorporates all fixes from 2026-05-26 AAR)
+## [2026-05-26] edit | _index.md | add AAR link, _template/ callout, broken-quiz warning banner; flag 7 corrupted quizzes pending content restore
+## [2026-05-26] write | _template/_QUESTION-AUTHORING.md | add question-authoring guide capturing the length-parity lesson and other quiz-quality rules learned during SY0-701 build
+## [2026-05-26] edit | _template/README.md | add _QUESTION-AUTHORING reference; strengthen shared-scaffold-from-day-one guidance; add lessons absorbed list items for question authoring, wiki/-prefix gotcha, CRLF regex, chunked builds
+## [2026-05-26] edit | _template/_LLM-OPERATING.md | add _QUESTION-AUTHORING reference; document wiki/-prefix path gotcha and CRLF-tolerant regex pattern as environment knowledge
+## [2026-05-26] edit | _template/STUDY.md | add _QUESTION-AUTHORING.md to required reading and directory layout; switch quiz-page bootstrap example to CRLF-tolerant regex; add §5.3 about authoring quiz banks
+## [2026-05-26] edit | _template/_quiz-scaffold.md | switch example bootstrap stub to CRLF-tolerant regex (avoids extraction failure on files with Windows line endings)
+## [2026-05-26] edit | _template/_practice-exam-scaffold.md | switch example bootstrap stub to CRLF-tolerant regex (avoids extraction failure on files with Windows line endings)
+## [2026-05-26] edit | _index.md | add _QUESTION-AUTHORING.md to template callout listing
+## [2026-05-26] edit | _template/_quiz-scaffold.md | point to _QUESTION-AUTHORING.md from the Notes section so question authors see the content rules
+## [2026-05-26] edit | _template/_practice-exam-scaffold.md | point to _QUESTION-AUTHORING.md from the Notes section so practice-exam authors see content rules and chunked-build pattern

@@ -119,12 +119,31 @@ const pbqs = [
 
 const domainNames = {"1": "1.0 General Security Concepts", "2": "2.0 Threats, Vulnerabilities, and Mitigations", "3": "3.0 Security Architecture", "4": "4.0 Security Operations", "5": "5.0 Security Program Management & Oversight"};
 
-// ---- State ----
+// ---- State (with localStorage persistence) ----
+const STATE_KEY = "claude-pe-state:practice-exam-c";
+function loadPersistedState() {
+  try {
+    const raw = window.localStorage.getItem(STATE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch { return null; }
+}
+function savePersistedState() {
+  try {
+    const sels = {};
+    Object.keys(selections).forEach(k => { sels[k] = [...selections[k]]; });
+    window.localStorage.setItem(STATE_KEY, JSON.stringify({ selections: sels, pbqSelections, graded }));
+  } catch (e) { console.error("PE state save failed:", e); }
+}
+function clearPersistedState() { window.localStorage.removeItem(STATE_KEY); }
+
+const _persisted = loadPersistedState() || {};
 const selections = {};
-questions.forEach(q => { selections[q.n] = new Set(); });
+questions.forEach(q => {
+  selections[q.n] = new Set(_persisted.selections?.[q.n] || []);
+});
 const pbqSelections = {};
-pbqs.forEach(p => { pbqSelections[p.n] = {}; });
-let graded = false;
+pbqs.forEach(p => { pbqSelections[p.n] = _persisted.pbqSelections?.[p.n] || {}; });
+let graded = !!_persisted.graded;
 
 // ---- Render setup ----
 const root = dv.container;
@@ -201,12 +220,25 @@ const countPbqItems = (p) => p.items ? p.items.length : 0;
 const countPbqAnswered = (p) => Object.values(pbqSelections[p.n]).filter(v => v).length;
 const pbqItemsTotal = pbqs.reduce((s, p) => s + countPbqItems(p), 0);
 const updateProgress = () => {
-  if (graded) return;
+  savePersistedState();
+  if (graded) { progress.style.display = "none"; return; }
   const mcqAnswered = questions.filter(q => selections[q.n].size > 0).length;
   const pbqAnswered = pbqs.reduce((s, p) => s + countPbqAnswered(p), 0);
   progress.setText(`PBQ ${pbqAnswered}/${pbqItemsTotal}  ·  MCQ ${mcqAnswered}/${questions.length}`);
 };
 updateProgress();
+
+// Reset button — mirrors the per-objective quiz pattern
+const _resetBar = root.createDiv();
+_resetBar.style.cssText = "display:flex; justify-content:flex-end; margin: 4px 0 18px;";
+const _resetBtn = _resetBar.createEl("button", { text: "Reset exam" });
+_resetBtn.style.cssText = "padding: 8px 14px; border: 1px solid var(--background-modifier-border); background: var(--background-secondary); color: var(--text-muted); cursor: pointer; border-radius: 6px; font-size: 0.85em; font-family: inherit;";
+_resetBtn.onclick = () => {
+  if (window.confirm("Reset this exam? Your selections and graded state will be cleared. (Attempt logs already written are kept.)")) {
+    clearPersistedState();
+    if (typeof location !== "undefined" && location.reload) location.reload();
+  }
+};
 
 const reportContainer = root.createDiv();
 
@@ -243,6 +275,8 @@ pbqs.forEach(p => {
       const o = sel.createEl("option", { text: opt });
       o.value = opt;
     });
+    sel.value = pbqSelections[p.n][item.id] || "";
+    if (graded) sel.disabled = true;
     sel.onchange = () => {
       if (graded) return;
       pbqSelections[p.n][item.id] = sel.value;
@@ -286,6 +320,8 @@ questions.forEach((q) => {
     const letterSpan = btn.createEl("span", { cls: "pe-opt-letter", text: `${opt.l}.` });
     const textSpan = btn.createEl("span", { cls: "pe-opt-text", text: opt.t });
     optButtons[opt.l] = btn;
+    if (selections[q.n].has(opt.l)) btn.classList.add("selected");
+    if (graded) btn.disabled = true;
     btn.onclick = () => {
       if (graded) return;
       const sel = selections[q.n];
@@ -316,6 +352,7 @@ const gradeBtn = root.createEl("button", { cls: "pe-grade-btn", text: "Grade my 
 gradeBtn.onclick = () => {
   if (graded) return;
   graded = true;
+  savePersistedState();
   gradeBtn.disabled = true;
   gradeBtn.setText("Test graded — scroll up for your report card");
   progress.style.display = "none";
@@ -529,10 +566,31 @@ gradeBtn.onclick = () => {
     const date = new Date().toISOString().slice(0, 10);
     const missLines = missed.length === 0
       ? "  - _Clean sweep — no MCQ misses_"
-      : missed.map(q => `  - C${q.n} (Obj ${q.objective || "?"}) — ${q.topic}`).join("\n");
+      : missed.map(q => {
+          const sel = selections[q.n];
+          const correctLetters = q.opts.filter(o => o.c).map(o => o.l).join(",");
+          const picked = sel.size === 0 ? "(no answer)" : [...sel].sort().join(",");
+          const snippet = truncate(q.q.split("\n")[0], 90);
+          return `  - **C${q.n}** (Obj ${q.objective || "?"}) — ${snippet}\n      picked: \`${picked}\`  ·  correct: \`${correctLetters}\`  ·  ${q.topic}`;
+        }).join("\n");
     const pbqLines = pbqs.map(p => {
       const r = pbqResults[p.n];
-      return `  - C${p.n} ${p.title}: ${r.correct}/${r.total}`;
+      const detailLines = r.details.map(d => {
+        if (d.kind === "match") {
+          const got = d.got || "(no answer)";
+          const mark = d.right ? "✓" : "✗";
+          return `      ${mark} ${d.desc}\n          picked: \`${got}\`  ·  correct: \`${d.expected}\``;
+        } else if (d.kind === "firewall") {
+          const mark = d.allRight ? "✓" : "✗";
+          const fieldDetails = Object.keys(d.fields).map(k => {
+            const f = d.fields[k];
+            return f.right ? `${k}=\`${f.got}\`` : `${k}=\`${f.got || "—"}\`→\`${f.expected}\``;
+          }).join(", ");
+          return `      ${mark} ${d.goal}\n          ${fieldDetails}`;
+        }
+        return "";
+      }).join("\n");
+      return `  - **C${p.n}** ${p.title}: ${r.correct}/${r.total}\n${detailLines}`;
     }).join("\n");
     const domainLines = Object.keys(domainNames).sort().map(d => {
       const s = domainStats[d] || { right: 0, total: 0 };
@@ -561,6 +619,16 @@ gradeBtn.onclick = () => {
     console.error("Persist failed:", e);
   }
 };
+
+// If state was loaded with graded=true, restore the "already graded" view banner.
+// Selections are already visible (restored above) but the report-card view doesn't persist.
+if (graded) {
+  gradeBtn.disabled = true;
+  gradeBtn.setText("Already graded — hit Reset exam at the top to start a fresh attempt");
+  const _banner = root.createDiv();
+  _banner.style.cssText = "padding: 12px 16px; background: var(--background-secondary); border-radius: 6px; margin: 16px 0; font-size: 0.9em; color: var(--text-muted); border-left: 3px solid var(--text-muted);";
+  _banner.setText("You graded this attempt previously. Your selections are shown above (read-only) and were logged to the attempt history. Click Reset exam to start over.");
+}
 
 function escapeHtml(s) {
   return (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
