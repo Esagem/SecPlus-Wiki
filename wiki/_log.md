@@ -251,3 +251,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | quizzes/2.3-vulnerabilities ✓.md | flag content-lost quiz; pointer to AAR for restore
 ## [2026-05-26] edit | quizzes/2.4-malicious-activity ✓.md | flag content-lost quiz; pointer to AAR for restore
 ## [2026-05-26] edit | quizzes/2.5-mitigation ✓.md | flag content-lost quiz; pointer to AAR for restore
+## [2026-05-26] edit | quizzes/practice-exam-a.md | expand log entries to record user picks + correct answers per missed MCQ and per PBQ item (fixes #1 user complaint)
