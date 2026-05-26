@@ -269,3 +269,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] write | _template/README.md | add template README — bootstrap guide for new study wikis derived from this one
 ## [2026-05-26] write | _template/STUDY.md | add parameterized STUDY.md template — schema and conventions for any subject study wiki
 ## [2026-05-26] write | _template/_quiz-scaffold.md | add template quiz scaffold — verbatim copy of working engine, with header noting template provenance
+## [2026-05-26] write | _template/_practice-exam-scaffold.md | add template practice-exam scaffold with state persistence, Reset button, comprehensive logging, parameterized inputs (incorporates all fixes from 2026-05-26 AAR)
