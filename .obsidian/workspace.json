@@ -197,6 +197,8 @@
   },
   "active": "3a0169c577a93720",
   "lastOpenFiles": [
+    "wiki/_template/examples/example-quiz.md",
+    "wiki/_template/examples",
     "wiki/_template/starter/aar-template.md",
     "wiki/_template/starter/synthesis-README.md",
     "wiki/_template/starter/sessions-README.md",
@@ -223,7 +225,6 @@
     "wiki/sessions/quiz-logs/practice-exam-b.log.md",
     "wiki/sessions/quiz-logs/5.6-awareness.log.md",
     "wiki/sessions/quiz-logs/5.5-audits-pentests.log.md",
-    "wiki/sessions/quiz-logs/5.4-compliance-privacy.log.md",
     "wiki/sessions/quiz-logs",
     "wiki/quizzes",
     "wiki/objectives",
@@ -233,7 +234,6 @@
     "server/node_modules/undici/docs/api",
     "server/node_modules/undici/docs",
     "wiki/_template",
-    "wiki/sessions/vocab-match-state.json",
     "Untitled.canvas"
   ]
 }
