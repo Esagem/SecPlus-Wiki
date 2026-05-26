@@ -287,3 +287,4 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] edit | quizzes/practice-exam-e.md | integrity check probe
 ## [2026-05-26] edit | quizzes/practice-exam-a.md | integrity check probe — verify already-graded banner present
 ## [2026-05-26] edit | _template/_LLM-OPERATING.md | expand §1 tool table from 4 mutation tools to all 10 server tools so the operating doc is a complete reference, not just a discipline-focused subset
+## [2026-05-26] edit | _template/STUDY.md | add wiki_delete to §8 tool table for completeness (table previously had 9 of 10 server tools)
