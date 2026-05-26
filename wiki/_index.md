@@ -18,7 +18,7 @@ The knowledge base and study surface for CompTIA Security+ (SY0-701). See [[STUD
 
 > ⚠️ **Seven per-objective quizzes were corrupted on 2026-05-25** and need content restored from git history or Obsidian local trash before they can be used: **1.1, 1.3, 1.4, 2.2, 2.3, 2.4, 2.5**. Each affected page carries a banner pointing to the postmortem. See [[synthesis/aar-2026-05-26|AAR — 2026-05-25 corruption incident]] for the full story.
 
-> 🛠 **Templates for future study wikis** live under `_template/` ([[_template/README|README]]). Includes the parameterized [[_template/STUDY|STUDY.md]] schema, the [[_template/_quiz-scaffold|quiz scaffold]], the new [[_template/_practice-exam-scaffold|practice-exam scaffold]] (with all 2026-05-26 fixes baked in), the [[_template/_LLM-OPERATING|LLM operating rules]] codifying the wiki_edit-vs-wiki_write discipline, and the [[_template/_QUESTION-AUTHORING|question-authoring rules]] (length parity, distractor design, chunked builds).
+> 🛠 **Templates for future study wikis** live under `_template/` ([[_template/README|README]]). Includes the parameterized [[_template/STUDY|STUDY.md]] schema, the [[_template/_quiz-scaffold|quiz scaffold]], the [[_template/_practice-exam-scaffold|practice-exam scaffold]] (with all 2026-05-26 fixes baked in), the [[_template/_LLM-OPERATING|LLM operating rules]] codifying the wiki_edit-vs-wiki_write discipline, the [[_template/_QUESTION-AUTHORING|question-authoring rules]] (length parity, distractor design, chunked builds), the [[_template/_INGESTION|source-ingestion strategy]], plus `starter/` (copy-paste content for the new wiki's root and per-folder READMEs) and `examples/example-quiz.md` (worked reference).
 
 ---
 
