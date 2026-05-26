@@ -19,7 +19,7 @@ updated: 2026-05-26
 >
 > Once substituted, delete this header block.
 
-Operating manual for the **{{SUBJECT}} study wiki**. Any LLM connecting to this wiki's MCP server MUST read this file first, plus [[_LLM-OPERATING|_LLM-OPERATING.md]], and follow both.
+Operating manual for the **{{SUBJECT}} study wiki**. Any LLM connecting to this wiki's MCP server MUST read this file first, plus [[_LLM-OPERATING|_LLM-OPERATING.md]] (tool discipline) and [[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]] (content rules), and follow all three.
 
 ---
 
@@ -52,6 +52,7 @@ wiki/
 ├── _log.md                # Append-only chronological log (auto-maintained).
 ├── STUDY.md               # This file.
 ├── _LLM-OPERATING.md      # Tool-discipline rules.
+├── _QUESTION-AUTHORING.md # Quiz/practice-exam content rules.
 ├── README.md              # Top-of-repo orientation.
 │
 ├── transcripts/           # Raw source material (immutable)
@@ -110,7 +111,7 @@ Titles are unquoted by default. Wrap in quotes only if the title contains a lite
 - **quiz** — per-objective question banks.
 - **practice-exam** — full-length practice banks. Same folder as `quiz`, different scope.
 - **session** — dated study-session notes.
-- **synthesis** — cross-cutting views (`synthesis/*.md`, plus `_index.md`, `STUDY.md`, `_LLM-OPERATING.md`).
+- **synthesis** — cross-cutting views (`synthesis/*.md`, plus `_index.md`, `STUDY.md`, `_LLM-OPERATING.md`, `_QUESTION-AUTHORING.md`).
 
 ### Status lifecycle
 
@@ -214,14 +215,14 @@ const scaffold = await app.vault.read(
   app.vault.getAbstractFileByPath("wiki/quizzes/_quiz-scaffold.md") ||
   app.vault.getAbstractFileByPath("quizzes/_quiz-scaffold.md")
 );
-const code = scaffold.match(/```javascript\n([\s\S]*?)\n```/)[1];
+const code = scaffold.match(/```javascript[ \t]*\r?\n([\s\S]*?)\r?\n[ \t]*```/)[1];
 eval(code);
 ```
 ```
 
 #### Practice-exam page
 
-Same shape as a quiz page, but `category: practice-exam`, a `covers` list spanning many or all objectives, and the bootstrap loads `_practice-exam-scaffold.md` instead of `_quiz-scaffold.md`. The scaffold supports MCQs and PBQs (match-type and firewall-type by default; extend the scaffold for other PBQ types).
+Same shape as a quiz page, but `category: practice-exam`, a `covers` list spanning many or all objectives, and the bootstrap loads `_practice-exam-scaffold.md` instead of `_quiz-scaffold.md`. The scaffold supports MCQs and PBQs (match-type and firewall-type by default; extend the scaffold for other PBQ types). For authoring rules — length parity, distractor design, multi-select, the chunked-build pattern for large exams — see [[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]] before writing questions.
 
 #### Session note
 
@@ -272,14 +273,23 @@ Always use explicit-path pipe-syntax wikilinks: `[[objectives/1.4|Objective 1.4]
 4. `wiki_status_set` mastery on the objective page.
 5. Append misses to `synthesis/weak-areas.md`.
 
-### 5.3 Pre-exam review
+### 5.3 Author a quiz bank or practice exam
+
+1. **Read [[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]] first.** Length parity, distractor design, multi-select handling, the chunked-build pattern for large practice exams — these rules exist because we've already gotten them wrong on the SY0-701 wiki.
+2. Read the relevant objective page(s) for source material.
+3. **For a per-topic quiz:** `wiki_write` a new file at `quizzes/<topic-id>-<slug>.md` with the front matter, intro, and a `dataviewjs` block containing `baseName`, the `questions` array, and the standard scaffold-loader stub. See the Quiz page template above.
+4. **For a practice exam:** same shape but with `category: practice-exam`, a `covers` list spanning many objectives, `pbqs` and `examLabel` and `domainNames` variables, and the practice-exam-scaffold loader. If the question payload is ~100 KB or larger, use the chunked-build pattern (skeleton page + sentinel + chunked `wiki_edit` replacements) per `_QUESTION-AUTHORING.md`.
+5. Update `_index.md` to list the new file.
+6. Run the quality checklist at the bottom of `_QUESTION-AUTHORING.md` before considering the bank done.
+
+### 5.4 Pre-exam review
 
 1. `wiki_search` or `wiki_list` for objectives with `mastery: weak`.
 2. Read those.
 3. Run targeted quizzes on weak areas.
 4. Run full practice exams to surface unknown-unknowns.
 
-### 5.4 Lint
+### 5.5 Lint
 
 On demand, scan for: schema drift, broken wikilinks, orphan pages, stale `_index.md` tables, quiz banks without `covers`, uniform-value tells (every page at the same `confidence` usually means template-default, not real signal).
 
@@ -299,7 +309,7 @@ Output to `synthesis/lint-report.md` with a dated section.
 
 ## 8. Working with the MCP tools
 
-See **[[_LLM-OPERATING|_LLM-OPERATING.md]]** for the operational rules — tool selection, read-before-write, when to use `wiki_edit` vs `wiki_write`, etc. That file is mandatory reading; this section just summarizes.
+See **[[_LLM-OPERATING|_LLM-OPERATING.md]]** for operational rules (tool selection, read-before-write, when to use `wiki_edit` vs `wiki_write`) and **[[_QUESTION-AUTHORING|_QUESTION-AUTHORING.md]]** for quiz/practice-exam content rules. Both files are mandatory reading; this section just summarizes the tools.
 
 | Tool | When to use |
 |------|-------------|
