@@ -299,3 +299,5 @@ Use `wiki_log_tail` to read recent entries — cheaper than reading the whole lo
 ## [2026-05-26] write | _template/starter/synthesis-README.md | add starter synthesis/README template with AAR convention
 ## [2026-05-26] write | _template/starter/aar-template.md | add AAR template scaffolding the post-mortem structure used for the 2026-05-26 incident
 ## [2026-05-26] write | _template/examples/example-quiz.md | add complete worked-example quiz file demonstrating scaffold-loader pattern, length parity, multi-select, and source attribution
+## [2026-05-26] edit | _template/_LLM-OPERATING.md | add §9b: search-staleness gotcha and probe-edit verification pattern (discovered during 2026-05-26 integrity check after user's out-of-band revert)
+## [2026-05-26] edit | _template/STUDY.md | add ingestion/ subfolders and sessions/quiz-logs/ to directory layout; update §5.1 to flow ingestion → objectives; reference _INGESTION.md

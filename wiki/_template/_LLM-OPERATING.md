@@ -138,6 +138,36 @@ Two non-obvious things about working with this wiki + Obsidian:
 
 **CRLF in regex extraction.** Bootstrap stubs extract the scaffold's JS code block via regex. The naive pattern `/```javascript\n([\s\S]*?)\n```/` fails on files written with CRLF line endings (some editors, some platforms, some round-trips through Git on Windows). Use `/```javascript[ \t]*\r?\n([\s\S]*?)\r?\n[ \t]*```/` instead — it tolerates both LF and CRLF, plus trailing whitespace on the fence lines. Every example stub in the template already uses this corrected pattern; copy it verbatim.
 
+## 9b. Verification — the search index can lie
+
+**The BM25 search index can be stale after out-of-band restores.** If a user reverts files via git, Obsidian sync, or any path that doesn't go through the wiki MCP, the search index may continue returning content from the pre-revert state until the next write triggers a reindex. This means `wiki_search` can give false negatives ("the post-fix string isn't there") even when a direct read would prove the string IS there.
+
+The lesson learned the hard way: **don't diagnose data loss from search results alone after any out-of-band event.** Confirm with a direct read or the probe-edit pattern below.
+
+**Probe-edit — the reliable integrity primitive.** A no-op `wiki_edit` where `old_str == new_str` succeeds if and only if the string exists exactly once in the file. This is the cleanest way to verify a specific edit landed without reading the whole file:
+
+```
+wiki_edit(
+  page_path="path/to/page.md",
+  edits=[{
+    "old_str": "<distinctive post-fix string>",
+    "new_str": "<same string>"
+  }],
+  changelog_entry="integrity check probe"
+)
+```
+
+If it returns "Applied 1 edit(s)", the string is present — fix is intact.
+If it returns "old_str not found" or "old_str matched N times", the file isn't in the state you expected.
+
+Side effects: probe-edits bump `updated:` and add a log entry. Acceptable cost for an authoritative integrity check. Use the changelog entry `"integrity check probe"` so the log entries are recognizable later.
+
+Use this pattern:
+- After any user-reported integrity concern
+- Before reapplying fixes you're not sure are still present
+- When `wiki_search` results contradict your mental model of the file state
+- When you'd otherwise need to read a very large file just to check one string
+
 ## 10. When you're not sure, ask
 
 This file does not cover every situation. When you genuinely don't know whether a change is a `wiki_edit` or a `wiki_write`, or whether a refactor should touch the scaffold or the content file, or whether front-matter changes belong here — ask the user before doing it. The cost of one clarifying question is much smaller than the cost of recovering from a wrong tool call.
